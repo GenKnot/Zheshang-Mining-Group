@@ -644,9 +644,12 @@ function Scene({ segments, still, mobile }: { segments: number; still: boolean; 
       cam.fov = fov;
       st.shift = shift;
       // 竖屏时改为把消失点下移到业务列表的下方
-      if (shift > 0.0005) cam.setViewOffset(1, 1, -0.17 * deep * wide, -0.31 * deep * (1 - wide), 1, 1);
+      // setViewOffset 会把宽高比改成"全尺寸"的比例，所以必须传真实的画布尺寸
+      const { width: w, height: h } = size;
+      if (shift > 0.0005) cam.setViewOffset(w, h, -0.17 * deep * wide * w, -0.31 * deep * (1 - wide) * h, w, h);
       else {
         cam.clearViewOffset();
+        cam.aspect = w / h;
         cam.updateProjectionMatrix();
       }
     }
