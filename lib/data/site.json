@@ -1,0 +1,1426 @@
+{
+  "ui": {
+    "zh-cn": {
+      "brand": "浙商矿投",
+      "brandSub": "ZS MINING INVESTMENT",
+      "legalName": "浙商矿业集团有限公司",
+      "metaTitle": "浙商矿投 ZSMI | 全球矿业项目信息、峰会对接与矿权交易平台",
+      "metaDesc": "浙商矿投（ZSMI）专注国际矿业投资与资源整合，发布全球矿权与矿业项目信息，组织矿业峰会与产业对接，提供联合开发与矿权交易服务。",
+      "nav": {
+        "about": "关于我们",
+        "business": "平台业务",
+        "projects": "项目库",
+        "summit": "峰会活动",
+        "contact": "联系我们"
+      }
+    },
+    "zh-hk": {
+      "brand": "浙商礦投",
+      "brandSub": "ZS MINING INVESTMENT",
+      "legalName": "浙商礦業集團有限公司",
+      "metaTitle": "浙商礦投 ZSMI | 全球礦業項目資訊、峰會對接與礦權交易平台",
+      "metaDesc": "浙商礦投（ZSMI）專注國際礦業投資與資源整合，發佈全球礦權與礦業項目資訊，組織礦業峰會與產業對接，提供聯合開發與礦權交易服務。",
+      "nav": {
+        "about": "關於我們",
+        "business": "平台業務",
+        "projects": "項目庫",
+        "summit": "峰會活動",
+        "contact": "聯絡我們"
+      }
+    },
+    "en": {
+      "brand": "ZS Mining Investment",
+      "brandSub": "ZSMI",
+      "legalName": "Zheshang Mining Investment Group Co., Ltd.",
+      "metaTitle": "ZS Mining Investment (ZSMI) | Mining Projects, Summits and Mineral Rights",
+      "metaDesc": "ZS Mining Investment (ZSMI) focuses on international mining investment and resource integration: publishing mining projects worldwide, hosting summits that connect buyers and sellers, and supporting joint development and mineral rights transactions.",
+      "nav": {
+        "about": "About",
+        "business": "Platform",
+        "projects": "Projects",
+        "summit": "Summits",
+        "contact": "Contact"
+      }
+    },
+    "ja": {
+      "brand": "ZS Mining Investment",
+      "brandSub": "ZSMI",
+      "legalName": "Zheshang Mining Investment Group Co., Ltd.",
+      "metaTitle": "ZS Mining Investment (ZSMI) | 鉱業プロジェクト情報・サミット・鉱業権取引",
+      "metaDesc": "ZS Mining Investment（ZSMI）は国際的な鉱業投資と資源統合に特化し、世界の鉱業プロジェクト情報の発信、サミットによるマッチング、共同開発と鉱業権取引の支援を行います。",
+      "nav": {
+        "about": "会社情報",
+        "business": "事業",
+        "projects": "プロジェクト",
+        "summit": "サミット",
+        "contact": "お問い合わせ"
+      }
+    },
+    "ko": {
+      "brand": "ZS Mining Investment",
+      "brandSub": "ZSMI",
+      "legalName": "Zheshang Mining Investment Group Co., Ltd.",
+      "metaTitle": "ZS Mining Investment (ZSMI) | 광업 프로젝트 정보·서밋·광업권 거래",
+      "metaDesc": "ZS Mining Investment(ZSMI)는 국제 광업 투자와 자원 통합에 집중하며, 전 세계 광업 프로젝트 정보 제공, 서밋을 통한 매칭, 공동 개발 및 광업권 거래를 지원합니다.",
+      "nav": {
+        "about": "회사 소개",
+        "business": "플랫폼",
+        "projects": "프로젝트",
+        "summit": "서밋",
+        "contact": "문의하기"
+      }
+    },
+    "fr": {
+      "brand": "ZS Mining Investment",
+      "brandSub": "ZSMI",
+      "legalName": "Zheshang Mining Investment Group Co., Ltd.",
+      "metaTitle": "ZS Mining Investment (ZSMI) | Projets miniers, sommets et droits miniers",
+      "metaDesc": "ZS Mining Investment (ZSMI) se consacre à l’investissement minier international et à l’intégration des ressources : publication de projets miniers, sommets de mise en relation, développement conjoint et transactions de droits miniers.",
+      "nav": {
+        "about": "À propos",
+        "business": "Plateforme",
+        "projects": "Projets",
+        "summit": "Sommets",
+        "contact": "Contact"
+      }
+    },
+    "es": {
+      "brand": "ZS Mining Investment",
+      "brandSub": "ZSMI",
+      "legalName": "Zheshang Mining Investment Group Co., Ltd.",
+      "metaTitle": "ZS Mining Investment (ZSMI) | Proyectos mineros, cumbres y derechos mineros",
+      "metaDesc": "ZS Mining Investment (ZSMI) se dedica a la inversión minera internacional y la integración de recursos: publicación de proyectos mineros, cumbres de conexión, desarrollo conjunto y transacciones de derechos mineros.",
+      "nav": {
+        "about": "Nosotros",
+        "business": "Plataforma",
+        "projects": "Proyectos",
+        "summit": "Cumbres",
+        "contact": "Contacto"
+      }
+    }
+  },
+  "home": {
+    "zh-cn": {
+      "heroEyebrow": "ZS MINING INVESTMENT",
+      "heroTitle": [
+        "连接全球矿产资源",
+        "与投资机遇"
+      ],
+      "heroSub": "浙商矿投专注国际矿业投资与资源整合，为矿权持有人、产业企业和投资机构搭建项目信息、峰会对接与矿权交易的专业平台。",
+      "cta1": "查看项目库",
+      "cta2": "联系我们",
+      "aboutTitle": "连接资源、资本与产业的矿业投资平台",
+      "aboutBody": "浙商矿投是一家专注于国际矿业投资与资源整合的投资企业，致力于发掘、评估和推进具有发展潜力的优质矿业项目。公司以投资管理、资源整合及项目合作为核心，采取轻资产优先的发展策略，而非以直接矿山开采运营为主营业务。",
+      "aboutMore": "了解公司",
+      "bizLabel": "平台三大板块",
+      "biz": [
+        {
+          "t": "矿业项目信息平台",
+          "d": "汇集并发布全球矿权与矿业项目信息，按区域和矿种分类，展示位置、资源、权属与合作条件。"
+        },
+        {
+          "t": "矿业峰会与产业对接",
+          "d": "组织高管闭门交流、项目推介会和行业论坛，让矿权持有人与投资方、产业方直接对接。"
+        },
+        {
+          "t": "联合开发与矿权交易",
+          "d": "推介可转让、可联营的矿权与项目，协助各方完成评估、谈判与合作落地。"
+        }
+      ],
+      "projLabel": "项目库",
+      "projTitle": "矿业项目",
+      "projIntro": "以下项目可洽谈转让、联营或投资合作。每个项目均列出位置、矿种、面积、权属和合作方式。",
+      "projAll": "查看全部项目",
+      "regLabel": "全球布局",
+      "regTitle": "重点关注的矿业区域",
+      "regions": [
+        [
+          "中亚",
+          "哈萨克斯坦、乌兹别克斯坦、吉尔吉斯斯坦"
+        ],
+        [
+          "非洲",
+          "几内亚、南非、莫桑比克"
+        ],
+        [
+          "北美",
+          "加拿大"
+        ],
+        [
+          "中东",
+          "沙特阿拉伯及海湾国家"
+        ],
+        [
+          "南美",
+          "苏里南等"
+        ]
+      ],
+      "sumLabel": "峰会活动",
+      "sumTitle": "让买矿方与卖矿方坐到一起",
+      "sumBody": "我们计划组织矿业高管闭门交流会、项目推介会和行业论坛，促进矿权持有人、产业企业与投资机构之间的直接沟通。",
+      "sumMore": "了解峰会"
+    },
+    "zh-hk": {
+      "heroEyebrow": "ZS MINING INVESTMENT",
+      "heroTitle": [
+        "連接全球礦產資源",
+        "與投資機遇"
+      ],
+      "heroSub": "浙商礦投專注國際礦業投資與資源整合，為礦權持有人、產業企業和投資機構搭建項目資訊、峰會對接與礦權交易的專業平台。",
+      "cta1": "查看項目庫",
+      "cta2": "聯絡我們",
+      "aboutTitle": "連接資源、資本與產業的礦業投資平台",
+      "aboutBody": "浙商礦投是一家專注於國際礦業投資與資源整合的投資企業，致力於發掘、評估和推進具有發展潛力的優質礦業項目。公司以投資管理、資源整合及項目合作為核心，採取輕資產優先的發展策略，而非以直接礦山開採運營為主營業務。",
+      "aboutMore": "瞭解公司",
+      "bizLabel": "平台三大板塊",
+      "biz": [
+        {
+          "t": "礦業項目資訊平台",
+          "d": "匯集並發佈全球礦權與礦業項目資訊，按區域和礦種分類，展示位置、資源、權屬與合作條件。"
+        },
+        {
+          "t": "礦業峰會與產業對接",
+          "d": "組織高管閉門交流、項目推介會和行業論壇，讓礦權持有人與投資方、產業方直接對接。"
+        },
+        {
+          "t": "聯合開發與礦權交易",
+          "d": "推介可轉讓、可聯營的礦權與項目，協助各方完成評估、談判與合作落地。"
+        }
+      ],
+      "projLabel": "項目庫",
+      "projTitle": "礦業項目",
+      "projIntro": "以下項目可洽談轉讓、聯營或投資合作。每個項目均列出位置、礦種、面積、權屬和合作方式。",
+      "projAll": "查看全部項目",
+      "regLabel": "全球佈局",
+      "regTitle": "重點關注的礦業區域",
+      "regions": [
+        [
+          "中亞",
+          "哈薩克斯坦、烏茲別克斯坦、吉爾吉斯斯坦"
+        ],
+        [
+          "非洲",
+          "幾內亞、南非、莫桑比克"
+        ],
+        [
+          "北美",
+          "加拿大"
+        ],
+        [
+          "中東",
+          "沙特阿拉伯及海灣國家"
+        ],
+        [
+          "南美",
+          "蘇里南等"
+        ]
+      ],
+      "sumLabel": "峰會活動",
+      "sumTitle": "讓買礦方與賣礦方坐到一起",
+      "sumBody": "我們計劃組織礦業高管閉門交流會、項目推介會和行業論壇，促進礦權持有人、產業企業與投資機構之間的直接溝通。",
+      "sumMore": "瞭解峰會"
+    },
+    "en": {
+      "heroEyebrow": "ZS MINING INVESTMENT",
+      "heroTitle": [
+        "Connecting Mineral Resources",
+        "with Investment"
+      ],
+      "heroSub": "ZS Mining Investment focuses on international mining investment and resource integration, giving licence holders, industrial companies and investors one platform for project information, summits and mineral rights transactions.",
+      "cta1": "View projects",
+      "cta2": "Contact us",
+      "aboutTitle": "A mining investment platform linking resources, capital and industry",
+      "aboutBody": "ZS Mining Investment is an investment company focused on international mining investment and resource integration. We identify, evaluate and advance quality mining projects with strong potential. Our core work is investment management, resource integration and project cooperation, with an asset-light approach rather than direct mine operation.",
+      "aboutMore": "About the company",
+      "bizLabel": "Three platform pillars",
+      "biz": [
+        {
+          "t": "Mining project information",
+          "d": "We gather and publish mineral rights and mining projects worldwide, organised by region and commodity, with location, resources, tenure and cooperation terms."
+        },
+        {
+          "t": "Summits and industry matchmaking",
+          "d": "Closed-door executive meetings, project roadshows and industry forums that bring licence holders together with investors and industrial buyers."
+        },
+        {
+          "t": "Joint development and mineral rights",
+          "d": "We present transferable and joint-venture projects and help the parties through evaluation, negotiation and closing."
+        }
+      ],
+      "projLabel": "Projects",
+      "projTitle": "Mining projects",
+      "projIntro": "The projects below are open to transfer, joint venture or investment. Each lists its location, commodity, area, tenure and cooperation terms.",
+      "projAll": "View all projects",
+      "regLabel": "Global reach",
+      "regTitle": "Mining regions we focus on",
+      "regions": [
+        [
+          "Central Asia",
+          "Kazakhstan, Uzbekistan, Kyrgyzstan"
+        ],
+        [
+          "Africa",
+          "Guinea, South Africa, Mozambique"
+        ],
+        [
+          "North America",
+          "Canada"
+        ],
+        [
+          "Middle East",
+          "Saudi Arabia and the Gulf states"
+        ],
+        [
+          "South America",
+          "Suriname and others"
+        ]
+      ],
+      "sumLabel": "Summits",
+      "sumTitle": "Bringing buyers and sellers to the same table",
+      "sumBody": "We plan to host closed-door executive meetings, project roadshows and industry forums to support direct dialogue between licence holders, industrial companies and investors.",
+      "sumMore": "About our summits"
+    },
+    "ja": {
+      "heroEyebrow": "ZS MINING INVESTMENT",
+      "heroTitle": [
+        "世界の鉱物資源と",
+        "投資機会をつなぐ"
+      ],
+      "heroSub": "ZS Mining Investment は国際的な鉱業投資と資源統合に特化し、鉱業権者・事業会社・投資家のために、プロジェクト情報、サミット、鉱業権取引の専門プラットフォームを提供します。",
+      "cta1": "プロジェクトを見る",
+      "cta2": "お問い合わせ",
+      "aboutTitle": "資源・資本・産業をつなぐ鉱業投資プラットフォーム",
+      "aboutBody": "ZS Mining Investment は、国際的な鉱業投資と資源統合に特化した投資会社です。成長性のある優良な鉱業プロジェクトを発掘・評価・推進します。投資管理、資源統合、プロジェクト協業を中核とし、鉱山の直接操業ではなくアセットライトの方針をとっています。",
+      "aboutMore": "会社情報を見る",
+      "bizLabel": "プラットフォームの三本柱",
+      "biz": [
+        {
+          "t": "鉱業プロジェクト情報",
+          "d": "世界の鉱業権・鉱業プロジェクト情報を集約して公開し、地域と鉱種で分類。所在地、資源、権利関係、協業条件を掲載します。"
+        },
+        {
+          "t": "サミットと産業マッチング",
+          "d": "経営層の非公開交流会、プロジェクト説明会、業界フォーラムを開催し、鉱業権者と投資家・事業会社を直接つなぎます。"
+        },
+        {
+          "t": "共同開発と鉱業権取引",
+          "d": "譲渡・共同事業が可能な鉱業権やプロジェクトを紹介し、評価から交渉、成約までを支援します。"
+        }
+      ],
+      "projLabel": "プロジェクト",
+      "projTitle": "鉱業プロジェクト",
+      "projIntro": "以下のプロジェクトは譲渡、共同事業、投資のご相談が可能です。所在地、鉱種、面積、権利関係、協業方式を掲載しています。",
+      "projAll": "すべてのプロジェクト",
+      "regLabel": "グローバル展開",
+      "regTitle": "重点地域",
+      "regions": [
+        [
+          "中央アジア",
+          "カザフスタン、ウズベキスタン、キルギス"
+        ],
+        [
+          "アフリカ",
+          "ギニア、南アフリカ、モザンビーク"
+        ],
+        [
+          "北米",
+          "カナダ"
+        ],
+        [
+          "中東",
+          "サウジアラビアおよび湾岸諸国"
+        ],
+        [
+          "南米",
+          "スリナムほか"
+        ]
+      ],
+      "sumLabel": "サミット",
+      "sumTitle": "買い手と売り手が同じテーブルに",
+      "sumBody": "経営層の非公開交流会、プロジェクト説明会、業界フォーラムの開催を計画しており、鉱業権者・事業会社・投資家の直接対話を促進します。",
+      "sumMore": "サミットについて"
+    },
+    "ko": {
+      "heroEyebrow": "ZS MINING INVESTMENT",
+      "heroTitle": [
+        "글로벌 광물 자원과",
+        "투자 기회를 잇다"
+      ],
+      "heroSub": "ZS Mining Investment는 국제 광업 투자와 자원 통합에 집중하며, 광업권자·산업 기업·투자 기관을 위한 프로젝트 정보, 서밋, 광업권 거래 전문 플랫폼을 제공합니다.",
+      "cta1": "프로젝트 보기",
+      "cta2": "문의하기",
+      "aboutTitle": "자원·자본·산업을 연결하는 광업 투자 플랫폼",
+      "aboutBody": "ZS Mining Investment는 국제 광업 투자와 자원 통합에 집중하는 투자 기업입니다. 성장 잠재력이 있는 우량 광업 프로젝트를 발굴·평가·추진합니다. 투자 관리, 자원 통합, 프로젝트 협력을 핵심으로 하며, 직접 광산 운영이 아닌 경자산 전략을 취합니다.",
+      "aboutMore": "회사 소개 보기",
+      "bizLabel": "플랫폼 3대 부문",
+      "biz": [
+        {
+          "t": "광업 프로젝트 정보",
+          "d": "전 세계 광업권과 광업 프로젝트 정보를 모아 지역·광종별로 공개하고, 위치·자원·권리·협력 조건을 제시합니다."
+        },
+        {
+          "t": "서밋과 산업 매칭",
+          "d": "경영진 비공개 교류회, 프로젝트 설명회, 산업 포럼을 열어 광업권자와 투자자·산업 기업을 직접 연결합니다."
+        },
+        {
+          "t": "공동 개발과 광업권 거래",
+          "d": "양도·합작이 가능한 광업권과 프로젝트를 소개하고, 평가부터 협상, 계약까지 지원합니다."
+        }
+      ],
+      "projLabel": "프로젝트",
+      "projTitle": "광업 프로젝트",
+      "projIntro": "아래 프로젝트는 양도, 합작 또는 투자 협의가 가능합니다. 위치, 광종, 면적, 권리, 협력 방식을 안내합니다.",
+      "projAll": "전체 프로젝트 보기",
+      "regLabel": "글로벌 네트워크",
+      "regTitle": "중점 광업 지역",
+      "regions": [
+        [
+          "중앙아시아",
+          "카자흐스탄, 우즈베키스탄, 키르기스스탄"
+        ],
+        [
+          "아프리카",
+          "기니, 남아프리카공화국, 모잠비크"
+        ],
+        [
+          "북미",
+          "캐나다"
+        ],
+        [
+          "중동",
+          "사우디아라비아 및 걸프 국가"
+        ],
+        [
+          "남미",
+          "수리남 등"
+        ]
+      ],
+      "sumLabel": "서밋",
+      "sumTitle": "매수자와 매도자를 한자리에",
+      "sumBody": "경영진 비공개 교류회, 프로젝트 설명회, 산업 포럼을 계획하고 있으며, 광업권자·산업 기업·투자 기관 간의 직접 소통을 지원합니다.",
+      "sumMore": "서밋 안내"
+    },
+    "fr": {
+      "heroEyebrow": "ZS MINING INVESTMENT",
+      "heroTitle": [
+        "Relier les ressources minérales",
+        "à l’investissement"
+      ],
+      "heroSub": "ZS Mining Investment se consacre à l’investissement minier international et à l’intégration des ressources, et offre aux détenteurs de titres, aux industriels et aux investisseurs une plateforme pour l’information sur les projets, les sommets et les transactions de droits miniers.",
+      "cta1": "Voir les projets",
+      "cta2": "Nous contacter",
+      "aboutTitle": "Une plateforme d’investissement minier reliant ressources, capitaux et industrie",
+      "aboutBody": "ZS Mining Investment est une société d’investissement spécialisée dans l’investissement minier international et l’intégration des ressources. Nous identifions, évaluons et faisons avancer des projets miniers de qualité. Notre cœur de métier est la gestion d’investissements, l’intégration des ressources et la coopération sur projets, selon une approche peu capitalistique plutôt que l’exploitation minière directe.",
+      "aboutMore": "Découvrir la société",
+      "bizLabel": "Trois piliers de la plateforme",
+      "biz": [
+        {
+          "t": "Information sur les projets miniers",
+          "d": "Nous rassemblons et publions des titres et projets miniers du monde entier, classés par région et par substance, avec localisation, ressources, titres et conditions de coopération."
+        },
+        {
+          "t": "Sommets et mise en relation",
+          "d": "Rencontres à huis clos entre dirigeants, présentations de projets et forums sectoriels pour réunir détenteurs de titres, investisseurs et industriels."
+        },
+        {
+          "t": "Développement conjoint et droits miniers",
+          "d": "Nous présentons des projets ouverts à la cession ou au partenariat et accompagnons les parties, de l’évaluation à la conclusion."
+        }
+      ],
+      "projLabel": "Projets",
+      "projTitle": "Projets miniers",
+      "projIntro": "Les projets ci-dessous sont ouverts à la cession, au partenariat ou à l’investissement. Chacun précise sa localisation, sa substance, sa superficie, ses titres et ses conditions de coopération.",
+      "projAll": "Voir tous les projets",
+      "regLabel": "Présence mondiale",
+      "regTitle": "Régions minières prioritaires",
+      "regions": [
+        [
+          "Asie centrale",
+          "Kazakhstan, Ouzbékistan, Kirghizistan"
+        ],
+        [
+          "Afrique",
+          "Guinée, Afrique du Sud, Mozambique"
+        ],
+        [
+          "Amérique du Nord",
+          "Canada"
+        ],
+        [
+          "Moyen-Orient",
+          "Arabie saoudite et pays du Golfe"
+        ],
+        [
+          "Amérique du Sud",
+          "Suriname et autres"
+        ]
+      ],
+      "sumLabel": "Sommets",
+      "sumTitle": "Réunir acheteurs et vendeurs autour de la même table",
+      "sumBody": "Nous prévoyons d’organiser des rencontres à huis clos entre dirigeants, des présentations de projets et des forums sectoriels afin de favoriser le dialogue direct entre détenteurs de titres, industriels et investisseurs.",
+      "sumMore": "En savoir plus"
+    },
+    "es": {
+      "heroEyebrow": "ZS MINING INVESTMENT",
+      "heroTitle": [
+        "Conectamos recursos minerales",
+        "con la inversión"
+      ],
+      "heroSub": "ZS Mining Investment se dedica a la inversión minera internacional y la integración de recursos, y ofrece a titulares de derechos, empresas industriales e inversores una plataforma de información de proyectos, cumbres y transacciones de derechos mineros.",
+      "cta1": "Ver proyectos",
+      "cta2": "Contáctenos",
+      "aboutTitle": "Una plataforma de inversión minera que une recursos, capital e industria",
+      "aboutBody": "ZS Mining Investment es una empresa de inversión centrada en la inversión minera internacional y la integración de recursos. Identificamos, evaluamos e impulsamos proyectos mineros de calidad. Nuestra actividad principal es la gestión de inversiones, la integración de recursos y la cooperación en proyectos, con un enfoque ligero en activos en lugar de la operación minera directa.",
+      "aboutMore": "Conozca la empresa",
+      "bizLabel": "Tres pilares de la plataforma",
+      "biz": [
+        {
+          "t": "Información de proyectos mineros",
+          "d": "Reunimos y publicamos derechos y proyectos mineros de todo el mundo, clasificados por región y mineral, con ubicación, recursos, titularidad y condiciones de cooperación."
+        },
+        {
+          "t": "Cumbres y conexión con la industria",
+          "d": "Encuentros a puerta cerrada entre directivos, presentaciones de proyectos y foros sectoriales que reúnen a titulares, inversores y empresas industriales."
+        },
+        {
+          "t": "Desarrollo conjunto y derechos mineros",
+          "d": "Presentamos proyectos abiertos a cesión o asociación y acompañamos a las partes desde la evaluación hasta el cierre."
+        }
+      ],
+      "projLabel": "Proyectos",
+      "projTitle": "Proyectos mineros",
+      "projIntro": "Los proyectos siguientes están abiertos a cesión, asociación o inversión. Cada uno indica su ubicación, mineral, superficie, titularidad y condiciones de cooperación.",
+      "projAll": "Ver todos los proyectos",
+      "regLabel": "Alcance global",
+      "regTitle": "Regiones mineras prioritarias",
+      "regions": [
+        [
+          "Asia Central",
+          "Kazajistán, Uzbekistán, Kirguistán"
+        ],
+        [
+          "África",
+          "Guinea, Sudáfrica, Mozambique"
+        ],
+        [
+          "Norteamérica",
+          "Canadá"
+        ],
+        [
+          "Oriente Medio",
+          "Arabia Saudita y países del Golfo"
+        ],
+        [
+          "Sudamérica",
+          "Surinam y otros"
+        ]
+      ],
+      "sumLabel": "Cumbres",
+      "sumTitle": "Compradores y vendedores en la misma mesa",
+      "sumBody": "Tenemos previsto organizar encuentros a puerta cerrada entre directivos, presentaciones de proyectos y foros sectoriales para favorecer el diálogo directo entre titulares, empresas industriales e inversores.",
+      "sumMore": "Sobre las cumbres"
+    }
+  },
+  "proj": {
+    "zh-cn": {
+      "title": "项目库",
+      "intro": "按区域分类的矿权与矿业项目。所有项目均可洽谈转让、联营或投资合作。",
+      "all": "全部",
+      "facts": "项目概况",
+      "highlights": "项目优势",
+      "gallery": "现场图片",
+      "list": "矿权清单",
+      "region": "区域",
+      "mineral": "矿种",
+      "area": "面积",
+      "stage": "阶段",
+      "coop": "合作方式",
+      "view": "查看详情",
+      "back": "返回项目库",
+      "inquire": "洽谈此项目",
+      "inquireBody": "如需进一步资料或安排对接，请与我们联系。",
+      "enNotice": ""
+    },
+    "zh-hk": {
+      "title": "項目庫",
+      "intro": "按區域分類的礦權與礦業項目。所有項目均可洽談轉讓、聯營或投資合作。",
+      "all": "全部",
+      "facts": "項目概況",
+      "highlights": "項目優勢",
+      "gallery": "現場圖片",
+      "list": "礦權清單",
+      "region": "區域",
+      "mineral": "礦種",
+      "area": "面積",
+      "stage": "階段",
+      "coop": "合作方式",
+      "view": "查看詳情",
+      "back": "返回項目庫",
+      "inquire": "洽談此項目",
+      "inquireBody": "如需進一步資料或安排對接，請與我們聯絡。",
+      "enNotice": ""
+    },
+    "en": {
+      "title": "Projects",
+      "intro": "Mineral rights and mining projects, organised by region. All are open to transfer, joint venture or investment.",
+      "all": "All",
+      "facts": "Project overview",
+      "highlights": "Key strengths",
+      "gallery": "Site photos",
+      "list": "Licence list",
+      "region": "Region",
+      "mineral": "Commodity",
+      "area": "Area",
+      "stage": "Stage",
+      "coop": "Cooperation",
+      "view": "View details",
+      "back": "Back to projects",
+      "inquire": "Enquire about this project",
+      "inquireBody": "Contact us for further information or to arrange an introduction.",
+      "enNotice": ""
+    },
+    "ja": {
+      "title": "プロジェクト",
+      "intro": "鉱業権・鉱業プロジェクトを地域別に掲載しています。いずれも譲渡、共同事業、投資のご相談が可能です。",
+      "all": "すべて",
+      "facts": "プロジェクト概要",
+      "highlights": "主な強み",
+      "gallery": "現地写真",
+      "list": "鉱業権一覧",
+      "region": "地域",
+      "mineral": "鉱種",
+      "area": "面積",
+      "stage": "段階",
+      "coop": "協業方式",
+      "view": "詳細を見る",
+      "back": "プロジェクト一覧へ",
+      "inquire": "このプロジェクトについて問い合わせる",
+      "inquireBody": "詳しい資料やご紹介をご希望の場合は、お問い合わせください。",
+      "enNotice": "プロジェクトの詳細は現在、英語でのみ提供しています。"
+    },
+    "ko": {
+      "title": "프로젝트",
+      "intro": "광업권과 광업 프로젝트를 지역별로 안내합니다. 모두 양도, 합작 또는 투자 협의가 가능합니다.",
+      "all": "전체",
+      "facts": "프로젝트 개요",
+      "highlights": "주요 강점",
+      "gallery": "현장 사진",
+      "list": "광업권 목록",
+      "region": "지역",
+      "mineral": "광종",
+      "area": "면적",
+      "stage": "단계",
+      "coop": "협력 방식",
+      "view": "자세히 보기",
+      "back": "프로젝트 목록으로",
+      "inquire": "이 프로젝트 문의하기",
+      "inquireBody": "추가 자료나 소개가 필요하시면 문의해 주십시오.",
+      "enNotice": "프로젝트 상세 내용은 현재 영어로만 제공됩니다."
+    },
+    "fr": {
+      "title": "Projets",
+      "intro": "Titres et projets miniers classés par région. Tous sont ouverts à la cession, au partenariat ou à l’investissement.",
+      "all": "Tous",
+      "facts": "Présentation du projet",
+      "highlights": "Atouts",
+      "gallery": "Photos du site",
+      "list": "Liste des titres",
+      "region": "Région",
+      "mineral": "Substance",
+      "area": "Superficie",
+      "stage": "Stade",
+      "coop": "Coopération",
+      "view": "Voir le détail",
+      "back": "Retour aux projets",
+      "inquire": "Se renseigner sur ce projet",
+      "inquireBody": "Contactez-nous pour obtenir davantage d’informations ou organiser une mise en relation.",
+      "enNotice": "Le détail des projets est actuellement disponible en anglais uniquement."
+    },
+    "es": {
+      "title": "Proyectos",
+      "intro": "Derechos y proyectos mineros clasificados por región. Todos están abiertos a cesión, asociación o inversión.",
+      "all": "Todos",
+      "facts": "Resumen del proyecto",
+      "highlights": "Fortalezas",
+      "gallery": "Fotos del sitio",
+      "list": "Lista de derechos",
+      "region": "Región",
+      "mineral": "Mineral",
+      "area": "Superficie",
+      "stage": "Etapa",
+      "coop": "Cooperación",
+      "view": "Ver detalle",
+      "back": "Volver a proyectos",
+      "inquire": "Consultar sobre este proyecto",
+      "inquireBody": "Contáctenos para obtener más información o concertar una presentación.",
+      "enNotice": "El detalle de los proyectos está disponible por ahora solo en inglés."
+    }
+  },
+  "summit": {
+    "zh-cn": {
+      "title": "峰会活动",
+      "lead": "连接行业领袖、投资资本与全球矿业机遇。我们计划通过一系列专业活动，让矿权持有人、产业企业与投资机构直接沟通。",
+      "status": "活动筹备中，日程确定后将在本页发布。欢迎提前登记参会或推介意向。",
+      "formatsLabel": "活动形式",
+      "formats": [
+        [
+          "矿业高管闭门交流会",
+          "小规模、定向邀请，围绕矿业投资机会、行业趋势和潜在合作项目展开深入讨论。"
+        ],
+        [
+          "矿业项目推介会",
+          "由矿权持有人和项目方现场展示项目，与潜在投资者和产业合作伙伴面对面对接。"
+        ],
+        [
+          "行业论坛与矿业投资会议",
+          "围绕矿产资源市场、各国矿业政策、新兴投资机会和全球矿业趋势开展专题交流。"
+        ]
+      ],
+      "whoLabel": "适合参加的机构",
+      "who": [
+        "矿权持有人与矿业项目开发企业",
+        "寻求稳定原料供应的产业企业",
+        "投资机构与金融机构",
+        "地质、工程、法律、环境等专业服务机构"
+      ],
+      "cta": "登记参会意向",
+      "goalsLabel": "平台目标",
+      "goalsTitle": "我们希望这个平台做到什么",
+      "goals": [
+        "发掘具有发展潜力的国际矿业投资机会",
+        "促进矿产资源持有人与潜在投资者、产业合作伙伴之间的有效对接",
+        "推动矿业企业与下游产业之间的合作",
+        "促进专业交流、项目评估及战略合作"
+      ],
+      "fieldsLabel": "机构合作",
+      "fieldsTitle": "与高校、科研和金融机构的合作方向",
+      "fields": [
+        "矿业投资研究与市场分析",
+        "地质技术评估与矿业项目专业审查",
+        "投资论坛及专业交流活动",
+        "矿业项目推介与资本对接",
+        "国际矿业合作与产业发展研究"
+      ]
+    },
+    "zh-hk": {
+      "title": "峰會活動",
+      "lead": "連接行業領袖、投資資本與全球礦業機遇。我們計劃通過一系列專業活動，讓礦權持有人、產業企業與投資機構直接溝通。",
+      "status": "活動籌備中，日程確定後將在本頁發佈。歡迎提前登記參會或推介意向。",
+      "formatsLabel": "活動形式",
+      "formats": [
+        [
+          "礦業高管閉門交流會",
+          "小規模、定向邀請，圍繞礦業投資機會、行業趨勢和潛在合作項目展開深入討論。"
+        ],
+        [
+          "礦業項目推介會",
+          "由礦權持有人和項目方現場展示項目，與潛在投資者和產業合作夥伴面對面對接。"
+        ],
+        [
+          "行業論壇與礦業投資會議",
+          "圍繞礦產資源市場、各國礦業政策、新興投資機會和全球礦業趨勢開展專題交流。"
+        ]
+      ],
+      "whoLabel": "適合參加的機構",
+      "who": [
+        "礦權持有人與礦業項目開發企業",
+        "尋求穩定原料供應的產業企業",
+        "投資機構與金融機構",
+        "地質、工程、法律、環境等專業服務機構"
+      ],
+      "cta": "登記參會意向",
+      "goalsLabel": "平台目標",
+      "goalsTitle": "我們希望這個平台做到什麼",
+      "goals": [
+        "發掘具有發展潛力的國際礦業投資機會",
+        "促進礦產資源持有人與潛在投資者、產業合作夥伴之間的有效對接",
+        "推動礦業企業與下游產業之間的合作",
+        "促進專業交流、項目評估及戰略合作"
+      ],
+      "fieldsLabel": "機構合作",
+      "fieldsTitle": "與高校、科研和金融機構的合作方向",
+      "fields": [
+        "礦業投資研究與市場分析",
+        "地質技術評估與礦業項目專業審查",
+        "投資論壇及專業交流活動",
+        "礦業項目推介與資本對接",
+        "國際礦業合作與產業發展研究"
+      ]
+    },
+    "en": {
+      "title": "Summits",
+      "lead": "Connecting industry leaders, capital and global mining opportunities. Through a series of professional events we plan to bring licence holders, industrial companies and investors into direct dialogue.",
+      "status": "Events are in preparation and dates will be posted here once confirmed. You are welcome to register your interest in attending or presenting a project.",
+      "formatsLabel": "Event formats",
+      "formats": [
+        [
+          "Closed-door executive meetings",
+          "Small, invitation-only sessions for in-depth discussion of mining investment opportunities, industry trends and potential projects."
+        ],
+        [
+          "Mining project roadshows",
+          "Licence holders and project owners present their projects in person to prospective investors and industrial partners."
+        ],
+        [
+          "Industry forums and mining investment conferences",
+          "Themed sessions on mineral markets, national mining policy, emerging opportunities and global mining trends."
+        ]
+      ],
+      "whoLabel": "Who should attend",
+      "who": [
+        "Licence holders and mining project developers",
+        "Industrial companies seeking secure raw material supply",
+        "Investment and financial institutions",
+        "Geological, engineering, legal and environmental service providers"
+      ],
+      "cta": "Register your interest",
+      "goalsLabel": "Platform goals",
+      "goalsTitle": "What we want this platform to achieve",
+      "goals": [
+        "Identify international mining investment opportunities with real potential",
+        "Connect resource holders with prospective investors and industrial partners",
+        "Foster cooperation between mining companies and downstream industry",
+        "Support professional exchange, project evaluation and strategic cooperation"
+      ],
+      "fieldsLabel": "Institutional cooperation",
+      "fieldsTitle": "Working with universities, research and financial institutions",
+      "fields": [
+        "Mining investment research and market analysis",
+        "Geological assessment and professional review of mining projects",
+        "Investment forums and professional exchange",
+        "Project promotion and access to capital",
+        "Research on international mining cooperation and industry development"
+      ]
+    },
+    "ja": {
+      "title": "サミット",
+      "lead": "業界リーダー、投資資本、世界の鉱業機会をつなぎます。専門的なイベントを通じて、鉱業権者・事業会社・投資家の直接対話の場を設ける計画です。",
+      "status": "イベントは準備中です。日程が決まり次第、本ページでお知らせします。参加やプロジェクト紹介のご希望は事前にお知らせください。",
+      "formatsLabel": "イベント形式",
+      "formats": [
+        [
+          "経営層の非公開交流会",
+          "少人数・招待制で、鉱業投資の機会、業界動向、協業候補について踏み込んだ議論を行います。"
+        ],
+        [
+          "鉱業プロジェクト説明会",
+          "鉱業権者やプロジェクト所有者が直接プロジェクトを紹介し、投資家や事業パートナーと対面で交流します。"
+        ],
+        [
+          "業界フォーラム・鉱業投資会議",
+          "鉱物資源市場、各国の鉱業政策、新たな投資機会、世界の鉱業動向をテーマに意見交換を行います。"
+        ]
+      ],
+      "whoLabel": "ご参加いただきたい方",
+      "who": [
+        "鉱業権者・鉱業プロジェクト開発企業",
+        "原料の安定調達を目指す事業会社",
+        "投資機関・金融機関",
+        "地質・エンジニアリング・法務・環境などの専門サービス機関"
+      ],
+      "cta": "参加希望を登録する",
+      "goalsLabel": "プラットフォームの目標",
+      "goalsTitle": "このプラットフォームで実現したいこと",
+      "goals": [
+        "成長性のある国際的な鉱業投資機会の発掘",
+        "資源保有者と投資家・事業パートナーとの効果的なマッチング",
+        "鉱業企業と下流産業との協業の促進",
+        "専門的な交流、プロジェクト評価、戦略的協業の促進"
+      ],
+      "fieldsLabel": "機関との連携",
+      "fieldsTitle": "大学・研究機関・金融機関との連携分野",
+      "fields": [
+        "鉱業投資の調査と市場分析",
+        "地質技術評価と鉱業プロジェクトの専門審査",
+        "投資フォーラムと専門交流イベント",
+        "鉱業プロジェクトの紹介と資本マッチング",
+        "国際的な鉱業協力と産業発展の研究"
+      ]
+    },
+    "ko": {
+      "title": "서밋",
+      "lead": "업계 리더, 투자 자본, 글로벌 광업 기회를 연결합니다. 전문 행사를 통해 광업권자·산업 기업·투자 기관이 직접 소통하는 자리를 마련할 계획입니다.",
+      "status": "행사를 준비 중이며, 일정이 확정되면 이 페이지에 안내하겠습니다. 참가 또는 프로젝트 소개 의향을 미리 알려 주십시오.",
+      "formatsLabel": "행사 형식",
+      "formats": [
+        [
+          "광업 경영진 비공개 교류회",
+          "소규모 초청 방식으로 광업 투자 기회, 산업 동향, 협력 후보 프로젝트를 깊이 있게 논의합니다."
+        ],
+        [
+          "광업 프로젝트 설명회",
+          "광업권자와 프로젝트 소유자가 직접 프로젝트를 소개하고 잠재 투자자·산업 파트너와 대면으로 만납니다."
+        ],
+        [
+          "산업 포럼 및 광업 투자 회의",
+          "광물 자원 시장, 각국 광업 정책, 새로운 투자 기회, 글로벌 광업 동향을 주제로 교류합니다."
+        ]
+      ],
+      "whoLabel": "참가 대상",
+      "who": [
+        "광업권자 및 광업 프로젝트 개발 기업",
+        "안정적인 원료 공급을 원하는 산업 기업",
+        "투자 기관 및 금융 기관",
+        "지질·엔지니어링·법률·환경 등 전문 서비스 기관"
+      ],
+      "cta": "참가 의향 등록",
+      "goalsLabel": "플랫폼 목표",
+      "goalsTitle": "이 플랫폼이 이루고자 하는 것",
+      "goals": [
+        "성장 잠재력이 있는 국제 광업 투자 기회 발굴",
+        "자원 보유자와 잠재 투자자·산업 파트너 간의 효과적인 연결",
+        "광업 기업과 하류 산업 간의 협력 추진",
+        "전문 교류, 프로젝트 평가, 전략적 협력 촉진"
+      ],
+      "fieldsLabel": "기관 협력",
+      "fieldsTitle": "대학·연구 기관·금융 기관과의 협력 분야",
+      "fields": [
+        "광업 투자 연구와 시장 분석",
+        "지질 기술 평가와 광업 프로젝트 전문 심사",
+        "투자 포럼과 전문 교류 행사",
+        "광업 프로젝트 소개와 자본 연결",
+        "국제 광업 협력과 산업 발전 연구"
+      ]
+    },
+    "fr": {
+      "title": "Sommets",
+      "lead": "Relier les dirigeants du secteur, les capitaux et les opportunités minières mondiales. À travers une série d’événements professionnels, nous prévoyons de mettre en dialogue direct détenteurs de titres, industriels et investisseurs.",
+      "status": "Les événements sont en préparation ; les dates seront publiées ici dès leur confirmation. Vous pouvez dès maintenant nous faire part de votre intérêt pour participer ou présenter un projet.",
+      "formatsLabel": "Formats",
+      "formats": [
+        [
+          "Rencontres à huis clos entre dirigeants",
+          "Sessions restreintes, sur invitation, pour un échange approfondi sur les opportunités d’investissement minier, les tendances et les projets potentiels."
+        ],
+        [
+          "Présentations de projets miniers",
+          "Les détenteurs de titres et porteurs de projets présentent leurs projets en personne à des investisseurs et partenaires industriels."
+        ],
+        [
+          "Forums et conférences sur l’investissement minier",
+          "Sessions thématiques sur les marchés des minéraux, les politiques minières, les nouvelles opportunités et les tendances mondiales."
+        ]
+      ],
+      "whoLabel": "À qui s’adressent-ils",
+      "who": [
+        "Détenteurs de titres et développeurs de projets miniers",
+        "Industriels recherchant un approvisionnement stable",
+        "Institutions d’investissement et financières",
+        "Prestataires en géologie, ingénierie, droit et environnement"
+      ],
+      "cta": "Manifester votre intérêt",
+      "goalsLabel": "Objectifs de la plateforme",
+      "goalsTitle": "Ce que nous voulons accomplir avec cette plateforme",
+      "goals": [
+        "Identifier des opportunités d’investissement minier international à fort potentiel",
+        "Mettre en relation les détenteurs de ressources avec investisseurs et partenaires industriels",
+        "Favoriser la coopération entre sociétés minières et industries en aval",
+        "Encourager les échanges professionnels, l’évaluation de projets et la coopération stratégique"
+      ],
+      "fieldsLabel": "Coopération institutionnelle",
+      "fieldsTitle": "Avec les universités, la recherche et les institutions financières",
+      "fields": [
+        "Recherche en investissement minier et analyse de marché",
+        "Évaluation géologique et examen professionnel des projets miniers",
+        "Forums d’investissement et échanges professionnels",
+        "Promotion de projets et accès aux capitaux",
+        "Recherche sur la coopération minière internationale et le développement du secteur"
+      ]
+    },
+    "es": {
+      "title": "Cumbres",
+      "lead": "Conectamos a líderes del sector, capital y oportunidades mineras globales. Mediante una serie de eventos profesionales, tenemos previsto poner en diálogo directo a titulares de derechos, empresas industriales e inversores.",
+      "status": "Los eventos están en preparación; las fechas se publicarán aquí una vez confirmadas. Puede indicarnos desde ahora su interés en asistir o presentar un proyecto.",
+      "formatsLabel": "Formatos",
+      "formats": [
+        [
+          "Encuentros a puerta cerrada entre directivos",
+          "Sesiones reducidas, por invitación, para tratar a fondo oportunidades de inversión minera, tendencias del sector y posibles proyectos."
+        ],
+        [
+          "Presentaciones de proyectos mineros",
+          "Titulares y promotores presentan sus proyectos en persona ante posibles inversores y socios industriales."
+        ],
+        [
+          "Foros y conferencias de inversión minera",
+          "Sesiones temáticas sobre mercados de minerales, políticas mineras, nuevas oportunidades y tendencias globales."
+        ]
+      ],
+      "whoLabel": "A quién va dirigido",
+      "who": [
+        "Titulares de derechos y promotores de proyectos mineros",
+        "Empresas industriales que buscan un suministro estable",
+        "Instituciones de inversión y financieras",
+        "Proveedores de servicios de geología, ingeniería, derecho y medio ambiente"
+      ],
+      "cta": "Registre su interés",
+      "goalsLabel": "Objetivos de la plataforma",
+      "goalsTitle": "Lo que queremos lograr con esta plataforma",
+      "goals": [
+        "Identificar oportunidades de inversión minera internacional con potencial",
+        "Conectar a los titulares de recursos con inversores y socios industriales",
+        "Impulsar la cooperación entre empresas mineras e industria",
+        "Favorecer el intercambio profesional, la evaluación de proyectos y la cooperación estratégica"
+      ],
+      "fieldsLabel": "Cooperación institucional",
+      "fieldsTitle": "Con universidades, centros de investigación e instituciones financieras",
+      "fields": [
+        "Investigación en inversión minera y análisis de mercado",
+        "Evaluación geológica y revisión profesional de proyectos mineros",
+        "Foros de inversión e intercambio profesional",
+        "Promoción de proyectos y acceso a capital",
+        "Investigación sobre cooperación minera internacional y desarrollo del sector"
+      ]
+    }
+  },
+  "about": {
+    "zh-cn": {
+      "title": "关于我们",
+      "lead": "浙商矿投是一家专注于国际矿业投资与资源整合的投资企业，致力于成为连接全球优质矿产资源与中国投资资本、产业技术及战略合作伙伴的可信赖桥梁。",
+      "sections": [
+        {
+          "h": "我们是谁",
+          "p": [
+            "浙商矿投致力于发掘、评估和推进具有较高发展潜力的优质矿业项目。公司通过整合矿权资源、投资资本、产业合作伙伴及专业技术力量，推动战略投资、联合开发与长期价值创造。",
+            "公司以投资管理、资源整合及项目合作为核心业务定位，采取轻资产优先的发展策略，而非以直接矿山开采运营为主营业务。"
+          ]
+        },
+        {
+          "h": "三大核心业务",
+          "p": [
+            "矿业联合开发：促进矿权持有人、下游产业企业、投资合作伙伴及专业矿业团队之间的合作，帮助矿权持有人获得开发所需的资源支持，协助下游企业建立稳定的矿产品供应渠道。",
+            "矿产资源交易经纪：依托国际商务网络，连接矿产资源持有人、潜在买家、投资机构及战略合作伙伴，识别合适的交易对象，支持商务谈判并促进合作协议达成。",
+            "优质矿业项目战略投资：根据项目的资源条件、开发阶段及合作需求，探索战略股权投资、合资合作、联合投资等方式，逐步构建多元化的矿业资产权益组合。"
+          ]
+        },
+        {
+          "h": "投资理念与项目评估",
+          "p": [
+            "公司的投资理念建立在五项基本原则之上：合法合规、资源可靠、技术可行、商业可行、风险可控。矿产资源潜力并不必然意味着投资成功，每一个项目都需要结合地质条件、技术可行性、经济价值、法律政策及市场环境进行综合评估。",
+            "项目评估涵盖四个领域：地质与技术评估、法律与合规审查、财务与商业评估、运营与环境评估。公司依托内部专业团队，并根据项目需要引入独立第三方专业机构。"
+          ]
+        },
+        {
+          "h": "全球布局与矿种",
+          "p": [
+            "公司重点关注中亚、非洲、北美和中东等矿产资源丰富的区域，同时保持开放的全球视野，根据项目质量、法律政策环境及商业可行性拓展其他市场。",
+            "公司坚持多矿种的投资策略，关注领域包括贵金属（金、银、铂族金属）、有色金属（铜、铝土矿、锌、铅）、能源转型与战略性矿产（锂、镍、钴、稀土、石墨），以及黑色金属与工业矿产（铁、铬、锰、磷）。"
+          ]
+        },
+        {
+          "h": "行业平台与合作网络",
+          "p": [
+            "浙商矿投计划建立集矿业投资交流、项目推介及战略合作于一体的专业化平台，汇聚矿业企业、矿权持有人、产业投资者、金融机构及专业服务机构。",
+            "公司积极探索与高等院校、科研机构、金融机构、行业协会及专业服务机构的合作，相关合作关系将在双方达成共识并完成正式安排后逐步建立。"
+          ]
+        },
+        {
+          "h": "未来展望",
+          "p": [
+            "在发展初期，公司优先采取轻资产运营模式，重点开展项目发掘、专业评估、资源整合及联合开发。随着业务发展，将通过战略股权投资、合资合作等方式逐步扩大对优质矿业资产的参与，长期目标是发展成为具有国际竞争力的矿业投资集团。"
+          ]
+        }
+      ],
+      "deptLabel": "组织架构",
+      "depts": [
+        [
+          "业务拓展与传播部",
+          "发掘国内外商业机会，开发客户及战略合作伙伴关系，支持品牌建设与对外传播。"
+        ],
+        [
+          "项目评估部",
+          "负责矿业项目的地质与技术评估、资源分析和开发可行性研究，为投资决策提供专业支持。"
+        ],
+        [
+          "项目协调与研究部",
+          "负责项目初步筛选、协调推进、行业与市场研究及项目信息管理。"
+        ],
+        [
+          "行政与运营部",
+          "负责人力资源、行政事务与运营协调，为各业务部门提供保障。"
+        ]
+      ],
+      "ceoLabel": "管理团队",
+      "ceoName": "周蘭 Michelle Zhou",
+      "ceoTitle": "浙商矿业集团有限公司 CEO ｜ 信寰资本合伙人 ｜ 浙江财经大学浙商资本市场研究院副研究员",
+      "ceoBio": [
+        "长期深耕全球矿业投资与跨境资源整合领域，具备产业资本、学术研究、跨境商务复合背景，专注搭建全球矿产资源与中国产业资本、技术方之间的价值桥梁。",
+        "她以穿越矿业周期的长期主义视角，主导面向中亚、非洲、北美、中东、南美等全球重点矿业区域的项目布局，重点覆盖铝土矿、锂、铜、黄金、稀土、黑色金属等战略矿产资源，聚焦矿业联合开发、矿权交易经纪、优质矿业项目战略股权投资三大业务方向。",
+        "在项目实操中，她坚持合规优先、价值导向的投资准则，统筹地质技术尽调、法律合规审查、商业模型测算、跨境多方协调全链条工作，推动矿权方、产业端、资本方、技术团队多方共赢落地。",
+        "依托浙商资本市场研究院的学术研究平台，她持续跟踪全球大宗商品周期、各国矿业政策与产业变革趋势，搭建矿业高管闭门交流、项目路演、产业资源对接的专业平台。"
+      ]
+    },
+    "zh-hk": {
+      "title": "關於我們",
+      "lead": "浙商礦投是一家專注於國際礦業投資與資源整合的投資企業，致力於成為連接全球優質礦產資源與中國投資資本、產業技術及戰略合作夥伴的可信賴橋梁。",
+      "sections": [
+        {
+          "h": "我們是誰",
+          "p": [
+            "浙商礦投致力於發掘、評估和推進具有較高發展潛力的優質礦業項目。公司通過整合礦權資源、投資資本、產業合作夥伴及專業技術力量，推動戰略投資、聯合開發與長期價值創造。",
+            "公司以投資管理、資源整合及項目合作為核心業務定位，採取輕資產優先的發展策略，而非以直接礦山開採運營為主營業務。"
+          ]
+        },
+        {
+          "h": "三大核心業務",
+          "p": [
+            "礦業聯合開發：促進礦權持有人、下游產業企業、投資合作夥伴及專業礦業團隊之間的合作，幫助礦權持有人獲得開發所需的資源支持，協助下游企業建立穩定的礦產品供應渠道。",
+            "礦產資源交易經紀：依託國際商務網絡，連接礦產資源持有人、潛在買家、投資機構及戰略合作夥伴，識別合適的交易對象，支持商務談判並促進合作協議達成。",
+            "優質礦業項目戰略投資：根據項目的資源條件、開發階段及合作需求，探索戰略股權投資、合資合作、聯合投資等方式，逐步構建多元化的礦業資產權益組合。"
+          ]
+        },
+        {
+          "h": "投資理念與項目評估",
+          "p": [
+            "公司的投資理念建立在五項基本原則之上：合法合規、資源可靠、技術可行、商業可行、風險可控。礦產資源潛力並不必然意味著投資成功，每一個項目都需要結合地質條件、技術可行性、經濟價值、法律政策及市場環境進行綜合評估。",
+            "項目評估涵蓋四個領域：地質與技術評估、法律與合規審查、財務與商業評估、運營與環境評估。公司依託內部專業團隊，並根據項目需要引入獨立第三方專業機構。"
+          ]
+        },
+        {
+          "h": "全球佈局與礦種",
+          "p": [
+            "公司重點關注中亞、非洲、北美和中東等礦產資源豐富的區域，同時保持開放的全球視野，根據項目質素、法律政策環境及商業可行性拓展其他市場。",
+            "公司堅持多礦種的投資策略，關注領域包括貴金屬（金、銀、鉑族金屬）、有色金屬（銅、鋁土礦、鋅、鉛）、能源轉型與戰略性礦產（鋰、鎳、鈷、稀土、石墨），以及黑色金屬與工業礦產（鐵、鉻、錳、磷）。"
+          ]
+        },
+        {
+          "h": "行業平台與合作網絡",
+          "p": [
+            "浙商礦投計劃建立集礦業投資交流、項目推介及戰略合作於一體的專業化平台，匯聚礦業企業、礦權持有人、產業投資者、金融機構及專業服務機構。",
+            "公司積極探索與高等院校、科研機構、金融機構、行業協會及專業服務機構的合作，相關合作關係將在雙方達成共識並完成正式安排後逐步建立。"
+          ]
+        },
+        {
+          "h": "未來展望",
+          "p": [
+            "在發展初期，公司優先採取輕資產運營模式，重點開展項目發掘、專業評估、資源整合及聯合開發。隨著業務發展，將通過戰略股權投資、合資合作等方式逐步擴大對優質礦業資產的參與，長期目標是發展成為具有國際競爭力的礦業投資集團。"
+          ]
+        }
+      ],
+      "deptLabel": "組織架構",
+      "depts": [
+        [
+          "業務拓展與傳播部",
+          "發掘國內外商業機會，開發客戶及戰略合作夥伴關係，支持品牌建設與對外傳播。"
+        ],
+        [
+          "項目評估部",
+          "負責礦業項目的地質與技術評估、資源分析和開發可行性研究，為投資決策提供專業支持。"
+        ],
+        [
+          "項目協調與研究部",
+          "負責項目初步篩選、協調推進、行業與市場研究及項目資訊管理。"
+        ],
+        [
+          "行政與運營部",
+          "負責人力資源、行政事務與運營協調，為各業務部門提供保障。"
+        ]
+      ],
+      "ceoLabel": "管理團隊",
+      "ceoName": "周蘭 Michelle Zhou",
+      "ceoTitle": "浙商礦業集團有限公司 CEO ｜ 信寰資本合伙人 ｜ 浙江財經大學浙商資本市場研究院副研究員",
+      "ceoBio": [
+        "長期深耕全球礦業投資與跨境資源整合領域，具備產業資本、學術研究、跨境商務復合背景，專注搭建全球礦產資源與中國產業資本、技術方之間的價值橋梁。",
+        "她以穿越礦業週期的長期主義視角，主導面向中亞、非洲、北美、中東、南美等全球重點礦業區域的項目佈局，重點覆蓋鋁土礦、鋰、銅、黃金、稀土、黑色金屬等戰略礦產資源，聚焦礦業聯合開發、礦權交易經紀、優質礦業項目戰略股權投資三大業務方向。",
+        "在項目實操中，她堅持合規優先、價值導向的投資准則，統籌地質技術盡調、法律合規審查、商業模型測算、跨境多方協調全鏈條工作，推動礦權方、產業端、資本方、技術團隊多方共贏落地。",
+        "依託浙商資本市場研究院的學術研究平台，她持續跟蹤全球大宗商品週期、各國礦業政策與產業變革趨勢，搭建礦業高管閉門交流、項目路演、產業資源對接的專業平台。"
+      ]
+    },
+    "en": {
+      "title": "About us",
+      "lead": "ZS Mining Investment is an investment company focused on international mining investment and resource integration. We aim to be a trusted bridge between quality mineral resources worldwide and Chinese capital, industrial technology and strategic partners.",
+      "sections": [
+        {
+          "h": "Who we are",
+          "p": [
+            "We identify, evaluate and advance quality mining projects with strong development potential. By bringing together mineral rights, investment capital, industrial partners and technical expertise, we support strategic investment, joint development and long-term value creation.",
+            "Our core business is investment management, resource integration and project cooperation. We follow an asset-light strategy and do not operate mines directly as our main business."
+          ]
+        },
+        {
+          "h": "Three core businesses",
+          "p": [
+            "Joint mine development: we bring together licence holders, downstream industrial companies, investors and professional mining teams, helping licence holders secure the resources needed for development and helping downstream companies build reliable supply channels.",
+            "Mineral resource brokerage: through our international business network we connect resource holders, prospective buyers, investors and strategic partners, identify suitable counterparties, support negotiations and help agreements come together.",
+            "Strategic investment in quality mining projects: depending on a project's resource, stage and needs, we explore strategic equity investment, joint ventures and co-investment, building a diversified portfolio of mining interests over time."
+          ]
+        },
+        {
+          "h": "Investment approach and evaluation",
+          "p": [
+            "Our approach rests on five principles: legal compliance, reliable resources, technical feasibility, commercial viability and controllable risk. Resource potential does not guarantee a successful investment. Every project must be assessed on its geology, technical feasibility, economics, legal and policy setting and market conditions.",
+            "Evaluation covers four areas: geology and technical assessment, legal and compliance review, financial and commercial assessment, and operational and environmental assessment. We rely on our in-house team and bring in independent specialists as each project requires."
+          ]
+        },
+        {
+          "h": "Regions and commodities",
+          "p": [
+            "We focus on resource-rich regions including Central Asia, Africa, North America and the Middle East, while staying open to other markets depending on project quality, legal and policy environment and commercial viability.",
+            "We invest across commodities: precious metals (gold, silver, platinum group metals), base metals (copper, bauxite, zinc, lead), energy-transition and strategic minerals (lithium, nickel, cobalt, rare earths, graphite), and ferrous and industrial minerals (iron, chrome, manganese, phosphate)."
+          ]
+        },
+        {
+          "h": "Industry platform and partnerships",
+          "p": [
+            "We plan to build a professional platform for mining investment exchange, project promotion and strategic cooperation, bringing together mining companies, licence holders, industrial investors, financial institutions and professional service providers.",
+            "We are exploring cooperation with universities, research institutes, financial institutions, industry associations and professional firms. These relationships will be established step by step once both sides reach agreement and formal arrangements are in place."
+          ]
+        },
+        {
+          "h": "Outlook",
+          "p": [
+            "In our early stage we give priority to an asset-light model centred on project sourcing, professional evaluation, resource integration and joint development. As the business grows we will take larger positions in quality mining assets through strategic equity investment and joint ventures, with the long-term goal of becoming an internationally competitive mining investment group."
+          ]
+        }
+      ],
+      "deptLabel": "Organisation",
+      "depts": [
+        [
+          "Business Development & Communications",
+          "Sources opportunities at home and abroad, develops client and partner relationships, and supports branding and external communications."
+        ],
+        [
+          "Project Evaluation",
+          "Carries out geological and technical evaluation, resource analysis and feasibility studies to support investment decisions."
+        ],
+        [
+          "Project Coordination & Research",
+          "Handles initial screening, project coordination, industry and market research, and project information management."
+        ],
+        [
+          "Administration & Operations",
+          "Covers human resources, administration and operational coordination in support of all business units."
+        ]
+      ],
+      "ceoLabel": "Leadership",
+      "ceoName": "Michelle Zhou",
+      "ceoTitle": "CEO, Zheshang Mining Investment Group Co., Ltd. | Partner, Xinhuan Capital | Associate Researcher, Zheshang Capital Market Research Institute, Zhejiang University of Finance and Economics",
+      "ceoBio": [
+        "Michelle Zhou has long worked in global mining investment and cross-border resource integration. With a background spanning industrial capital, academic research and cross-border business, she focuses on building a bridge between mineral resources worldwide and Chinese industrial capital and technology.",
+        "Taking a long-term view across mining cycles, she leads project development in Central Asia, Africa, North America, the Middle East and South America, covering strategic minerals such as bauxite, lithium, copper, gold, rare earths and ferrous metals. Her work centres on joint mine development, mineral rights brokerage and strategic equity investment in quality mining projects.",
+        "In practice she puts compliance first and invests for value, coordinating geological and technical due diligence, legal and compliance review, commercial modelling and cross-border coordination so that licence holders, industry, capital and technical teams can reach outcomes that work for all sides.",
+        "Through the research platform of the Zheshang Capital Market Research Institute, she tracks global commodity cycles, national mining policy and industry change, and is building a professional platform for closed-door executive meetings, project roadshows and industry matchmaking."
+      ]
+    },
+    "ja": {
+      "title": "会社情報",
+      "lead": "ZS Mining Investment は、国際的な鉱業投資と資源統合に特化した投資会社です。世界の優良な鉱物資源と、中国の投資資本・産業技術・戦略パートナーをつなぐ信頼される架け橋となることを目指しています。",
+      "sections": [
+        {
+          "h": "私たちについて",
+          "p": [
+            "成長性の高い優良な鉱業プロジェクトを発掘・評価・推進します。投資管理、資源統合、プロジェクト協業を中核事業とし、鉱山の直接操業ではなくアセットライトの戦略をとっています。"
+          ]
+        },
+        {
+          "h": "三つの中核事業",
+          "p": [
+            "鉱山の共同開発、鉱物資源取引の仲介、優良鉱業プロジェクトへの戦略投資の三つを柱としています。鉱業権者、事業会社、投資家、専門技術チームを結びつけ、案件ごとに適した協業の形を検討します。"
+          ]
+        },
+        {
+          "h": "投資方針と評価",
+          "p": [
+            "法令遵守、資源の信頼性、技術的実現性、事業性、リスク管理の五原則に基づいて投資を行います。評価は、地質・技術、法務・コンプライアンス、財務・事業性、操業・環境の四分野にわたり、必要に応じて独立した専門機関を起用します。"
+          ]
+        },
+        {
+          "h": "地域と鉱種",
+          "p": [
+            "中央アジア、アフリカ、北米、中東を重点地域とし、貴金属、非鉄金属、エネルギー転換・戦略鉱物、鉄鋼・工業用鉱物など、複数の鉱種を対象としています。"
+          ]
+        }
+      ],
+      "deptLabel": "組織",
+      "depts": [
+        [
+          "事業開発・広報部",
+          "国内外の事業機会の発掘、顧客・パートナーとの関係構築、ブランドと対外発信を担当します。"
+        ],
+        [
+          "プロジェクト評価部",
+          "地質・技術評価、資源分析、開発可能性調査を行い、投資判断を支えます。"
+        ],
+        [
+          "プロジェクト調整・調査部",
+          "案件の初期選別、調整と推進、業界・市場調査、情報管理を担当します。"
+        ],
+        [
+          "総務・運営部",
+          "人事、総務、運営調整を担い、各部門を支援します。"
+        ]
+      ],
+      "ceoLabel": "経営陣",
+      "ceoName": "Michelle Zhou（周蘭）",
+      "ceoTitle": "Zheshang Mining Investment Group Co., Ltd. CEO ｜ Xinhuan Capital パートナー ｜ 浙江財経大学 浙商資本市場研究院 副研究員",
+      "ceoBio": [
+        "グローバルな鉱業投資とクロスボーダーの資源統合に長く携わり、中央アジア、アフリカ、北米、中東、南米などの国際鉱業市場に精通しています。戦略鉱物プロジェクトの共同開発、鉱業権取引、鉱業エクイティ投資に注力し、産業投資・学術研究・国際ビジネスの経験を生かして、プロジェクト全工程のデューデリジェンス、リスク判断、関係者間の調整を行います。"
+      ]
+    },
+    "ko": {
+      "title": "회사 소개",
+      "lead": "ZS Mining Investment는 국제 광업 투자와 자원 통합에 집중하는 투자 기업입니다. 전 세계의 우량 광물 자원과 중국의 투자 자본·산업 기술·전략적 파트너를 잇는 신뢰받는 가교가 되고자 합니다.",
+      "sections": [
+        {
+          "h": "우리는 누구인가",
+          "p": [
+            "성장 잠재력이 높은 우량 광업 프로젝트를 발굴·평가·추진합니다. 투자 관리, 자원 통합, 프로젝트 협력을 핵심 사업으로 하며, 직접 광산 운영이 아닌 경자산 전략을 취합니다."
+          ]
+        },
+        {
+          "h": "3대 핵심 사업",
+          "p": [
+            "광산 공동 개발, 광물 자원 거래 중개, 우량 광업 프로젝트 전략 투자를 세 축으로 합니다. 광업권자, 산업 기업, 투자자, 전문 기술팀을 연결하고 프로젝트별로 적합한 협력 구조를 모색합니다."
+          ]
+        },
+        {
+          "h": "투자 원칙과 평가",
+          "p": [
+            "합법·준법, 자원의 신뢰성, 기술적 타당성, 사업성, 위험 관리의 다섯 가지 원칙에 따라 투자합니다. 평가는 지질·기술, 법률·준법, 재무·사업성, 운영·환경의 네 분야를 다루며, 필요에 따라 독립된 전문 기관을 활용합니다."
+          ]
+        },
+        {
+          "h": "지역과 광종",
+          "p": [
+            "중앙아시아, 아프리카, 북미, 중동을 중점 지역으로 하며, 귀금속, 비철금속, 에너지 전환·전략 광물, 철강·산업용 광물 등 여러 광종을 대상으로 합니다."
+          ]
+        }
+      ],
+      "deptLabel": "조직",
+      "depts": [
+        [
+          "사업 개발 및 커뮤니케이션부",
+          "국내외 사업 기회 발굴, 고객·파트너 관계 구축, 브랜드와 대외 커뮤니케이션을 담당합니다."
+        ],
+        [
+          "프로젝트 평가부",
+          "지질·기술 평가, 자원 분석, 개발 타당성 연구를 수행하여 투자 결정을 지원합니다."
+        ],
+        [
+          "프로젝트 조정 및 연구부",
+          "프로젝트 초기 선별, 조정과 추진, 산업·시장 연구, 정보 관리를 담당합니다."
+        ],
+        [
+          "행정 및 운영부",
+          "인사, 행정, 운영 조정을 담당하며 각 부서를 지원합니다."
+        ]
+      ],
+      "ceoLabel": "경영진",
+      "ceoName": "Michelle Zhou (周蘭)",
+      "ceoTitle": "Zheshang Mining Investment Group Co., Ltd. CEO | Xinhuan Capital 파트너 | 저장재경대학 저상자본시장연구원 부연구원",
+      "ceoBio": [
+        "글로벌 광업 투자와 국경 간 자원 통합 분야에서 오랫동안 활동해 왔으며, 중앙아시아, 아프리카, 북미, 중동, 남미 등 국제 광업 시장에 정통합니다. 전략 광물 프로젝트의 공동 개발, 광업권 거래, 광업 지분 투자에 집중하고, 산업 투자·학술 연구·국제 비즈니스 경험을 바탕으로 프로젝트 전 과정의 실사, 위험 판단, 이해관계자 조율을 수행합니다."
+      ]
+    },
+    "fr": {
+      "title": "À propos",
+      "lead": "ZS Mining Investment est une société d’investissement spécialisée dans l’investissement minier international et l’intégration des ressources. Nous voulons être un pont de confiance entre les ressources minérales de qualité dans le monde et les capitaux, la technologie industrielle et les partenaires stratégiques chinois.",
+      "sections": [
+        {
+          "h": "Qui sommes-nous",
+          "p": [
+            "Nous identifions, évaluons et faisons avancer des projets miniers de qualité à fort potentiel. Notre cœur de métier est la gestion d’investissements, l’intégration des ressources et la coopération sur projets, selon une stratégie peu capitalistique plutôt que l’exploitation minière directe."
+          ]
+        },
+        {
+          "h": "Trois métiers",
+          "p": [
+            "Le développement minier conjoint, le courtage de ressources minérales et l’investissement stratégique dans des projets miniers de qualité. Nous réunissons détenteurs de titres, industriels, investisseurs et équipes techniques, et recherchons pour chaque projet la structure de coopération adaptée."
+          ]
+        },
+        {
+          "h": "Approche d’investissement et évaluation",
+          "p": [
+            "Notre approche repose sur cinq principes : conformité légale, fiabilité de la ressource, faisabilité technique, viabilité commerciale et maîtrise des risques. L’évaluation couvre quatre domaines : géologie et technique, droit et conformité, finance et commerce, exploitation et environnement, avec le concours d’experts indépendants si nécessaire."
+          ]
+        },
+        {
+          "h": "Régions et substances",
+          "p": [
+            "Nous nous concentrons sur l’Asie centrale, l’Afrique, l’Amérique du Nord et le Moyen-Orient, et couvrons plusieurs substances : métaux précieux, métaux de base, minéraux stratégiques et de la transition énergétique, métaux ferreux et minéraux industriels."
+          ]
+        }
+      ],
+      "deptLabel": "Organisation",
+      "depts": [
+        [
+          "Développement commercial et communication",
+          "Recherche d’opportunités en Chine et à l’international, relations clients et partenaires, image de marque et communication externe."
+        ],
+        [
+          "Évaluation des projets",
+          "Évaluation géologique et technique, analyse des ressources et études de faisabilité à l’appui des décisions d’investissement."
+        ],
+        [
+          "Coordination et recherche",
+          "Présélection des projets, coordination, études sectorielles et de marché, gestion de l’information."
+        ],
+        [
+          "Administration et opérations",
+          "Ressources humaines, administration et coordination opérationnelle au service de toutes les équipes."
+        ]
+      ],
+      "ceoLabel": "Direction",
+      "ceoName": "Michelle Zhou",
+      "ceoTitle": "CEO, Zheshang Mining Investment Group Co., Ltd. | Associée, Xinhuan Capital | Chercheuse associée, Zheshang Capital Market Research Institute, Zhejiang University of Finance and Economics",
+      "ceoBio": [
+        "Michelle Zhou travaille de longue date dans l’investissement minier mondial et l’intégration transfrontalière des ressources, sur les marchés miniers d’Asie centrale, d’Afrique, d’Amérique du Nord, du Moyen-Orient et d’Amérique du Sud. Elle se consacre au développement conjoint de projets de minéraux stratégiques, aux transactions de droits miniers et à l’investissement en capital dans le secteur minier. Forte d’une expérience en investissement industriel, en recherche et en affaires internationales, elle conduit la due diligence complète des projets, l’analyse des risques et la coordination entre les parties."
+      ]
+    },
+    "es": {
+      "title": "Nosotros",
+      "lead": "ZS Mining Investment es una empresa de inversión centrada en la inversión minera internacional y la integración de recursos. Queremos ser un puente de confianza entre los recursos minerales de calidad de todo el mundo y el capital, la tecnología industrial y los socios estratégicos chinos.",
+      "sections": [
+        {
+          "h": "Quiénes somos",
+          "p": [
+            "Identificamos, evaluamos e impulsamos proyectos mineros de calidad con alto potencial. Nuestra actividad principal es la gestión de inversiones, la integración de recursos y la cooperación en proyectos, con una estrategia ligera en activos en lugar de la operación minera directa."
+          ]
+        },
+        {
+          "h": "Tres líneas de negocio",
+          "p": [
+            "El desarrollo minero conjunto, la intermediación de recursos minerales y la inversión estratégica en proyectos mineros de calidad. Reunimos a titulares de derechos, empresas industriales, inversores y equipos técnicos, y buscamos para cada proyecto la estructura de cooperación adecuada."
+          ]
+        },
+        {
+          "h": "Enfoque de inversión y evaluación",
+          "p": [
+            "Nuestro enfoque se basa en cinco principios: cumplimiento legal, recurso fiable, viabilidad técnica, viabilidad comercial y riesgo controlable. La evaluación abarca cuatro áreas: geología y técnica, legal y cumplimiento, financiera y comercial, y operativa y ambiental, con apoyo de especialistas independientes cuando es necesario."
+          ]
+        },
+        {
+          "h": "Regiones y minerales",
+          "p": [
+            "Nos centramos en Asia Central, África, Norteamérica y Oriente Medio, y abarcamos varios minerales: metales preciosos, metales básicos, minerales estratégicos y de la transición energética, metales ferrosos y minerales industriales."
+          ]
+        }
+      ],
+      "deptLabel": "Organización",
+      "depts": [
+        [
+          "Desarrollo de negocio y comunicación",
+          "Búsqueda de oportunidades en China y el exterior, relaciones con clientes y socios, marca y comunicación externa."
+        ],
+        [
+          "Evaluación de proyectos",
+          "Evaluación geológica y técnica, análisis de recursos y estudios de viabilidad para apoyar las decisiones de inversión."
+        ],
+        [
+          "Coordinación e investigación",
+          "Selección inicial de proyectos, coordinación, estudios sectoriales y de mercado, y gestión de la información."
+        ],
+        [
+          "Administración y operaciones",
+          "Recursos humanos, administración y coordinación operativa al servicio de todas las áreas."
+        ]
+      ],
+      "ceoLabel": "Dirección",
+      "ceoName": "Michelle Zhou",
+      "ceoTitle": "CEO, Zheshang Mining Investment Group Co., Ltd. | Socia, Xinhuan Capital | Investigadora asociada, Zheshang Capital Market Research Institute, Zhejiang University of Finance and Economics",
+      "ceoBio": [
+        "Michelle Zhou trabaja desde hace años en la inversión minera global y la integración transfronteriza de recursos, en los mercados mineros de Asia Central, África, Norteamérica, Oriente Medio y Sudamérica. Se dedica al desarrollo conjunto de proyectos de minerales estratégicos, las transacciones de derechos mineros y la inversión de capital en minería. Con experiencia en inversión industrial, investigación académica y negocios internacionales, dirige la due diligence integral de los proyectos, el análisis de riesgos y la coordinación entre las partes."
+      ]
+    }
+  }
+}

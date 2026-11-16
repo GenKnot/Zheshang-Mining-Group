@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
+import { ui } from '../../../lib/site';
 import Site from '../../../components/Site';
-import { content, HTML_LANG, LANGS, type Lang } from '../../../lib/content';
+import { HTML_LANG, LANGS, type Lang } from '../../../lib/content';
 import { contactPage } from '../../../lib/content-more';
 
 type Props = { params: Promise<{ lang: string }> };
@@ -9,7 +10,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { lang } = await params;
   const l = lang as Lang;
   return {
-    title: `${contactPage[l].title} | ${content[l].brand}`,
+    title: `${contactPage[l].title} | ${ui[l].brand}`,
     description: contactPage[l].intro,
     alternates: {
       canonical: `/${lang}/contact`,

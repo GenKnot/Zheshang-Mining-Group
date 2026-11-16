@@ -206,7 +206,7 @@ export const docs: Record<DocLang, Record<LegalKind, LegalDoc>> = {
 
   en: {
     privacy: {
-      intro: 'Zheshang Mining Group Limited (“we”) respects your privacy. This policy explains how we handle your personal information when you visit this website or contact us.',
+      intro: 'Zheshang Mining Investment Group Co., Ltd. (“we”) respects your privacy. This policy explains how we handle your personal information when you visit this website or contact us.',
       sections: [
         {
           h: 'Information we collect',
@@ -234,9 +234,9 @@ export const docs: Record<DocLang, Record<LegalKind, LegalDoc>> = {
     legal: {
       intro: 'By accessing and using this website, you confirm that you have read and agree to the following terms.',
       sections: [
-        { h: 'Website content', p: ['The content of this website is for general information only and is intended to introduce Zheshang Mining Group Limited. We aim to keep the information accurate, but give no express or implied warranty as to its completeness, accuracy or timeliness.'] },
+        { h: 'Website content', p: ['The content of this website is for general information only and is intended to introduce Zheshang Mining Investment Group Co., Ltd.. We aim to keep the information accurate, but give no express or implied warranty as to its completeness, accuracy or timeliness.'] },
         { h: 'No offer or advice', p: ['Nothing on this website constitutes an offer or invitation to buy or sell securities or other financial products, nor investment, legal, tax or other professional advice. You should seek independent professional advice before making any decision.'] },
-        { h: 'Intellectual property', p: ['Unless otherwise stated, the intellectual property rights in the text, graphics, marks, interface design and other content of this website belong to Zheshang Mining Group Limited or the relevant rights holders. No part may be reproduced, republished or used commercially without written permission.'] },
+        { h: 'Intellectual property', p: ['Unless otherwise stated, the intellectual property rights in the text, graphics, marks, interface design and other content of this website belong to Zheshang Mining Investment Group Co., Ltd. or the relevant rights holders. No part may be reproduced, republished or used commercially without written permission.'] },
         { h: 'Limitation of liability', p: ['To the fullest extent permitted by law, we accept no liability for any direct or indirect loss arising from access to or use of this website, or from reliance on its content.'] },
         { h: 'External links', p: ['This website may contain links to third-party websites, provided for convenience only. We are not responsible for the content or availability of those websites.'] },
         { h: 'Language versions', p: ['This website is available in several languages. If there is any inconsistency between versions, the Simplified Chinese version prevails.'] },

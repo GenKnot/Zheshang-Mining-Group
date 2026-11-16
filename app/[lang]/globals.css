@@ -1830,3 +1830,1393 @@ html:lang(es) .mmenu nav a {
     transition: none;
   }
 }
+
+/* ==========================================================================
+   品牌：ZSMI 红 + 黑 + 金
+   ========================================================================== */
+:root {
+  --red: #d7262d;
+  --red-deep: #8f1319;
+}
+.zsmi {
+  font-family: 'Didot', 'Bodoni 72', 'Bodoni MT', 'Playfair Display', 'Times New Roman', Times, serif;
+  font-weight: 700;
+  font-size: 25px;
+  line-height: 1;
+  letter-spacing: -0.045em;
+  color: var(--red);
+  transform: scaleY(1.06);
+}
+.brand.small .zsmi {
+  font-size: 20px;
+}
+.nav nav a[aria-current='page'] {
+  color: var(--ink);
+  box-shadow: inset 0 -2px 0 var(--red);
+}
+.nav-cta {
+  background: var(--red);
+  color: #fff;
+}
+.nav-cta:hover,
+.nav-cta[aria-current='page'] {
+  background: var(--ink);
+  color: #14110b;
+}
+.btn.primary {
+  background: var(--red);
+  border-color: var(--red);
+  color: #fff;
+}
+.btn.primary:hover {
+  background: var(--ink);
+  border-color: var(--ink);
+  color: #14110b;
+}
+.btn.ink {
+  margin-top: 30px;
+  border-color: var(--line-dark);
+  color: #14110b;
+}
+.btn.ink:hover {
+  background: #14110b;
+  border-color: #14110b;
+  color: var(--ink);
+}
+.eyebrow i {
+  background: var(--red);
+}
+.band {
+  background: linear-gradient(115deg, #4a0a0f 0%, var(--red-deep) 45%, var(--red) 100%);
+  color: #fff;
+}
+.band small {
+  display: block;
+  margin-bottom: 18px;
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  opacity: 0.8;
+}
+.band h2 {
+  font-size: clamp(30px, 4.6vw, 72px);
+}
+
+/* ==========================================================================
+   项目库
+   ========================================================================== */
+.hproj {
+  background: rgba(10, 12, 15, 0.9);
+  padding-bottom: 10vh;
+}
+.hproj .sec-head {
+  padding-bottom: 7vh;
+}
+.hproj-more {
+  padding: 40px 16px 0;
+}
+.plist {
+  padding-bottom: 6vh;
+}
+.chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  padding: 0 16px 34px;
+}
+.chips button {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 18px;
+  border: 1px solid var(--line);
+  color: var(--muted);
+  font-size: 13px;
+  letter-spacing: 0.08em;
+  transition: color 0.3s, border-color 0.3s, background 0.3s;
+}
+.chips button i {
+  font-family: var(--mono);
+  font-size: 10px;
+  font-style: normal;
+  opacity: 0.7;
+}
+.chips button:hover {
+  color: var(--ink);
+  border-color: var(--ink);
+}
+.chips button.on {
+  background: var(--red);
+  border-color: var(--red);
+  color: #fff;
+}
+.pgrid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  border-top: 1px solid var(--line);
+  border-left: 1px solid var(--line);
+}
+.pcard {
+  display: flex;
+  flex-direction: column;
+  background: var(--bg);
+  transition: opacity 0.9s var(--ease), transform 0.9s var(--ease), background 0.4s;
+}
+.pcard:hover {
+  background: #111418;
+}
+.pcard-img {
+  position: relative;
+  aspect-ratio: 16 / 10;
+  overflow: hidden;
+  background: #0d1014;
+}
+.pcard-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: saturate(0.82) contrast(1.04);
+  transition: transform 1.2s var(--ease), filter 0.6s;
+}
+.pcard:hover .pcard-img img {
+  transform: scale(1.05);
+  filter: none;
+}
+.pcard-ph {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4%;
+  background:
+    repeating-linear-gradient(135deg, rgba(212, 171, 107, 0.07) 0 1px, transparent 1px 14px),
+    radial-gradient(circle at 70% 30%, rgba(215, 38, 45, 0.16), transparent 60%);
+}
+.pcard-ph b {
+  font-size: clamp(40px, 5vw, 76px);
+  font-weight: 500;
+  letter-spacing: -0.04em;
+  color: transparent;
+  -webkit-text-stroke: 1px var(--gold);
+}
+.pcard-sym {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  padding: 7px 12px;
+  background: var(--red);
+  color: #fff;
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: 0.14em;
+}
+.pcard-body {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  padding: 24px 22px 22px;
+}
+.pcard small,
+.pd-kicker {
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--gold);
+}
+.pcard h3 {
+  margin: 12px 0 18px;
+  font-size: clamp(19px, 1.6vw, 24px);
+  font-weight: 600;
+  line-height: 1.3;
+}
+.pcard dl {
+  margin-bottom: 22px;
+  border-top: 1px solid var(--line);
+}
+.pcard dl > div {
+  display: grid;
+  grid-template-columns: 5.5em minmax(0, 1fr);
+  gap: 10px;
+  padding: 10px 0;
+  border-bottom: 1px solid var(--line);
+  font-size: 13px;
+  line-height: 1.5;
+}
+html:lang(en) .pcard dl > div,
+html:lang(fr) .pcard dl > div,
+html:lang(es) .pcard dl > div,
+html:lang(ja) .pcard dl > div,
+html:lang(ko) .pcard dl > div {
+  grid-template-columns: 7.5em minmax(0, 1fr);
+}
+.pcard dt {
+  color: var(--muted);
+}
+.pcard dd {
+  color: rgba(236, 232, 223, 0.86);
+}
+.pcard-more {
+  margin-top: auto;
+  font-size: 12px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--ink);
+}
+.pcard-more i {
+  display: inline-block;
+  margin-left: 6px;
+  font-style: normal;
+  transition: transform 0.4s var(--ease);
+}
+.pcard:hover .pcard-more i {
+  transform: translateX(6px);
+}
+.disclaimer {
+  margin: 34px 16px 0;
+  padding: 18px 20px;
+  max-width: 62em;
+  border-left: 2px solid var(--red);
+  background: rgba(236, 232, 223, 0.04);
+  color: var(--muted);
+  font-size: 12.5px;
+  line-height: 1.8;
+}
+
+/* 首页：重点区域 */
+.regs {
+  display: grid;
+  grid-template-columns: 1.4fr repeat(5, 1fr);
+  margin-top: 9vh;
+  border-top: 1px solid var(--line);
+}
+.regs > div {
+  display: flex;
+  flex-direction: column;
+  padding: 28px 18px 10px;
+  border-left: 1px solid var(--line);
+}
+.regs > .cell-head {
+  border-left: 0;
+  padding-left: 16px;
+}
+.regs > .cell-head strong {
+  margin-top: 16px;
+  font-size: clamp(18px, 1.6vw, 24px);
+  line-height: 1.35;
+}
+.regs small {
+  font-family: var(--mono);
+  font-size: 11px;
+  color: var(--red);
+}
+.regs strong {
+  margin: 10px 0 8px;
+  font-size: 18px;
+  font-weight: 600;
+}
+.regs span {
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+/* ==========================================================================
+   项目详情
+   ========================================================================== */
+.back {
+  display: inline-flex;
+  gap: 8px;
+  padding-left: 16px;
+  font-size: 12px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--muted);
+  transition: color 0.3s;
+}
+.back:hover {
+  color: var(--ink);
+}
+.pd-kicker {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 18px;
+  margin-bottom: 20px;
+}
+.pd-kicker span {
+  padding: 2px 9px;
+  background: var(--red);
+  color: #fff;
+}
+.pdetail .lpage-hero h1 {
+  font-size: clamp(32px, 4.4vw, 68px);
+  line-height: 1.12;
+}
+.pdetail .lpage-hero .sec-head {
+  padding-bottom: 6vh;
+}
+.pd-cover {
+  display: block;
+  width: 100%;
+  max-height: 72vh;
+  overflow: hidden;
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+  cursor: zoom-in;
+}
+.pd-cover img {
+  display: block;
+  width: 100%;
+  height: 72vh;
+  object-fit: cover;
+}
+.pd-block {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  padding-top: 8vh;
+  padding-bottom: 8vh;
+  border-top: 1px solid var(--line);
+}
+.pd-cover + .pd-block {
+  border-top: 0;
+}
+.pd-block > div:first-child {
+  padding-left: 16px;
+}
+.pd-block > :nth-child(2) {
+  margin: 0 24px;
+}
+.facts {
+  border-top: 1px solid var(--line);
+}
+.facts > div {
+  display: grid;
+  grid-template-columns: 10em minmax(0, 1fr);
+  gap: 20px;
+  padding: 15px 0;
+  border-bottom: 1px solid var(--line);
+}
+.facts dt {
+  color: var(--gold);
+  font-size: 13px;
+  letter-spacing: 0.06em;
+}
+.facts dd {
+  color: rgba(236, 232, 223, 0.9);
+  line-height: 1.7;
+}
+.hl {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  border-top: 1px solid var(--line);
+  border-left: 1px solid var(--line);
+  list-style: none;
+}
+.hl li {
+  display: flex;
+  gap: 16px;
+  padding: 22px 20px;
+  background: var(--bg);
+  line-height: 1.6;
+  transition: opacity 0.9s var(--ease), transform 0.9s var(--ease);
+}
+.hl small {
+  flex: none;
+  padding-top: 3px;
+  font-family: var(--mono);
+  font-size: 11px;
+  color: var(--red);
+}
+.ptable {
+  overflow-x: auto;
+}
+.ptable table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 14px;
+}
+.ptable th,
+.ptable td {
+  padding: 14px 16px 14px 0;
+  text-align: left;
+  border-bottom: 1px solid var(--line);
+  vertical-align: top;
+}
+.ptable th {
+  font-family: var(--mono);
+  font-size: 11px;
+  font-weight: 400;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--gold);
+}
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 10px;
+}
+.gallery button {
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+  background: #0d1014;
+  cursor: zoom-in;
+  transition: opacity 0.9s var(--ease), transform 0.9s var(--ease);
+}
+.gallery img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 1s var(--ease);
+}
+.gallery button:hover img {
+  transform: scale(1.05);
+}
+.lightbox {
+  position: fixed;
+  inset: 0;
+  z-index: 200;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4vh 4vw;
+  background: rgba(5, 6, 8, 0.94);
+  cursor: zoom-out;
+}
+.lightbox img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+.lightbox span {
+  position: absolute;
+  left: 50%;
+  bottom: 18px;
+  transform: translateX(-50%);
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: 0.16em;
+  color: var(--muted);
+}
+.inq {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 26px;
+  padding-top: 9vh;
+  padding-bottom: 9vh;
+  border-top: 1px solid var(--line);
+}
+.inq > div {
+  padding-left: 16px;
+}
+.inq > .btn {
+  margin-right: 16px;
+}
+.inq h2 {
+  font-size: clamp(26px, 3vw, 44px);
+}
+.inq p {
+  margin-top: 10px;
+  color: var(--muted);
+}
+.pd-disc {
+  padding-bottom: 9vh;
+}
+.pd-disc .disclaimer {
+  margin-top: 0;
+}
+.hl li:last-child:nth-child(odd) {
+  grid-column: 1 / -1;
+}
+
+/* ==========================================================================
+   关于我们 / 峰会
+   ========================================================================== */
+.depts {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  border-top: 1px solid var(--line);
+  border-left: 1px solid var(--line);
+}
+.depts.three {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+.depts > div {
+  display: flex;
+  flex-direction: column;
+  padding: 26px 20px 34px;
+  background: var(--bg);
+  transition: opacity 0.9s var(--ease), transform 0.9s var(--ease);
+}
+.depts small {
+  font-family: var(--mono);
+  font-size: 11px;
+  color: var(--red);
+}
+.depts strong {
+  margin: 14px 0 12px;
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 1.35;
+}
+.depts span {
+  color: var(--muted);
+  font-size: 14px;
+  line-height: 1.7;
+}
+.ceo h2 {
+  font-size: clamp(28px, 3.2vw, 48px);
+}
+.ceo-title {
+  margin: 12px 0 26px;
+  color: var(--gold);
+  font-size: 14px;
+  line-height: 1.7;
+}
+.ceo p:not(.ceo-title) {
+  max-width: 46em;
+  color: rgba(236, 232, 223, 0.78);
+}
+.ceo p + p:not(.ceo-title) {
+  margin-top: 14px;
+}
+.cpage-back {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+.lpage .notice {
+  max-width: 60em;
+  line-height: 1.9;
+}
+
+@media (max-width: 1180px) {
+  .pgrid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .regs {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+  .regs > .cell-head {
+    grid-column: 1 / -1;
+    padding-bottom: 26px;
+  }
+  .regs > div:not(.cell-head) {
+    border-top: 1px solid var(--line);
+    padding-bottom: 26px;
+  }
+  .depts {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .depts.three {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+@media (max-width: 860px) {
+  .zsmi {
+    font-size: 22px;
+  }
+  .brand i {
+    display: none;
+  }
+  .pgrid,
+  .hl,
+  .depts {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  .regs {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .regs > div {
+    padding-left: 12px;
+  }
+  .chips {
+    padding: 0 12px 26px;
+  }
+  .pd-block {
+    grid-template-columns: minmax(0, 1fr);
+    padding-top: 6vh;
+    padding-bottom: 6vh;
+  }
+  .pd-block > div:first-child {
+    padding: 0 12px 22px;
+  }
+  .pd-block > :nth-child(2) {
+    margin: 0 12px;
+  }
+  .facts > div {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 4px;
+  }
+  .pd-cover img {
+    height: 46vh;
+  }
+  .gallery {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 6px;
+  }
+  .ptable thead {
+    display: none;
+  }
+  .ptable tr {
+    display: block;
+    padding: 12px 0;
+    border-bottom: 1px solid var(--line);
+  }
+  .ptable td {
+    display: grid;
+    grid-template-columns: 6.5em minmax(0, 1fr);
+    gap: 10px;
+    padding: 4px 0;
+    border: 0;
+  }
+  .ptable td::before {
+    content: attr(data-th);
+    color: var(--muted);
+    font-size: 12px;
+  }
+  .disclaimer {
+    margin: 26px 12px 0;
+  }
+  .inq > div {
+    padding-left: 12px;
+  }
+  .back {
+    padding-left: 12px;
+  }
+  .hproj-more {
+    padding: 28px 12px 0;
+  }
+}
+
+.pgrid > *,
+.hl > *,
+.depts > * {
+  border-right: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+}
+
+/* 窄屏上非中文的品牌全称放不下，只留 ZSMI 字标 */
+@media (max-width: 430px) {
+  html:not(:lang(zh)) .nav .brand b {
+    display: none;
+  }
+}
+
+/* ==========================================================================
+   首页峰会入口：黑金底，红色只作点缀
+   ========================================================================== */
+.band {
+  position: relative;
+  display: block;
+  overflow: hidden;
+  padding-top: 13vh;
+  padding-bottom: 13vh;
+  background: #0b0d10;
+  color: var(--ink);
+  border-top: 1px solid rgba(212, 171, 107, 0.45);
+  border-bottom: 1px solid rgba(212, 171, 107, 0.45);
+}
+/* 右侧一组金色同心线，呼应矿坑的台阶线；左下一抹暗红 */
+.band::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(70% 130% at 0% 100%, rgba(215, 38, 45, 0.3), transparent 62%),
+    repeating-radial-gradient(circle at 104% 50%, rgba(212, 171, 107, 0.22) 0 1px, transparent 1px 38px);
+  -webkit-mask-image: linear-gradient(90deg, #000 0%, rgba(0, 0, 0, 0.5) 18%, rgba(0, 0, 0, 0.12) 50%, #000 100%);
+  mask-image: linear-gradient(90deg, #000 0%, rgba(0, 0, 0, 0.5) 18%, rgba(0, 0, 0, 0.12) 50%, #000 100%);
+  pointer-events: none;
+}
+/* 顶边的红色短条 */
+.band::after {
+  content: '';
+  position: absolute;
+  left: calc(var(--pad) + 16px);
+  top: -1px;
+  width: 96px;
+  height: 3px;
+  background: var(--red);
+}
+.band > .band-in {
+  position: relative;
+  display: grid;
+  grid-template-columns: minmax(0, 1.55fr) minmax(0, 1fr);
+  gap: 6vw;
+  align-items: end;
+  padding: 0 16px;
+}
+.band small {
+  color: var(--gold);
+  opacity: 1;
+}
+.band h2 {
+  font-size: clamp(30px, 4.4vw, 68px);
+  line-height: 1.16;
+}
+.band p {
+  color: rgba(236, 232, 223, 0.72);
+}
+.band .btn {
+  margin-top: 34px;
+}
+.band ol {
+  list-style: none;
+  border-top: 1px solid rgba(212, 171, 107, 0.35);
+}
+.band li {
+  display: flex;
+  align-items: baseline;
+  gap: 18px;
+  padding: 20px 0;
+  border-bottom: 1px solid rgba(212, 171, 107, 0.35);
+}
+.band li small {
+  display: inline;
+  margin: 0;
+  font-size: 11px;
+  color: var(--red);
+}
+.band li strong {
+  font-size: clamp(16px, 1.4vw, 20px);
+  font-weight: 500;
+  line-height: 1.4;
+}
+@media (max-width: 860px) {
+  .band {
+    padding-top: 10vh;
+    padding-bottom: 10vh;
+  }
+  .band > .band-in {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 40px;
+    padding: 0 12px;
+  }
+  .band::after {
+    left: calc(var(--pad) + 12px);
+  }
+}
+
+/* ==========================================================================
+   项目库：页首透明，露出背景里的地球；筛选按钮放在页首
+   ========================================================================== */
+.lpage.ppage {
+  background: transparent;
+}
+.ppage .lpage-hero {
+  display: flex;
+  align-items: center;
+  min-height: 100svh;
+}
+.ppage .lpage-hero .sec-head {
+  width: 100%;
+  padding: 6vh 0;
+}
+.ppage .lpage-hero .sec-head > div + div {
+  max-width: 560px;
+}
+.ppage .chips {
+  padding: 34px 0 0;
+}
+.ppage .chips button {
+  background: rgba(10, 12, 15, 0.6);
+}
+.ppage .chips button.on {
+  background: var(--red);
+}
+.ppage .plist {
+  padding-top: 8vh;
+  background: rgba(10, 12, 15, 0.92);
+}
+.pg-labels > div {
+  margin-left: 0;
+  padding: 0 0 0 10px;
+  border-right: 0;
+  border-left: 1px solid var(--red);
+  text-align: left;
+}
+.pg-labels b {
+  font-size: 11px;
+  letter-spacing: 0.14em;
+}
+@media (max-width: 860px) {
+  .ppage .lpage-hero {
+    align-items: flex-start;
+    min-height: 0;
+    padding-bottom: 52vh;
+  }
+  .ppage .lpage-hero .sec-head {
+    padding: 10vh 0 0;
+  }
+  .ppage .chips {
+    padding: 26px 0 0;
+  }
+}
+
+/* 宽屏：项目卡片排在左侧两列，右侧留一栏透明，让地球一直停在那里 */
+@media (min-width: 1181px) {
+  .ppage .plist {
+    display: grid;
+    grid-template-columns: minmax(0, 1.75fr) minmax(0, 1fr);
+    background: linear-gradient(90deg, rgba(10, 12, 15, 0.95) 0%, rgba(10, 12, 15, 0.95) 58%, rgba(10, 12, 15, 0) 72%);
+  }
+  .ppage .pgrid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .ppage .pcard {
+    background: rgba(10, 12, 15, 0.6);
+  }
+}
+
+/* ==========================================================================
+   关于我们：首屏透明，露出背景里的钻机；正文各节带底色
+   ========================================================================== */
+.lpage.apage {
+  background: transparent;
+}
+.apage .lpage-hero {
+  display: flex;
+  align-items: center;
+  min-height: 100svh;
+}
+.apage .lpage-hero .sec-head {
+  width: 100%;
+  padding: 6vh 0;
+}
+.apage .lpage-hero .sec-head > div + div {
+  max-width: 600px;
+}
+.apage > section:not(.lpage-hero) {
+  background: rgba(10, 12, 15, 0.93);
+}
+.rig-labels > div {
+  border-left-color: var(--gold);
+}
+@media (max-width: 860px) {
+  .apage .lpage-hero {
+    align-items: flex-start;
+    min-height: 0;
+    padding-bottom: 58vh;
+  }
+  .apage .lpage-hero .sec-head {
+    padding: 10vh 0 0;
+  }
+}
+
+/* 关于页的"跟钻"一段：画面固定，背景里的镜头跟着钻头往下走 */
+.apage > section.adesc {
+  height: 420vh;
+  background: transparent;
+}
+@media (min-width: 861px) {
+  .adesc .biz-sticky {
+    grid-template-columns: minmax(0, 1.05fr) minmax(0, 1fr);
+  }
+}
+.adesc .biz-left {
+  position: relative;
+}
+/* 文字后面垫一层从左到右渐隐的暗底，保证在亮起的矿层上也能看清 */
+.adesc .biz-left::before {
+  content: '';
+  position: absolute;
+  inset: -22vh -30% -22vh calc(-1 * var(--pad) - 16px);
+  background: linear-gradient(90deg, rgba(10, 12, 15, 0.86) 0%, rgba(10, 12, 15, 0.7) 55%, rgba(10, 12, 15, 0) 100%);
+  pointer-events: none;
+}
+.adesc .biz-left ol {
+  position: relative;
+  margin-top: 0;
+}
+.adesc.biz li.on p {
+  max-height: 260px;
+}
+.adesc .biz-right {
+  justify-content: flex-end;
+}
+@media (max-width: 860px) {
+  /* 手机：只显示当前这一段，贴在屏幕下方，把上半屏留给钻头 */
+  .adesc .biz-sticky {
+    align-items: end;
+    padding-bottom: 9vh;
+  }
+  .adesc.biz li:not(.on) {
+    display: none;
+  }
+  .adesc.biz li {
+    border: 0;
+    padding: 0;
+  }
+  .adesc .biz-left::before {
+    inset: -5vh -12px -9vh;
+    background: linear-gradient(180deg, rgba(10, 12, 15, 0) 0%, rgba(10, 12, 15, 0.82) 22%, rgba(10, 12, 15, 0.9) 100%);
+  }
+  .adesc.biz li.on p {
+    max-height: 360px;
+  }
+}
+
+/* ==========================================================================
+   关于页的后半段：背景里镜头继续在地下下潜，正文是悬浮的半透明卡片
+   ========================================================================== */
+.apage > section.afloat,
+.apage > section.aminerals,
+.apage > section.pd-block,
+.apage > section.cpage-back {
+  background: transparent;
+  border-top: 0;
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
+}
+.afloat {
+  display: flex;
+  flex-direction: column;
+  gap: 34vh;
+  padding-top: 16vh;
+  padding-bottom: 20vh;
+}
+.afloat article {
+  width: min(600px, 100%);
+  margin-left: 16px;
+  padding: 34px 36px 38px;
+  border: 1px solid rgba(212, 171, 107, 0.34);
+  border-left: 2px solid var(--red);
+  background: rgba(10, 12, 15, 0.72);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  transition: opacity 0.9s var(--ease), transform 0.9s var(--ease);
+}
+/* 卡片都靠左、前后错开，把右半边留给一直往下钻的钻头 */
+.afloat article:nth-child(even) {
+  margin-left: calc(16px + 7vw);
+}
+.afloat small {
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: 0.16em;
+  color: var(--gold);
+}
+.afloat h2 {
+  margin: 14px 0 16px;
+  font-size: clamp(22px, 2.2vw, 32px);
+}
+.afloat p {
+  color: rgba(236, 232, 223, 0.8);
+}
+.afloat p + p {
+  margin-top: 12px;
+}
+/* 矿种：半透明的元素格，背景里的晶簇从格子后面透出来 */
+.aminerals {
+  padding-top: 6vh;
+  padding-bottom: 20vh;
+}
+.aminerals-head {
+  padding: 0 16px 6vh;
+}
+.aminerals-head h2 {
+  margin-top: 20px;
+  white-space: pre-line;
+  font-size: clamp(30px, 4.2vw, 64px);
+  line-height: 1.14;
+}
+.aminerals .tiles {
+  margin-left: 0;
+  border-color: rgba(212, 171, 107, 0.3);
+}
+.aminerals .tiles > div {
+  min-height: 230px;
+  border-color: rgba(212, 171, 107, 0.3);
+  background: rgba(10, 12, 15, 0.46);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+}
+.aminerals .tiles b {
+  color: transparent;
+  -webkit-text-stroke: 1px var(--gold);
+}
+/* 悬停：整格变金、文字变深（要写在半透明底色之后，否则会被它盖掉） */
+.aminerals .tiles > div:hover {
+  background: rgba(212, 171, 107, 0.94);
+  color: #14110b;
+}
+.aminerals .tiles > div:hover b {
+  color: #14110b;
+  -webkit-text-stroke: 0;
+}
+.apage .pd-block > :nth-child(2) {
+  position: relative;
+}
+.apage .depts > div {
+  background: rgba(10, 12, 15, 0.7);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+.apage .ceo {
+  padding: 40px 40px 44px;
+  border: 1px solid rgba(212, 171, 107, 0.34);
+  background: rgba(10, 12, 15, 0.74);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+.apage > section.pd-block {
+  padding-top: 10vh;
+  padding-bottom: 14vh;
+}
+.apage > section.cpage-back {
+  padding-bottom: 16vh;
+}
+@media (max-width: 860px) {
+  .afloat {
+    gap: 26vh;
+  }
+  .afloat article,
+  .afloat article:nth-child(even) {
+    margin: 0;
+    padding: 24px 20px 26px;
+  }
+  .aminerals-head {
+    padding: 0 12px 5vh;
+  }
+  .aminerals .tiles {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .aminerals .tiles > div {
+    min-height: 170px;
+    padding: 14px 14px 18px;
+  }
+  .apage .ceo {
+    padding: 24px 20px 28px;
+  }
+}
+
+/* ==========================================================================
+   项目库：全屏地球巡览。画面固定，滚动时逐个切换项目，卡片叠在地球上
+   ========================================================================== */
+.ppage > section.ptour {
+  height: 700vh;
+}
+.ptour-sticky {
+  position: sticky;
+  top: 0;
+  height: 100svh;
+  padding-top: var(--nav-h);
+  display: grid;
+  grid-template-columns: minmax(0, 500px) minmax(0, 1fr);
+  align-items: center;
+}
+.ptour-panel {
+  padding-left: 16px;
+  animation: rise 0.7s var(--ease) both;
+}
+.ptour-intro h1 {
+  margin-top: 26px;
+  font-size: clamp(44px, 6.4vw, 104px);
+  line-height: 1.05;
+}
+.ptour-intro .body {
+  margin-top: 26px;
+  max-width: 30em;
+  color: rgba(236, 232, 223, 0.78);
+  font-size: clamp(15px, 1.3vw, 18px);
+}
+.ptour-intro .chips {
+  padding: 30px 0 0;
+}
+.ptour-next {
+  display: inline-flex;
+  align-items: center;
+  gap: 14px;
+  margin-top: 44px;
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: 0.2em;
+  color: var(--gold);
+}
+.ptour-next i {
+  width: 1px;
+  height: 46px;
+  background: linear-gradient(180deg, var(--gold), transparent);
+  animation: ptour-drop 2s var(--ease) infinite;
+  transform-origin: top;
+}
+@keyframes ptour-drop {
+  0% {
+    transform: scaleY(0);
+  }
+  60%,
+  100% {
+    transform: scaleY(1);
+  }
+}
+/* 叠在地球上的项目卡片 */
+.tcard {
+  border: 1px solid rgba(212, 171, 107, 0.4);
+  background: rgba(10, 12, 15, 0.8);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  box-shadow: 0 30px 80px rgba(0, 0, 0, 0.55);
+}
+.tcard-img {
+  position: relative;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  background: #0d1014;
+}
+.tcard-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.tcard-body {
+  padding: 22px 24px 26px;
+}
+.tcard small {
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--gold);
+}
+.tcard h2 {
+  margin: 12px 0 16px;
+  font-size: clamp(22px, 2vw, 30px);
+  line-height: 1.25;
+}
+.tcard dl {
+  margin-bottom: 22px;
+  border-top: 1px solid var(--line);
+}
+.tcard dl > div {
+  display: grid;
+  grid-template-columns: 6em minmax(0, 1fr);
+  gap: 10px;
+  padding: 9px 0;
+  border-bottom: 1px solid var(--line);
+  font-size: 13px;
+  line-height: 1.5;
+}
+html:not(:lang(zh)) .tcard dl > div {
+  grid-template-columns: 7.5em minmax(0, 1fr);
+}
+.tcard dt {
+  color: var(--muted);
+}
+.tcard dd {
+  color: rgba(236, 232, 223, 0.9);
+}
+/* 右下角的项目索引 */
+.ptour-index {
+  position: absolute;
+  right: 16px;
+  bottom: 7vh;
+  list-style: none;
+  min-width: 210px;
+  border-top: 1px solid var(--line);
+  background: rgba(10, 12, 15, 0.55);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}
+.ptour-index button {
+  display: flex;
+  align-items: baseline;
+  gap: 12px;
+  width: 100%;
+  padding: 10px 14px 10px 12px;
+  border-bottom: 1px solid var(--line);
+  border-left: 2px solid transparent;
+  color: var(--muted);
+  font-size: 13px;
+  text-align: left;
+  transition: color 0.3s, border-color 0.3s, background 0.3s;
+}
+.ptour-index small {
+  font-family: var(--mono);
+  font-size: 10px;
+}
+.ptour-index i {
+  margin-left: auto;
+  padding-left: 14px;
+  font-family: var(--mono);
+  font-size: 10px;
+  font-style: normal;
+  letter-spacing: 0.08em;
+  color: var(--gold);
+  opacity: 0.7;
+}
+.ptour-index button:hover {
+  color: var(--ink);
+}
+.ptour-index button.on {
+  color: var(--ink);
+  border-left-color: var(--red);
+  background: rgba(215, 38, 45, 0.12);
+}
+.ptour-bar {
+  position: absolute;
+  left: 16px;
+  right: 16px;
+  bottom: 3vh;
+  height: 1px;
+  background: var(--line);
+}
+.ptour-bar i {
+  display: block;
+  height: 2px;
+  margin-top: -0.5px;
+  background: var(--gold);
+  transform-origin: left;
+}
+/* 巡览之后：铺满整行的全部项目 */
+.ppage .plist {
+  display: block;
+  padding-top: 9vh;
+  padding-bottom: 10vh;
+  background: rgba(10, 12, 15, 0.96);
+}
+.plist-head {
+  padding: 0 16px 30px;
+}
+@media (min-width: 1181px) {
+  .ppage .plist {
+    display: block;
+    background: rgba(10, 12, 15, 0.96);
+  }
+  .ppage .pgrid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+  .ppage .pcard {
+    background: var(--bg);
+  }
+}
+@media (max-width: 860px) {
+  /* 手机：地球在上半屏，卡片贴在下半屏 */
+  .ptour-sticky {
+    grid-template-columns: minmax(0, 1fr);
+    align-items: end;
+    padding-bottom: 5vh;
+  }
+  .ptour-panel {
+    padding: 0;
+  }
+  .ptour-intro {
+    padding: 22px 12px 4px;
+    background: linear-gradient(180deg, rgba(10, 12, 15, 0) 0%, rgba(10, 12, 15, 0.85) 26%);
+  }
+  .ptour-intro h1 {
+    margin-top: 16px;
+    font-size: 40px;
+  }
+  .ptour-intro .body {
+    margin-top: 14px;
+  }
+  .ptour-intro .chips {
+    padding-top: 18px;
+    gap: 6px;
+  }
+  .ptour-intro .chips button {
+    padding: 8px 12px;
+  }
+  .ptour-next {
+    display: none;
+  }
+  .ptour-index {
+    display: none;
+  }
+  .tcard {
+    display: grid;
+    grid-template-columns: 34% minmax(0, 1fr);
+  }
+  .tcard-img {
+    aspect-ratio: auto;
+    min-height: 100%;
+  }
+  .tcard-body {
+    padding: 14px 14px 16px;
+  }
+  .tcard h2 {
+    margin: 8px 0 10px;
+    font-size: 19px;
+  }
+  .tcard dl {
+    margin-bottom: 14px;
+  }
+  .tcard dl > div,
+  html:not(:lang(zh)) .tcard dl > div {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 0;
+    padding: 6px 0;
+    font-size: 12px;
+  }
+  .tcard dl > div:nth-child(n + 3) {
+    display: none;
+  }
+  .tcard .btn {
+    padding: 10px 16px;
+  }
+  .ptour-bar {
+    left: 12px;
+    right: 12px;
+    bottom: 2vh;
+  }
+  .plist-head {
+    padding: 0 12px 22px;
+  }
+}
+
+/* ==========================================================================
+   峰会页：沿用关于页的整屏首屏和固定滚动段，背景是会场
+   ========================================================================== */
+.spage > section.adesc {
+  height: 560vh;
+}
+.spage .adesc .biz-left ol {
+  margin-top: 30px;
+}
+.spage .adesc .biz-left > .label {
+  position: relative;
+}
+.apage .hl {
+  border-color: rgba(212, 171, 107, 0.3);
+}
+.apage .hl li {
+  border-color: rgba(212, 171, 107, 0.3);
+  background: rgba(10, 12, 15, 0.7);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+.spage .lpage-hero .notice {
+  max-width: 34em;
+}
+@media (max-width: 860px) {
+  .spage .adesc .biz-left > .label {
+    display: none;
+  }
+}
+.afloat ul {
+  list-style: none;
+  border-top: 1px solid rgba(212, 171, 107, 0.3);
+}
+.afloat li {
+  display: flex;
+  gap: 16px;
+  padding: 13px 0;
+  border-bottom: 1px solid rgba(212, 171, 107, 0.3);
+  color: rgba(236, 232, 223, 0.88);
+  line-height: 1.6;
+}
+.afloat li i {
+  flex: none;
+  padding-top: 3px;
+  font-family: var(--mono);
+  font-size: 11px;
+  font-style: normal;
+  color: var(--red);
+}
+.spage .afloat h2 {
+  margin-bottom: 22px;
+}

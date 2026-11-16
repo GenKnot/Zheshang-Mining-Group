@@ -209,7 +209,7 @@ function pitGeometry(cx: number, cy: number, nr: number, na: number) {
 }
 
 /** 线框矿用卡车：车头朝 +x，长度约为 1，轮子落在 z = 0 */
-function truckGeometry() {
+export function truckGeometry() {
   const v: number[] = [];
   type P = number[];
   const seg = (a: P, b: P) => v.push(a[0], a[1], a[2], b[0], b[1], b[2]);
@@ -505,13 +505,13 @@ function buildTunnel(X: number, Z: number) {
 }
 
 // 后期处理按原始数值直通输出，所以颜色都以"不做色彩空间转换"的方式写入
-const raw = (hex: string) => {
+export const raw = (hex: string) => {
   const n = parseInt(hex.slice(1), 16);
   return new THREE.Color().setRGB(((n >> 16) & 255) / 255, ((n >> 8) & 255) / 255, (n & 255) / 255, THREE.LinearSRGBColorSpace);
 };
 
 /** 辉光：亮的线条和灯向外晕开一圈柔光 */
-function Bloom({ mobile }: { mobile: boolean }) {
+export function Bloom({ mobile }: { mobile: boolean }) {
   const { gl, scene, camera, size } = useThree();
   const composer = useMemo(() => {
     // 自带多重采样的渲染目标，否则细线会出现锯齿

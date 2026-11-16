@@ -1,0 +1,1503 @@
+{
+  "regions": {
+    "south-america": {
+      "zh-cn": "南美",
+      "zh-hk": "南美",
+      "en": "South America"
+    },
+    "africa": {
+      "zh-cn": "非洲",
+      "zh-hk": "非洲",
+      "en": "Africa"
+    },
+    "central-asia": {
+      "zh-cn": "中亚",
+      "zh-hk": "中亞",
+      "en": "Central Asia"
+    },
+    "south-asia": {
+      "zh-cn": "南亚",
+      "zh-hk": "南亞",
+      "en": "South Asia"
+    },
+    "china": {
+      "zh-cn": "中国",
+      "zh-hk": "中國",
+      "en": "China"
+    }
+  },
+  "projects": [
+    {
+      "slug": "suriname-gold",
+      "region": "south-america",
+      "symbols": [
+        "Au"
+      ],
+      "images": 5,
+      "coord": [
+        5.1,
+        -55.0
+      ],
+      "t": {
+        "zh-cn": {
+          "name": "苏里南金矿项目",
+          "country": "苏里南",
+          "mineral": "金（砂金、岩金）",
+          "area": "探矿权 174 km²，其中采矿许可 99.3 km²",
+          "stage": "已取得采矿许可，砂金可先行开发",
+          "coop": "联合开发，可洽谈",
+          "summary": "项目位于南美洲北部的苏里南，处在 Rosebel 与 Merian 两座已投产大型金矿之间，三者同属北苏里南绿岩型金矿成矿带。矿权范围内砂金与岩金并存，已完成高精度航磁测量。",
+          "facts": [
+            [
+              "所在位置",
+              "苏里南，南美洲北部；Rosebel 金矿与 Merian 金矿之间"
+            ],
+            [
+              "矿种",
+              "金（砂金、岩金）"
+            ],
+            [
+              "矿权面积",
+              "探矿权 174 km²，其中采矿许可 99.3 km²（含砂金赋存区域）"
+            ],
+            [
+              "矿权归属",
+              "苏里南本地矿权公司 100% 持有"
+            ],
+            [
+              "砂金品位",
+              "0.8–1.0 克/立方米，赋存深度 1.5–10 米"
+            ],
+            [
+              "岩金品位",
+              "平均 12.5 克/吨"
+            ],
+            [
+              "资源潜力",
+              "砂金约 6 吨，岩金 100 吨以上"
+            ],
+            [
+              "开采方式",
+              "露天开采"
+            ],
+            [
+              "作业条件",
+              "水系发达，全年可作业，年有效生产天数 300 天以上"
+            ],
+            [
+              "合作方式",
+              "联合开发：投资方投入设备、人员与流动资金，与矿权方按约定比例分成"
+            ]
+          ],
+          "highlights": [
+            "位于世界级绿岩型金矿成矿带，周边已有两座大型在产金矿",
+            "矿权范围内分布 7–8 处砂金采点，砂金埋藏浅，可先行开发",
+            "已完成 1:25000 高精度航磁测量，圈定 2 处大型航磁异常",
+            "采矿许可已取得，矿权方与当地政府沟通顺畅"
+          ],
+          "sections": [
+            {
+              "h": "区位与成矿背景",
+              "p": [
+                "项目位于圭亚那地盾前寒武纪变质绿岩带，受北苏里南韧性剪切带控制。该成矿带是全球重要的绿岩型金矿产区，区域内的大型金矿均产于这一地质单元。",
+                "矿权区位于 Rosebel 金矿与 Merian 金矿之间，北苏里南金矿成矿带自矿区东北部穿过，成矿地质条件与两座相邻矿山相似。"
+              ]
+            },
+            {
+              "h": "砂金",
+              "p": [
+                "砂金主要赋存于河谷及风化层中，品位 0.8–1.0 克/立方米，开采深度 1.5–10 米，采用露天方式开采，剥离量小。",
+                "矿区水系发达，生产用水充足，全年可以作业。单条生产线日处理量约 3000 立方米，配置约 35 人，可根据投资规模分期建设多条生产线。"
+              ]
+            },
+            {
+              "h": "岩金",
+              "p": [
+                "勘查发现稳定的含金石英脉及明确的找矿靶区，岩金平均品位为 12.5 克/吨，适合露天开采。"
+              ]
+            },
+            {
+              "h": "已完成的勘查工作",
+              "p": [
+                "由专业勘查单位完成 1:25000 高精度航空磁测，测线间距 250 米，飞行高度 70–125 米，执行 DZ/T 0142-2010 技术规范。",
+                "航磁成果圈定 2 处大型磁异常，磁异常源体与地表砂金采点在空间上关系密切，是下一步勘查的重点靶区。"
+              ]
+            },
+            {
+              "h": "合作方式",
+              "p": [
+                "项目以联合开发方式对外合作：投资方负责投入开采设备、人员及流动资金并组织生产，矿权方配合矿山管理与当地事务协调。砂金与岩金的具体分成比例及合作结构可面议。"
+              ]
+            }
+          ]
+        },
+        "zh-hk": {
+          "name": "蘇里南金礦項目",
+          "country": "蘇里南",
+          "mineral": "金（砂金、岩金）",
+          "area": "探礦權 174 km²，其中採礦許可 99.3 km²",
+          "stage": "已取得採礦許可，砂金可先行開發",
+          "coop": "聯合開發，可洽談",
+          "summary": "項目位於南美洲北部的蘇里南，處在 Rosebel 與 Merian 兩座已投產大型金礦之間，三者同屬北蘇里南綠岩型金礦成礦帶。礦權範圍內砂金與岩金並存，已完成高精度航磁測量。",
+          "facts": [
+            [
+              "所在位置",
+              "蘇里南，南美洲北部；Rosebel 金礦與 Merian 金礦之間"
+            ],
+            [
+              "礦種",
+              "金（砂金、岩金）"
+            ],
+            [
+              "礦權面積",
+              "探礦權 174 km²，其中採礦許可 99.3 km²（含砂金賦存區域）"
+            ],
+            [
+              "礦權歸屬",
+              "蘇里南本地礦權公司 100% 持有"
+            ],
+            [
+              "砂金品位",
+              "0.8–1.0 克/立方米，賦存深度 1.5–10 米"
+            ],
+            [
+              "岩金品位",
+              "平均 12.5 克/噸"
+            ],
+            [
+              "資源潛力",
+              "砂金約 6 噸，岩金 100 噸以上"
+            ],
+            [
+              "開採方式",
+              "露天開採"
+            ],
+            [
+              "作業條件",
+              "水系發達，全年可作業，年有效生產天數 300 天以上"
+            ],
+            [
+              "合作方式",
+              "聯合開發：投資方投入設備、人員與流動資金，與礦權方按約定比例分成"
+            ]
+          ],
+          "highlights": [
+            "位於世界級綠岩型金礦成礦帶，周邊已有兩座大型在產金礦",
+            "礦權範圍內分布 7–8 處砂金採點，砂金埋藏淺，可先行開發",
+            "已完成 1:25000 高精度航磁測量，圈定 2 處大型航磁異常",
+            "採礦許可已取得，礦權方與當地政府溝通順暢"
+          ],
+          "sections": [
+            {
+              "h": "區位與成礦背景",
+              "p": [
+                "項目位於圭亞那地盾前寒武紀變質綠岩帶，受北蘇里南韌性剪切帶控制。該成礦帶是全球重要的綠岩型金礦產區，區域內的大型金礦均產於這一地質單元。",
+                "礦權區位於 Rosebel 金礦與 Merian 金礦之間，北蘇里南金礦成礦帶自礦區東北部穿過，成礦地質條件與兩座相鄰礦山相似。"
+              ]
+            },
+            {
+              "h": "砂金",
+              "p": [
+                "砂金主要賦存於河谷及風化層中，品位 0.8–1.0 克/立方米，開採深度 1.5–10 米，採用露天方式開採，剝離量小。",
+                "礦區水系發達，生產用水充足，全年可以作業。單條生產線日處理量約 3000 立方米，配置約 35 人，可根據投資規模分期建設多條生產線。"
+              ]
+            },
+            {
+              "h": "岩金",
+              "p": [
+                "勘查發現穩定的含金石英脈及明確的找礦靶區，岩金平均品位為 12.5 克/噸，適合露天開採。"
+              ]
+            },
+            {
+              "h": "已完成的勘查工作",
+              "p": [
+                "由專業勘查單位完成 1:25000 高精度航空磁測，測線間距 250 米，飛行高度 70–125 米，執行 DZ/T 0142-2010 技術規範。",
+                "航磁成果圈定 2 處大型磁異常，磁異常源體與地表砂金採點在空間上關係密切，是下一步勘查的重點靶區。"
+              ]
+            },
+            {
+              "h": "合作方式",
+              "p": [
+                "項目以聯合開發方式對外合作：投資方負責投入開採設備、人員及流動資金並組織生產，礦權方配合礦山管理與當地事務協調。砂金與岩金的具體分成比例及合作結構可面議。"
+              ]
+            }
+          ]
+        },
+        "en": {
+          "name": "Suriname Gold Project",
+          "country": "Suriname",
+          "mineral": "Gold (alluvial and hard-rock)",
+          "area": "174 km² exploration area, incl. 99.3 km² under mining permit",
+          "stage": "Mining permit granted; alluvial gold ready for early development",
+          "coop": "Joint development, open to discussion",
+          "summary": "Located in Suriname in northern South America, between the producing Rosebel and Merian gold mines, on the same North Suriname greenstone gold belt. The licence hosts both alluvial and hard-rock gold, and a high-resolution aeromagnetic survey has been completed.",
+          "facts": [
+            [
+              "Location",
+              "Suriname, northern South America; between the Rosebel and Merian gold mines"
+            ],
+            [
+              "Commodity",
+              "Gold (alluvial and hard-rock)"
+            ],
+            [
+              "Licence area",
+              "174 km² exploration area, of which 99.3 km² is under mining permit (including the alluvial zones)"
+            ],
+            [
+              "Ownership",
+              "100% held by a Surinamese licence holder"
+            ],
+            [
+              "Alluvial grade",
+              "0.8–1.0 g/m³ at depths of 1.5–10 m"
+            ],
+            [
+              "Hard-rock grade",
+              "12.5 g/t on average"
+            ],
+            [
+              "Resource potential",
+              "About 6 t of alluvial gold and more than 100 t of hard-rock gold"
+            ],
+            [
+              "Mining method",
+              "Open pit"
+            ],
+            [
+              "Operating conditions",
+              "Abundant water; year-round operation with 300+ working days a year"
+            ],
+            [
+              "Cooperation",
+              "Joint development: the investor provides equipment, personnel and working capital and shares output with the licence holder at an agreed ratio"
+            ]
+          ],
+          "highlights": [
+            "On a world-class greenstone gold belt, next to two large producing gold mines",
+            "Seven to eight alluvial workings within the licence; shallow alluvial gold can be developed first",
+            "1:25,000 high-resolution aeromagnetic survey completed, outlining two large magnetic anomalies",
+            "Mining permit in place; the licence holder has a good working relationship with local authorities"
+          ],
+          "sections": [
+            {
+              "h": "Location and geological setting",
+              "p": [
+                "The project lies in the Precambrian metamorphic greenstone belt of the Guiana Shield and is controlled by the North Suriname ductile shear zone. This belt is one of the world's important greenstone gold provinces, and the large gold deposits of the region occur within it.",
+                "The licence sits between the Rosebel and Merian gold mines. The North Suriname gold belt crosses its north-eastern part, and the geological setting is similar to that of the two neighbouring mines."
+              ]
+            },
+            {
+              "h": "Alluvial gold",
+              "p": [
+                "Alluvial gold occurs in valleys and the weathered layer at grades of 0.8–1.0 g/m³ and depths of 1.5–10 m. It can be mined by open pit with little stripping.",
+                "The area has abundant water and can operate all year. One production line processes about 3,000 m³ a day with a crew of about 35, and further lines can be added in stages to match the scale of investment."
+              ]
+            },
+            {
+              "h": "Hard-rock gold",
+              "p": [
+                "Exploration has identified persistent gold-bearing quartz veins and clear targets. The average hard-rock grade is 12.5 g/t, suitable for open-pit mining."
+              ]
+            },
+            {
+              "h": "Work completed",
+              "p": [
+                "A 1:25,000 high-resolution aeromagnetic survey was flown by a professional exploration contractor, with 250 m line spacing and a flying height of 70–125 m, to the DZ/T 0142-2010 standard.",
+                "The survey outlined two large magnetic anomalies. The anomaly sources are spatially associated with the alluvial workings at surface and are the priority targets for follow-up work."
+              ]
+            },
+            {
+              "h": "Cooperation",
+              "p": [
+                "The project is offered for joint development. The investor provides mining equipment, personnel and working capital and runs production, while the licence holder supports mine management and local coordination. The sharing ratio and structure for alluvial and hard-rock gold are open to negotiation."
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "slug": "south-africa-chrome",
+      "region": "africa",
+      "symbols": [
+        "Cr",
+        "Pt"
+      ],
+      "images": 5,
+      "coord": [
+        -25.06,
+        26.21
+      ],
+      "t": {
+        "zh-cn": {
+          "name": "南非西北省铬矿项目",
+          "country": "南非",
+          "mineral": "铬矿，伴生铂族元素",
+          "area": "总面积 3000 公顷，其中 4.92 公顷已获采矿许可",
+          "stage": "在产，露天开采",
+          "coop": "股权合作、联合开发，可洽谈",
+          "summary": "项目位于南非西北省，距约翰内斯堡直线约 260 公里，有公路相连。首采区块已取得采矿许可并投入生产，整块 3000 公顷土地由项目公司持有，具备由 5 公顷扩展至 3000 公顷的开发路径。",
+          "facts": [
+            [
+              "所在位置",
+              "南非西北省，距约翰内斯堡直线约 260 公里，矿区有道路与公路相连"
+            ],
+            [
+              "矿种",
+              "铬矿，伴生铂族元素"
+            ],
+            [
+              "矿权面积",
+              "总面积 3000 公顷；首采区块 4.92 公顷已获采矿许可，有效期至 2029 年 9 月 30 日"
+            ],
+            [
+              "土地权属",
+              "项目公司持有整块 3000 公顷土地的所有权"
+            ],
+            [
+              "矿体厚度",
+              "1.8–2.2 米"
+            ],
+            [
+              "埋藏深度",
+              "10–150 米"
+            ],
+            [
+              "矿石品位",
+              "Cr₂O₃ 36–40%，部分区域原矿品位 44–48%"
+            ],
+            [
+              "资源潜力",
+              "3000 公顷范围内资源量可达亿吨以上"
+            ],
+            [
+              "开采方式",
+              "露天开采"
+            ],
+            [
+              "生产现状",
+              "已投产；规划第二年原矿产量 24 万吨，第三年起 45 万吨"
+            ],
+            [
+              "合作方式",
+              "股权合作、联合开发、产品包销，可洽谈"
+            ]
+          ],
+          "highlights": [
+            "已在生产，首采区块证照齐全",
+            "土地所有权与矿权同属项目公司，扩区有土地保障",
+            "矿体埋藏浅、厚度稳定，适合露天开采",
+            "伴生铂族元素，可在铬矿开采过程中综合回收",
+            "南非矿业法律体系成熟，产权保护有力"
+          ],
+          "sections": [
+            {
+              "h": "区位与交通",
+              "p": [
+                "项目位于南非西北省，距约翰内斯堡直线距离约 260 公里，矿区有道路与公路网相连，交通便利。南非拥有成熟的矿业运营环境和完善的法律保障。"
+              ]
+            },
+            {
+              "h": "资源赋存",
+              "p": [
+                "矿体厚度 1.8–2.2 米，埋藏深度 10–150 米，矿石品位 Cr₂O₃ 36–40%，部分区域原矿品位达到 44–48%，适合露天开采。",
+                "矿区已施工 10 个钻孔，孔深约 15–56 米。区域地质条件显示铬矿层伴生铂族元素，具备综合开发价值。"
+              ]
+            },
+            {
+              "h": "生产与扩产路径",
+              "p": [
+                "首采区块 4.92 公顷已取得采矿许可并投入露天开采，规划第二年原矿产量 24 万吨，第三年及以后年产 45 万吨。",
+                "按当地规定完成钻探计划（不少于 10 个钻孔，孔距不小于 50 米）、提交合资格人士报告、缴纳复垦保证金并经矿产主管部门审批后，可申请整块 3000 公顷范围的采矿权。全面开发后规划年产品位高于 44% 的铬精矿 300 万吨。"
+              ]
+            },
+            {
+              "h": "合作方式",
+              "p": [
+                "项目可就股权合作、联合开发及产品包销等方式进行洽谈，具体结构根据投资方需求商定。"
+              ]
+            }
+          ]
+        },
+        "zh-hk": {
+          "name": "南非西北省鉻礦項目",
+          "country": "南非",
+          "mineral": "鉻礦，伴生鉑族元素",
+          "area": "總面積 3000 公頃，其中 4.92 公頃已獲採礦許可",
+          "stage": "在產，露天開採",
+          "coop": "股權合作、聯合開發，可洽談",
+          "summary": "項目位於南非西北省，距約翰內斯堡直線約 260 公里，有公路相連。首採區塊已取得採礦許可並投入生產，整塊 3000 公頃土地由項目公司持有，具備由 5 公頃擴展至 3000 公頃的開發路徑。",
+          "facts": [
+            [
+              "所在位置",
+              "南非西北省，距約翰內斯堡直線約 260 公里，礦區有道路與公路相連"
+            ],
+            [
+              "礦種",
+              "鉻礦，伴生鉑族元素"
+            ],
+            [
+              "礦權面積",
+              "總面積 3000 公頃；首採區塊 4.92 公頃已獲採礦許可，有效期至 2029 年 9 月 30 日"
+            ],
+            [
+              "土地權屬",
+              "項目公司持有整塊 3000 公頃土地的所有權"
+            ],
+            [
+              "礦體厚度",
+              "1.8–2.2 米"
+            ],
+            [
+              "埋藏深度",
+              "10–150 米"
+            ],
+            [
+              "礦石品位",
+              "Cr₂O₃ 36–40%，部分區域原礦品位 44–48%"
+            ],
+            [
+              "資源潛力",
+              "3000 公頃範圍內資源量可達億噸以上"
+            ],
+            [
+              "開採方式",
+              "露天開採"
+            ],
+            [
+              "生產現狀",
+              "已投產；規劃第二年原礦產量 24 萬噸，第三年起 45 萬噸"
+            ],
+            [
+              "合作方式",
+              "股權合作、聯合開發、產品包銷，可洽談"
+            ]
+          ],
+          "highlights": [
+            "已在生產，首採區塊證照齊全",
+            "土地所有權與礦權同屬項目公司，擴區有土地保障",
+            "礦體埋藏淺、厚度穩定，適合露天開採",
+            "伴生鉑族元素，可在鉻礦開採過程中綜合回收",
+            "南非礦業法律體系成熟，產權保護有力"
+          ],
+          "sections": [
+            {
+              "h": "區位與交通",
+              "p": [
+                "項目位於南非西北省，距約翰內斯堡直線距離約 260 公里，礦區有道路與公路網相連，交通便利。南非擁有成熟的礦業運營環境和完善的法律保障。"
+              ]
+            },
+            {
+              "h": "資源賦存",
+              "p": [
+                "礦體厚度 1.8–2.2 米，埋藏深度 10–150 米，礦石品位 Cr₂O₃ 36–40%，部分區域原礦品位達到 44–48%，適合露天開採。",
+                "礦區已施工 10 個鑽孔，孔深約 15–56 米。區域地質條件顯示鉻礦層伴生鉑族元素，具備綜合開發價值。"
+              ]
+            },
+            {
+              "h": "生產與擴產路徑",
+              "p": [
+                "首採區塊 4.92 公頃已取得採礦許可並投入露天開採，規劃第二年原礦產量 24 萬噸，第三年及以後年產 45 萬噸。",
+                "按當地規定完成鑽探計劃（不少於 10 個鑽孔，孔距不小於 50 米）、提交合資格人士報告、繳納復墾保證金並經礦產主管部門審批後，可申請整塊 3000 公頃範圍的採礦權。全面開發後規劃年產品位高於 44% 的鉻精礦 300 萬噸。"
+              ]
+            },
+            {
+              "h": "合作方式",
+              "p": [
+                "項目可就股權合作、聯合開發及產品包銷等方式進行洽談，具體結構根據投資方需求商定。"
+              ]
+            }
+          ]
+        },
+        "en": {
+          "name": "North West Chrome Project, South Africa",
+          "country": "South Africa",
+          "mineral": "Chromite with associated PGEs",
+          "area": "3,000 ha in total, incl. 4.92 ha under mining permit",
+          "stage": "In production, open pit",
+          "coop": "Equity partnership or joint development, open to discussion",
+          "summary": "Located in South Africa's North West Province, about 260 km in a straight line from Johannesburg and connected by road. The first block holds a mining permit and is in production. The project company owns the full 3,000 ha of land, giving a path to expand from 5 ha to 3,000 ha.",
+          "facts": [
+            [
+              "Location",
+              "North West Province, South Africa; about 260 km from Johannesburg, with road access to the site"
+            ],
+            [
+              "Commodity",
+              "Chromite with associated platinum group elements"
+            ],
+            [
+              "Tenure",
+              "3,000 ha in total; a 4.92 ha first block holds a mining permit valid to 30 September 2029"
+            ],
+            [
+              "Land ownership",
+              "The project company owns the full 3,000 ha of land"
+            ],
+            [
+              "Seam thickness",
+              "1.8–2.2 m"
+            ],
+            [
+              "Depth",
+              "10–150 m"
+            ],
+            [
+              "Grade",
+              "36–40% Cr₂O₃; run-of-mine grade of 44–48% in parts"
+            ],
+            [
+              "Resource potential",
+              "More than 100 Mt across the 3,000 ha"
+            ],
+            [
+              "Mining method",
+              "Open pit"
+            ],
+            [
+              "Production",
+              "In production; planned run-of-mine output of 240,000 t in year two and 450,000 t a year from year three"
+            ],
+            [
+              "Cooperation",
+              "Equity partnership, joint development or offtake, open to discussion"
+            ]
+          ],
+          "highlights": [
+            "Already producing, with permits in place for the first block",
+            "Land and mineral tenure held by the same company, securing land for expansion",
+            "Shallow, consistent seam suited to open-pit mining",
+            "Associated PGEs can be recovered alongside chromite",
+            "Mature mining law and strong protection of property rights in South Africa"
+          ],
+          "sections": [
+            {
+              "h": "Location and access",
+              "p": [
+                "The project is in North West Province, about 260 km in a straight line from Johannesburg, and is connected to the road network. South Africa offers a mature mining environment and sound legal protection."
+              ]
+            },
+            {
+              "h": "Mineralisation",
+              "p": [
+                "The seam is 1.8–2.2 m thick at depths of 10–150 m, grading 36–40% Cr₂O₃ and reaching 44–48% run-of-mine in parts. It is suited to open-pit mining.",
+                "Ten holes have been drilled to depths of about 15–56 m. Regional geology indicates platinum group elements associated with the chromite seam, adding value for combined recovery."
+              ]
+            },
+            {
+              "h": "Production and expansion",
+              "p": [
+                "The 4.92 ha first block holds a mining permit and is being mined by open pit, with planned run-of-mine output of 240,000 t in year two and 450,000 t a year thereafter.",
+                "A mining right over the full 3,000 ha can be applied for after completing the drilling programme (at least ten holes at a minimum spacing of 50 m), filing a Competent Person's Report, lodging the rehabilitation guarantee and obtaining approval from the minerals authority. At full development the plan is to produce 3 Mt a year of chrome concentrate grading above 44%."
+              ]
+            },
+            {
+              "h": "Cooperation",
+              "p": [
+                "Equity partnership, joint development and offtake arrangements can all be discussed, with the structure agreed to suit the investor."
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "slug": "mozambique-heavy-sands",
+      "region": "africa",
+      "symbols": [
+        "Ti",
+        "Zr"
+      ],
+      "images": 6,
+      "coord": [
+        -17.0,
+        38.5
+      ],
+      "t": {
+        "zh-cn": {
+          "name": "莫桑比克钛锆重砂矿项目",
+          "country": "莫桑比克",
+          "mineral": "钛铁矿、锆石、金红石，伴生独居石",
+          "area": "两大成矿区，十余个靶区",
+          "stage": "靶区筛选与勘查阶段",
+          "coop": "矿权转让、联合开发、技术服务，可洽谈",
+          "summary": "项目聚焦莫桑比克滨海及红土型钛锆重砂矿，在两大成矿区掌握十余个重砂矿靶区，矿石富钛、高锆并伴生独居石，露天开采条件成熟。项目方拥有具备海外实操经验的地质与钻探取样团队。",
+          "facts": [
+            [
+              "所在位置",
+              "莫桑比克，东非沿海"
+            ],
+            [
+              "矿种",
+              "钛铁矿、锆石、金红石，伴生独居石（稀土）"
+            ],
+            [
+              "矿床类型",
+              "滨海型及红土型重砂矿"
+            ],
+            [
+              "靶区范围",
+              "两大成矿区，十余个重砂矿靶区"
+            ],
+            [
+              "资源规模",
+              "多数靶区为亿吨级"
+            ],
+            [
+              "开采方式",
+              "露天开采，剥离比低"
+            ],
+            [
+              "项目阶段",
+              "靶区筛选与勘查"
+            ],
+            [
+              "合作方式",
+              "优质矿权或项目股权转让、联合开发、勘查与技术服务"
+            ]
+          ],
+          "highlights": [
+            "钛、锆、稀土多种产品，单一矿源综合利用价值高",
+            "矿床埋藏浅，采选难度低",
+            "自有地质、钻探、取样、化验团队，熟悉重砂矿取样的技术难点",
+            "可对接国内选矿设备制造企业和下游钛锆、稀土材料企业"
+          ],
+          "sections": [
+            {
+              "h": "资源特点",
+              "p": [
+                "莫桑比克沿海是东非重要的重砂矿产区。项目靶区多具备富钛、高锆并含稀土矿物的复合特征，可产出钛铁矿、锆石、金红石和独居石等多种精矿产品。",
+                "矿床以滨海型和红土型为主，露天开采条件成熟，剥离比低，选矿工艺相对简单。"
+              ]
+            },
+            {
+              "h": "技术与落地能力",
+              "p": [
+                "项目方拥有具备海外实操经验的地质、钻探、取样与化验团队，并配备现场勘探设备，能够应对铁板砂、塌孔、矿砂遇水取样等重砂矿勘查中的常见难点。",
+                "通过浅钻快速圈定矿体并核定资源量，从多个靶区中筛选出条件较好的矿点，再推进确权、选厂建设和投产。"
+              ]
+            },
+            {
+              "h": "合作方式",
+              "p": [
+                "联合开发：项目方以矿权、勘查技术和当地资源参与，合作方投入开采、选矿及运营资金，共同经营。",
+                "矿权或股权转让：对已完成浅钻勘查并取得资源量报告的矿点，可向矿业企业和投资机构转让部分或全部权益。",
+                "技术服务：为进入当地的矿业企业提供钻探取样、地质勘查、现场技术指导和本地运维等配套服务。"
+              ]
+            }
+          ]
+        },
+        "zh-hk": {
+          "name": "莫桑比克鈦鋯重砂礦項目",
+          "country": "莫桑比克",
+          "mineral": "鈦鐵礦、鋯石、金紅石，伴生獨居石",
+          "area": "兩大成礦區，十餘個靶區",
+          "stage": "靶區篩選與勘查階段",
+          "coop": "礦權轉讓、聯合開發、技術服務，可洽談",
+          "summary": "項目聚焦莫桑比克濱海及紅土型鈦鋯重砂礦，在兩大成礦區掌握十餘個重砂礦靶區，礦石富鈦、高鋯並伴生獨居石，露天開採條件成熟。項目方擁有具備海外實操經驗的地質與鑽探取樣團隊。",
+          "facts": [
+            [
+              "所在位置",
+              "莫桑比克，東非沿海"
+            ],
+            [
+              "礦種",
+              "鈦鐵礦、鋯石、金紅石，伴生獨居石（稀土）"
+            ],
+            [
+              "礦床類型",
+              "濱海型及紅土型重砂礦"
+            ],
+            [
+              "靶區範圍",
+              "兩大成礦區，十餘個重砂礦靶區"
+            ],
+            [
+              "資源規模",
+              "多數靶區為億噸級"
+            ],
+            [
+              "開採方式",
+              "露天開採，剝離比低"
+            ],
+            [
+              "項目階段",
+              "靶區篩選與勘查"
+            ],
+            [
+              "合作方式",
+              "優質礦權或項目股權轉讓、聯合開發、勘查與技術服務"
+            ]
+          ],
+          "highlights": [
+            "鈦、鋯、稀土多種產品，單一礦源綜合利用價值高",
+            "礦床埋藏淺，採選難度低",
+            "自有地質、鑽探、取樣、化驗團隊，熟悉重砂礦取樣的技術難點",
+            "可對接國內選礦設備製造企業和下游鈦鋯、稀土材料企業"
+          ],
+          "sections": [
+            {
+              "h": "資源特點",
+              "p": [
+                "莫桑比克沿海是東非重要的重砂礦產區。項目靶區多具備富鈦、高鋯並含稀土礦物的復合特徵，可產出鈦鐵礦、鋯石、金紅石和獨居石等多種精礦產品。",
+                "礦床以濱海型和紅土型為主，露天開採條件成熟，剝離比低，選礦工藝相對簡單。"
+              ]
+            },
+            {
+              "h": "技術與落地能力",
+              "p": [
+                "項目方擁有具備海外實操經驗的地質、鑽探、取樣與化驗團隊，並配備現場勘探設備，能夠應對鐵板砂、塌孔、礦砂遇水取樣等重砂礦勘查中的常見難點。",
+                "通過淺鑽快速圈定礦體並核定資源量，從多個靶區中篩選出條件較好的礦點，再推進確權、選廠建設和投產。"
+              ]
+            },
+            {
+              "h": "合作方式",
+              "p": [
+                "聯合開發：項目方以礦權、勘查技術和當地資源參與，合作方投入開採、選礦及運營資金，共同經營。",
+                "礦權或股權轉讓：對已完成淺鑽勘查並取得資源量報告的礦點，可向礦業企業和投資機構轉讓部分或全部權益。",
+                "技術服務：為進入當地的礦業企業提供鑽探取樣、地質勘查、現場技術指導和本地運維等配套服務。"
+              ]
+            }
+          ]
+        },
+        "en": {
+          "name": "Mozambique Titanium–Zircon Heavy Mineral Sands",
+          "country": "Mozambique",
+          "mineral": "Ilmenite, zircon, rutile, with associated monazite",
+          "area": "More than ten targets across two mineralised belts",
+          "stage": "Target screening and exploration",
+          "coop": "Licence transfer, joint development or technical services, open to discussion",
+          "summary": "The project covers coastal and lateritic titanium–zircon heavy mineral sands in Mozambique, with more than ten targets in two mineralised belts. The sands are rich in titanium and zircon with associated monazite and are suited to open-pit mining. The project team has hands-on overseas experience in geology, drilling and sampling.",
+          "facts": [
+            [
+              "Location",
+              "Mozambique, East African coast"
+            ],
+            [
+              "Commodity",
+              "Ilmenite, zircon, rutile, with associated monazite (rare earths)"
+            ],
+            [
+              "Deposit type",
+              "Coastal and lateritic heavy mineral sands"
+            ],
+            [
+              "Targets",
+              "More than ten heavy mineral sand targets in two mineralised belts"
+            ],
+            [
+              "Resource",
+              "Most targets are in the hundred-million-tonne range"
+            ],
+            [
+              "Mining method",
+              "Open pit with a low strip ratio"
+            ],
+            [
+              "Stage",
+              "Target screening and exploration"
+            ],
+            [
+              "Cooperation",
+              "Transfer of licences or project equity, joint development, exploration and technical services"
+            ]
+          ],
+          "highlights": [
+            "Titanium, zircon and rare earth products from a single ore source",
+            "Shallow deposits that are simple to mine and process",
+            "In-house geology, drilling, sampling and assay team familiar with the difficulties of sampling heavy sands",
+            "Links to Chinese processing-plant manufacturers and downstream titanium, zircon and rare earth users"
+          ],
+          "sections": [
+            {
+              "h": "Resource characteristics",
+              "p": [
+                "The coast of Mozambique is an important heavy mineral sands province in East Africa. Most targets combine high titanium and zircon with rare earth minerals, and can yield ilmenite, zircon, rutile and monazite concentrates.",
+                "The deposits are mainly coastal and lateritic, suited to open-pit mining with a low strip ratio and relatively simple processing."
+              ]
+            },
+            {
+              "h": "Technical capability",
+              "p": [
+                "The project team includes geologists, drillers, samplers and assayers with overseas field experience and its own exploration equipment. It can handle the usual difficulties of heavy sand exploration, such as hardpan layers, hole collapse and sampling below the water table.",
+                "Shallow drilling is used to outline mineralisation and confirm resources quickly, so that the better sites can be selected from many targets before tenure, plant construction and production."
+              ]
+            },
+            {
+              "h": "Cooperation",
+              "p": [
+                "Joint development: the project side contributes tenure, exploration expertise and local resources, and the partner funds mining, processing and operations.",
+                "Transfer of licences or equity: for sites with shallow drilling and a resource report completed, part or all of the interest can be transferred to mining companies and investors.",
+                "Technical services: drilling and sampling, geological exploration, on-site technical guidance and local operations support for mining companies entering the country."
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "slug": "kyrgyzstan-ashutor-gold",
+      "region": "central-asia",
+      "symbols": [
+        "Au"
+      ],
+      "images": 5,
+      "coord": [
+        42.6,
+        79.6
+      ],
+      "t": {
+        "zh-cn": {
+          "name": "吉尔吉斯斯坦 Ashutor 金矿项目",
+          "country": "吉尔吉斯斯坦",
+          "mineral": "金，另见钨、钒、铜矿化",
+          "area": "许可范围 55.93 km²",
+          "stage": "勘探阶段，已有钻探成果",
+          "coop": "矿权合作、联合勘探，可洽谈",
+          "summary": "项目位于吉尔吉斯斯坦东北部伊塞克湖州阿克苏地区，地处天山成矿带。2004 至 2010 年间已完成系统的槽探、反循环钻探和金刚石钻探，取得多处高品位见矿成果，矿体沿走向和深部均未封闭。",
+          "facts": [
+            [
+              "所在位置",
+              "吉尔吉斯斯坦东北部，伊塞克湖州阿克苏地区，海拔 3400–4000 米"
+            ],
+            [
+              "矿种",
+              "金；许可范围内另见钨、钒、铜及稀土矿化"
+            ],
+            [
+              "许可范围",
+              "55.93 km²（5593 公顷）"
+            ],
+            [
+              "矿床类型",
+              "窄脉型金矿"
+            ],
+            [
+              "已完成钻探",
+              "反循环钻孔 69 个，共 8135 米；金刚石钻孔 9 个，共 883 米"
+            ],
+            [
+              "资源估算",
+              "55 米以浅含金 17 吨，品位 21.17 克/吨"
+            ],
+            [
+              "历史勘探投入",
+              "2004–2010 年累计约 250 万美元"
+            ],
+            [
+              "交通",
+              "经 40 公里土路通往最近的村庄，距州中心卡拉科尔约 140 公里"
+            ],
+            [
+              "项目阶段",
+              "勘探阶段"
+            ],
+            [
+              "合作方式",
+              "矿权合作、联合勘探，可洽谈"
+            ]
+          ],
+          "highlights": [
+            "位于天山成矿带，区域内分布多座世界级金矿",
+            "已有系统的槽探和钻探数据，可直接用于下一步勘探设计",
+            "历史估算品位高",
+            "主矿带沿走向和深部均未封闭，另有多处待验证的勘探靶区"
+          ],
+          "sections": [
+            {
+              "h": "区位与地质",
+              "p": [
+                "项目位于吉尔吉斯斯坦东北部，与哈萨克斯坦接壤。区域地质以构成天山山脉的复杂地层为主，是中亚重要的金矿成矿带。",
+                "许可范围内出露元古代至古生代地层，岩石破碎带为含矿热液的运移提供了通道，形成窄脉型金矿化。"
+              ]
+            },
+            {
+              "h": "历史勘探成果",
+              "p": [
+                "2004 至 2006 年完成槽探、推土机剥离和剖面取样；2007 至 2008 年施工反循环钻孔 69 个，共 8135 米，钻孔网度 100 米 × 50 米；2010 年施工金刚石钻孔 9 个，共 883 米。槽探和钻探均取得多处见矿成果。",
+                "前矿权人于 2009 年将钻探成果纳入估算，55 米以浅含金 17 吨，品位 21.17 克/吨。"
+              ]
+            },
+            {
+              "h": "勘探潜力",
+              "p": [
+                "地质填图和地球化学工作已圈出数处异常区，主矿带沿走向向南北两端以及向深部均未封闭，矿床边界尚未确定。许可范围内仍有区域未完成取样。"
+              ]
+            }
+          ]
+        },
+        "zh-hk": {
+          "name": "吉爾吉斯斯坦 Ashutor 金礦項目",
+          "country": "吉爾吉斯斯坦",
+          "mineral": "金，另見鎢、釩、銅礦化",
+          "area": "許可範圍 55.93 km²",
+          "stage": "勘探階段，已有鑽探成果",
+          "coop": "礦權合作、聯合勘探，可洽談",
+          "summary": "項目位於吉爾吉斯斯坦東北部伊塞克湖州阿克蘇地區，地處天山成礦帶。2004 至 2010 年間已完成系統的槽探、反循環鑽探和金剛石鑽探，取得多處高品位見礦成果，礦體沿走向和深部均未封閉。",
+          "facts": [
+            [
+              "所在位置",
+              "吉爾吉斯斯坦東北部，伊塞克湖州阿克蘇地區，海拔 3400–4000 米"
+            ],
+            [
+              "礦種",
+              "金；許可範圍內另見鎢、釩、銅及稀土礦化"
+            ],
+            [
+              "許可範圍",
+              "55.93 km²（5593 公頃）"
+            ],
+            [
+              "礦床類型",
+              "窄脈型金礦"
+            ],
+            [
+              "已完成鑽探",
+              "反循環鑽孔 69 個，共 8135 米；金剛石鑽孔 9 個，共 883 米"
+            ],
+            [
+              "資源估算",
+              "55 米以淺含金 17 噸，品位 21.17 克/噸"
+            ],
+            [
+              "歷史勘探投入",
+              "2004–2010 年累計約 250 萬美元"
+            ],
+            [
+              "交通",
+              "經 40 公里土路通往最近的村莊，距州中心卡拉科爾約 140 公里"
+            ],
+            [
+              "項目階段",
+              "勘探階段"
+            ],
+            [
+              "合作方式",
+              "礦權合作、聯合勘探，可洽談"
+            ]
+          ],
+          "highlights": [
+            "位於天山成礦帶，區域內分布多座世界級金礦",
+            "已有系統的槽探和鑽探數據，可直接用於下一步勘探設計",
+            "歷史估算品位高",
+            "主礦帶沿走向和深部均未封閉，另有多處待驗證的勘探靶區"
+          ],
+          "sections": [
+            {
+              "h": "區位與地質",
+              "p": [
+                "項目位於吉爾吉斯斯坦東北部，與哈薩克斯坦接壤。區域地質以構成天山山脈的複雜地層為主，是中亞重要的金礦成礦帶。",
+                "許可範圍內出露元古代至古生代地層，岩石破碎帶為含礦熱液的運移提供了通道，形成窄脈型金礦化。"
+              ]
+            },
+            {
+              "h": "歷史勘探成果",
+              "p": [
+                "2004 至 2006 年完成槽探、推土機剝離和剖面取樣；2007 至 2008 年施工反循環鑽孔 69 個，共 8135 米，鑽孔網度 100 米 × 50 米；2010 年施工金剛石鑽孔 9 個，共 883 米。槽探和鑽探均取得多處見礦成果。",
+                "前礦權人於 2009 年將鑽探成果納入估算，55 米以淺含金 17 噸，品位 21.17 克/噸。"
+              ]
+            },
+            {
+              "h": "勘探潛力",
+              "p": [
+                "地質填圖和地球化學工作已圈出數處異常區，主礦帶沿走向向南北兩端以及向深部均未封閉，礦床邊界尚未確定。許可範圍內仍有區域未完成取樣。"
+              ]
+            }
+          ]
+        },
+        "en": {
+          "name": "Ashutor Gold Project, Kyrgyzstan",
+          "country": "Kyrgyzstan",
+          "mineral": "Gold, with tungsten, vanadium and copper mineralisation",
+          "area": "55.93 km² licence area",
+          "stage": "Exploration stage with drilling results",
+          "coop": "Licence partnership or joint exploration, open to discussion",
+          "summary": "Located in the Ak-Suu district of the Issyk-Kul region in north-eastern Kyrgyzstan, on the Tien Shan metallogenic belt. Systematic trenching, reverse-circulation and diamond drilling were completed between 2004 and 2010 with multiple high-grade intercepts. Mineralisation remains open along strike and at depth.",
+          "facts": [
+            [
+              "Location",
+              "Ak-Suu district, Issyk-Kul region, north-eastern Kyrgyzstan; 3,400–4,000 m elevation"
+            ],
+            [
+              "Commodity",
+              "Gold; tungsten, vanadium, copper and rare earth mineralisation also noted in the licence"
+            ],
+            [
+              "Licence area",
+              "55.93 km² (5,593 ha)"
+            ],
+            [
+              "Deposit type",
+              "Narrow-vein gold"
+            ],
+            [
+              "Drilling completed",
+              "69 RC holes for 8,135 m; 9 diamond holes for 883 m"
+            ],
+            [
+              "Resource estimate",
+              "17 t of gold at 21.17 g/t to 55 m depth"
+            ],
+            [
+              "Historical spend",
+              "About US$2.5 million in 2004–2010"
+            ],
+            [
+              "Access",
+              "40 km unsealed road to the nearest village; about 140 km to the regional centre, Karakol"
+            ],
+            [
+              "Stage",
+              "Exploration"
+            ],
+            [
+              "Cooperation",
+              "Licence partnership or joint exploration, open to discussion"
+            ]
+          ],
+          "highlights": [
+            "On the Tien Shan belt, home to several world-class gold deposits",
+            "Systematic trench and drill data available for planning the next programme",
+            "High grades in the historical estimate",
+            "Main zone open along strike and at depth, with further untested targets"
+          ],
+          "sections": [
+            {
+              "h": "Location and geology",
+              "p": [
+                "The project is in north-eastern Kyrgyzstan near the border with Kazakhstan. Regional geology is dominated by the complex sequences of the Tien Shan range, an important gold belt of Central Asia.",
+                "Proterozoic to Palaeozoic rocks crop out in the licence. Fracture zones provided pathways for mineralising fluids and host narrow-vein gold mineralisation."
+              ]
+            },
+            {
+              "h": "Historical exploration",
+              "p": [
+                "Trenching, bulldozer cuts and traverse sampling were completed in 2004–2006. In 2007–2008, 69 reverse-circulation holes were drilled for 8,135 m on a 100 m × 50 m grid, followed by nine diamond holes for 883 m in 2010. Both trenching and drilling returned multiple gold intercepts.",
+                "In 2009 the previous licence holder included the drilling in an estimate of 17 t of gold at 21.17 g/t to a depth of 55 m."
+              ]
+            },
+            {
+              "h": "Exploration potential",
+              "p": [
+                "Mapping and geochemistry have outlined several anomalies. The main zone is open to the north and south along strike and at depth, and the limits of the deposit have not been defined. Parts of the licence have yet to be sampled."
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "slug": "pakistan-metals",
+      "region": "south-asia",
+      "symbols": [
+        "Cu",
+        "Au",
+        "Li",
+        "Pb"
+      ],
+      "images": 1,
+      "coord": [
+        35.3,
+        74.0
+      ],
+      "t": {
+        "zh-cn": {
+          "name": "巴基斯坦北部金属矿权组合",
+          "country": "巴基斯坦",
+          "mineral": "铜、金、锂、铅锌等多金属",
+          "area": "6 处矿权，分布于吉尔吉特-巴尔蒂斯坦和开伯尔-普赫图赫瓦省",
+          "stage": "矿权可转让",
+          "coop": "矿权转让，可洽谈",
+          "summary": "巴基斯坦北部的一组金属矿权，包括铜金矿、锂矿和铅锌多金属矿，分布在吉尔吉特-巴尔蒂斯坦地区和开伯尔-普赫图赫瓦省，均可转让。可由伊斯兰堡乘机前往矿区考察。",
+          "facts": [
+            [
+              "所在位置",
+              "巴基斯坦北部：吉尔吉特-巴尔蒂斯坦地区、开伯尔-普赫图赫瓦省"
+            ],
+            [
+              "矿种",
+              "铜、金、锂、铅、锌、锑"
+            ],
+            [
+              "矿权数量",
+              "6 处"
+            ],
+            [
+              "项目阶段",
+              "已取得矿权，可转让"
+            ],
+            [
+              "考察条件",
+              "可由伊斯兰堡乘机前往斯卡都等地考察"
+            ],
+            [
+              "合作方式",
+              "矿权转让，可洽谈"
+            ]
+          ],
+          "highlights": [
+            "一次可对比多处矿权，覆盖铜金、锂和多金属",
+            "锂矿权面积较大，单证 35–43 平方公里",
+            "矿权均可转让"
+          ],
+          "table": {
+            "head": [
+              "矿种",
+              "所在地区",
+              "矿权面积",
+              "状态"
+            ],
+            "rows": [
+              [
+                "铜、金",
+                "吉尔吉特-巴尔蒂斯坦，吉泽尔地区",
+                "33 km²",
+                "可转让"
+              ],
+              [
+                "锂",
+                "吉尔吉特-巴尔蒂斯坦，斯卡都",
+                "43 km²",
+                "可转让"
+              ],
+              [
+                "锂",
+                "吉尔吉特-巴尔蒂斯坦，斯卡都",
+                "35 km²",
+                "可转让"
+              ],
+              [
+                "铅、铜等多金属",
+                "开伯尔-普赫图赫瓦省，吉德拉尔",
+                "499 英亩",
+                "可转让"
+              ],
+              [
+                "铜",
+                "开伯尔-普赫图赫瓦省，上迪尔地区",
+                "496 英亩",
+                "可转让"
+              ],
+              [
+                "铅、锌、锑、铜多金属",
+                "开伯尔-普赫图赫瓦省，吉德拉尔",
+                "499 英亩",
+                "可转让"
+              ]
+            ]
+          },
+          "sections": []
+        },
+        "zh-hk": {
+          "name": "巴基斯坦北部金屬礦權組合",
+          "country": "巴基斯坦",
+          "mineral": "銅、金、鋰、鉛鋅等多金屬",
+          "area": "6 處礦權，分布於吉爾吉特-巴爾蒂斯坦和開伯爾-普赫圖赫瓦省",
+          "stage": "礦權可轉讓",
+          "coop": "礦權轉讓，可洽談",
+          "summary": "巴基斯坦北部的一組金屬礦權，包括銅金礦、鋰礦和鉛鋅多金屬礦，分布在吉爾吉特-巴爾蒂斯坦地區和開伯爾-普赫圖赫瓦省，均可轉讓。可由伊斯蘭堡乘機前往礦區考察。",
+          "facts": [
+            [
+              "所在位置",
+              "巴基斯坦北部：吉爾吉特-巴爾蒂斯坦地區、開伯爾-普赫圖赫瓦省"
+            ],
+            [
+              "礦種",
+              "銅、金、鋰、鉛、鋅、銻"
+            ],
+            [
+              "礦權數量",
+              "6 處"
+            ],
+            [
+              "項目階段",
+              "已取得礦權，可轉讓"
+            ],
+            [
+              "考察條件",
+              "可由伊斯蘭堡乘機前往斯卡都等地考察"
+            ],
+            [
+              "合作方式",
+              "礦權轉讓，可洽談"
+            ]
+          ],
+          "highlights": [
+            "一次可對比多處礦權，覆蓋銅金、鋰和多金屬",
+            "鋰礦權面積較大，單證 35–43 平方公里",
+            "礦權均可轉讓"
+          ],
+          "table": {
+            "head": [
+              "礦種",
+              "所在地區",
+              "礦權面積",
+              "狀態"
+            ],
+            "rows": [
+              [
+                "銅、金",
+                "吉爾吉特-巴爾蒂斯坦，吉澤爾地區",
+                "33 km²",
+                "可轉讓"
+              ],
+              [
+                "鋰",
+                "吉爾吉特-巴爾蒂斯坦，斯卡都",
+                "43 km²",
+                "可轉讓"
+              ],
+              [
+                "鋰",
+                "吉爾吉特-巴爾蒂斯坦，斯卡都",
+                "35 km²",
+                "可轉讓"
+              ],
+              [
+                "鉛、銅等多金屬",
+                "開伯爾-普赫圖赫瓦省，吉德拉爾",
+                "499 英畝",
+                "可轉讓"
+              ],
+              [
+                "銅",
+                "開伯爾-普赫圖赫瓦省，上迪爾地區",
+                "496 英畝",
+                "可轉讓"
+              ],
+              [
+                "鉛、鋅、銻、銅多金屬",
+                "開伯爾-普赫圖赫瓦省，吉德拉爾",
+                "499 英畝",
+                "可轉讓"
+              ]
+            ]
+          },
+          "sections": []
+        },
+        "en": {
+          "name": "Northern Pakistan Metals Licence Portfolio",
+          "country": "Pakistan",
+          "mineral": "Copper, gold, lithium, lead–zinc and other metals",
+          "area": "Six licences in Gilgit-Baltistan and Khyber Pakhtunkhwa",
+          "stage": "Licences available for transfer",
+          "coop": "Licence transfer, open to discussion",
+          "summary": "A group of metal licences in northern Pakistan covering copper–gold, lithium and lead–zinc polymetallic ground in Gilgit-Baltistan and Khyber Pakhtunkhwa, all available for transfer. Sites can be visited by air from Islamabad.",
+          "facts": [
+            [
+              "Location",
+              "Northern Pakistan: Gilgit-Baltistan and Khyber Pakhtunkhwa"
+            ],
+            [
+              "Commodity",
+              "Copper, gold, lithium, lead, zinc, antimony"
+            ],
+            [
+              "Licences",
+              "Six"
+            ],
+            [
+              "Stage",
+              "Licences granted and transferable"
+            ],
+            [
+              "Site visits",
+              "By air from Islamabad to Skardu and nearby areas"
+            ],
+            [
+              "Cooperation",
+              "Licence transfer, open to discussion"
+            ]
+          ],
+          "highlights": [
+            "Several licences can be compared at once, covering copper–gold, lithium and polymetallic ground",
+            "Large lithium licences of 35–43 km² each",
+            "All licences are transferable"
+          ],
+          "table": {
+            "head": [
+              "Commodity",
+              "Area",
+              "Licence size",
+              "Status"
+            ],
+            "rows": [
+              [
+                "Copper, gold",
+                "Ghizer district, Gilgit-Baltistan",
+                "33 km²",
+                "Transferable"
+              ],
+              [
+                "Lithium",
+                "Skardu, Gilgit-Baltistan",
+                "43 km²",
+                "Transferable"
+              ],
+              [
+                "Lithium",
+                "Skardu, Gilgit-Baltistan",
+                "35 km²",
+                "Transferable"
+              ],
+              [
+                "Lead, copper and other metals",
+                "Chitral, Khyber Pakhtunkhwa",
+                "499 acres",
+                "Transferable"
+              ],
+              [
+                "Copper",
+                "Upper Dir, Khyber Pakhtunkhwa",
+                "496 acres",
+                "Transferable"
+              ],
+              [
+                "Lead, zinc, antimony, copper",
+                "Chitral, Khyber Pakhtunkhwa",
+                "499 acres",
+                "Transferable"
+              ]
+            ]
+          },
+          "sections": []
+        }
+      }
+    },
+    {
+      "slug": "guangxi-luchuan-gold",
+      "region": "china",
+      "symbols": [
+        "Au"
+      ],
+      "images": 1,
+      "coord": [
+        22.3,
+        110.26
+      ],
+      "t": {
+        "zh-cn": {
+          "name": "广西陆川金矿项目",
+          "country": "中国",
+          "mineral": "金",
+          "area": "矿区面积 1.393 km²",
+          "stage": "已取得采矿权",
+          "coop": "合作开发，可洽谈",
+          "summary": "项目位于广西壮族自治区玉林市陆川县，开采矿种为金矿，矿区面积 1.393 平方公里，采矿权有效期至 2030 年 9 月。",
+          "facts": [
+            [
+              "所在位置",
+              "广西壮族自治区玉林市陆川县"
+            ],
+            [
+              "矿种",
+              "金"
+            ],
+            [
+              "矿区面积",
+              "1.393 km²"
+            ],
+            [
+              "采矿权",
+              "已取得，有效期至 2030 年 9 月 16 日"
+            ],
+            [
+              "取得方式",
+              "探矿权转采矿权"
+            ],
+            [
+              "合作方式",
+              "合作开发，可洽谈"
+            ]
+          ],
+          "highlights": [
+            "采矿权在有效期内",
+            "位于国内，手续与管理环境清晰"
+          ],
+          "sections": []
+        },
+        "zh-hk": {
+          "name": "廣西陸川金礦項目",
+          "country": "中國",
+          "mineral": "金",
+          "area": "礦區面積 1.393 km²",
+          "stage": "已取得採礦權",
+          "coop": "合作開發，可洽談",
+          "summary": "項目位於廣西壯族自治區玉林市陸川縣，開採礦種為金礦，礦區面積 1.393 平方公里，採礦權有效期至 2030 年 9 月。",
+          "facts": [
+            [
+              "所在位置",
+              "廣西壯族自治區玉林市陸川縣"
+            ],
+            [
+              "礦種",
+              "金"
+            ],
+            [
+              "礦區面積",
+              "1.393 km²"
+            ],
+            [
+              "採礦權",
+              "已取得，有效期至 2030 年 9 月 16 日"
+            ],
+            [
+              "取得方式",
+              "探礦權轉採礦權"
+            ],
+            [
+              "合作方式",
+              "合作開發，可洽談"
+            ]
+          ],
+          "highlights": [
+            "採礦權在有效期內",
+            "位於國內，手續與管理環境清晰"
+          ],
+          "sections": []
+        },
+        "en": {
+          "name": "Luchuan Gold Project, Guangxi",
+          "country": "China",
+          "mineral": "Gold",
+          "area": "1.393 km² mining area",
+          "stage": "Mining right granted",
+          "coop": "Cooperative development, open to discussion",
+          "summary": "Located in Luchuan County, Yulin, Guangxi Zhuang Autonomous Region. The mining right covers gold over an area of 1.393 km² and is valid to September 2030.",
+          "facts": [
+            [
+              "Location",
+              "Luchuan County, Yulin, Guangxi Zhuang Autonomous Region, China"
+            ],
+            [
+              "Commodity",
+              "Gold"
+            ],
+            [
+              "Mining area",
+              "1.393 km²"
+            ],
+            [
+              "Mining right",
+              "Granted, valid to 16 September 2030"
+            ],
+            [
+              "How acquired",
+              "Converted from an exploration right"
+            ],
+            [
+              "Cooperation",
+              "Cooperative development, open to discussion"
+            ]
+          ],
+          "highlights": [
+            "Mining right currently valid",
+            "Domestic project with a clear regulatory framework"
+          ],
+          "sections": []
+        }
+      }
+    }
+  ]
+}

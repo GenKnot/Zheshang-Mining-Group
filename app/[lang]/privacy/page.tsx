@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
+import { ui } from '../../../lib/site';
 import Site from '../../../components/Site';
-import { content, HTML_LANG, LANGS, type Lang } from '../../../lib/content';
+import { HTML_LANG, LANGS, type Lang } from '../../../lib/content';
 import { docLang, docs, pageText } from '../../../lib/legal';
 
 type Props = { params: Promise<{ lang: string }> };
@@ -9,7 +10,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { lang } = await params;
   const l = lang as Lang;
   return {
-    title: `${pageText[l].privacy} | ${content[l].brand}`,
+    title: `${pageText[l].privacy} | ${ui[l].brand}`,
     description: docs[docLang(l)].privacy.intro,
     alternates: {
       canonical: `/${lang}/privacy`,

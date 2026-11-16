@@ -7,13 +7,21 @@ import { content, HTML_LANG, LANGS, MAIL, TEL, type Lang } from '../lib/content'
 import { contactPage, ELEMENTS, more } from '../lib/content-more';
 import { view } from '../lib/store';
 import { pageText } from '../lib/legal';
+import { about, home as homeText, projectBySlug, projects, projLang, projText, summit, ui } from '../lib/site';
+import AboutView from './AboutView';
 import ContactView from './ContactView';
+import ProjectsView, { ProjectCard } from './ProjectsView';
+import ProjectView from './ProjectView';
+import SummitView from './SummitView';
 import LegalView from './LegalView';
 import NotFoundView from './NotFoundView';
 import Label from './Label';
 
 const Terrain = dynamic(() => import('./Terrain'), { ssr: false });
 const Globe = dynamic(() => import('./Globe'), { ssr: false });
+const ProjectGlobe = dynamic(() => import('./ProjectGlobe'), { ssr: false });
+const AboutRig = dynamic(() => import('./AboutRig'), { ssr: false });
+const SummitHall = dynamic(() => import('./SummitHall'), { ssr: false });
 
 const pad = (n: number) => String(n).padStart(2, '0');
 const DOTS = 40;
@@ -22,12 +30,12 @@ const MAX_DEPTH = 3000;
 // 加载开场每次整页加载只播一次；站内跳转回首页时不重播
 let introSeen = false;
 
+/** 品牌字标：红色 ZSMI。拿到正式的标志文件后可以换成图片 */
 function Logo() {
   return (
-    <svg viewBox="0 0 40 40" width="30" height="30" aria-hidden="true">
-      <path d="M20 2 36 11v18L20 38 4 29V11z" fill="none" stroke="currentColor" strokeWidth="1.4" />
-      <path d="M9 27 16.5 15l4.5 6.5 3-4L31 27" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinejoin="round" />
-    </svg>
+    <span className="zsmi" aria-hidden="true">
+      ZSMI
+    </span>
   );
 }
 
@@ -60,14 +68,15 @@ function Wire({ kind }: { kind: number }) {
   );
 }
 
-type PageKind = 'home' | 'contact' | 'privacy' | 'legal' | 'notfound';
+type PageKind = 'home' | 'about' | 'projects' | 'project' | 'summit' | 'contact' | 'privacy' | 'legal' | 'notfound';
+const BIZ_COUNT = 3; // 首页"平台三大板块"的条数
 
-export default function Site({ initial, page = 'home' }: { initial: Lang; page?: PageKind }) {
+export default function Site({ initial, page = 'home', slug }: { initial: Lang; page?: PageKind; slug?: string }) {
   const home = page === 'home';
+  const project = page === 'project' && slug ? projectBySlug(slug) : undefined;
   // 当前页面在语言代码之后的路径；404 页保留访客输入的原路径
-  const subOf = () =>
-    page === 'notfound' ? window.location.pathname.replace(/^\/[^/]+/, '') : home ? '' : `/${page}`;
-  const sub = home || page === 'notfound' ? '' : `/${page}`;
+  const sub = home || page === 'notfound' ? '' : page === 'project' ? `/projects/${slug}` : `/${page}`;
+  const subOf = () => (page === 'notfound' ? window.location.pathname.replace(/^\/[^/]+/, '') : sub);
   const [lang, setLang] = useState<Lang>(initial);
   const [menu, setMenu] = useState(false);
   const [open, setOpen] = useState(false); // 手机端全屏菜单
@@ -83,26 +92,44 @@ export default function Site({ initial, page = 'home' }: { initial: Lang; page?:
   const depthRef = useRef<HTMLSpanElement>(null);
   const t = content[lang];
   const m = more[lang];
-  const navItems: [string, string][] = [
-    [t.nav[0], 'about'],
-    [t.nav[1], 'business'],
-    [m.nav[0], 'minerals'],
-    [m.nav[1], 'responsibility'],
+  const u = ui[lang];
+  const h = homeText[lang];
+  // 导航：[文字, 链接, 对应的页面]
+  const navItems: [string, string, string][] = [
+    [u.nav.about, `/${lang}/about`, 'about'],
+    [u.nav.business, home ? '#business' : `/${lang}#business`, ''],
+    [u.nav.projects, `/${lang}/projects`, 'projects'],
+    [u.nav.summit, `/${lang}/summit`, 'summit'],
   ];
+  const here = page === 'project' ? 'projects' : page;
   const go = phase === 'out' || phase === 'done';
 
   useEffect(() => {
     document.documentElement.lang = HTML_LANG[lang];
-    const brand = content[lang].brand;
-    document.title =
-      page === 'home'
-        ? content[lang].meta.title
-        : page === 'contact'
-          ? `${contactPage[lang].title} | ${brand}`
-          : page === 'notfound'
-            ? `404 | ${brand}`
-            : `${pageText[lang][page]} | ${brand}`;
-  }, [lang, page]);
+    const brand = ui[lang].brand;
+    const name =
+      page === 'contact'
+        ? contactPage[lang].title
+        : page === 'about'
+          ? about[lang].title
+          : page === 'summit'
+            ? summit[lang].title
+            : page === 'projects'
+              ? projText[lang].title
+              : page === 'project'
+                ? (project?.t[projLang(lang)].name ?? '')
+                : page === 'notfound'
+                  ? '404'
+                  : page === 'home'
+                    ? ''
+                    : pageText[lang][page];
+    document.title = page === 'home' ? ui[lang].metaTitle : `${name} | ${brand}`;
+  }, [lang, page, project]);
+
+  // 进入任何页面都从顶部开始；带锚点的链接（如 #business）除外
+  useEffect(() => {
+    if (!window.location.hash) window.scrollTo({ top: 0, left: 0, behavior: 'instant' });
+  }, [page, slug]);
 
   // 全屏菜单打开时锁住页面滚动
   useEffect(() => {
@@ -163,7 +190,7 @@ export default function Site({ initial, page = 'home' }: { initial: Lang; page?:
         const r = el.getBoundingClientRect();
         const local = Math.min(1, Math.max(0, -r.top / (r.height - vh)));
         const inView = r.top < vh * 0.5 && r.bottom > vh * 0.5;
-        const idx = Math.min(3, Math.floor(local * 4));
+        const idx = Math.min(BIZ_COUNT - 1, Math.floor(local * BIZ_COUNT));
         view.biz = inView ? idx : -1;
         view.bizL = local;
         setActive(idx);
@@ -202,8 +229,8 @@ export default function Site({ initial, page = 'home' }: { initial: Lang; page?:
       {phase !== 'done' && (
         <div className={`loader ${phase}`} aria-hidden="true">
           <div className="q q1">
-            <strong>// {content['zh-cn'].brand}</strong>
-            <span>// ZHESHANG MINING GROUP</span>
+            <strong>// ZSMI {ui['zh-cn'].brand}</strong>
+            <span>// ZS MINING INVESTMENT</span>
             <span>// {phase === 'loading' ? 'PLEASE WAIT' : 'WELCOME'}</span>
           </div>
           <div className="q q2">
@@ -224,7 +251,17 @@ export default function Site({ initial, page = 'home' }: { initial: Lang; page?:
       )}
 
       <div className="stage" aria-hidden="true">
-        {page === 'contact' ? <Globe /> : <Terrain />}
+        {page === 'contact' ? (
+          <Globe />
+        ) : page === 'projects' ? (
+          <ProjectGlobe lang={lang} />
+        ) : page === 'about' ? (
+          <AboutRig />
+        ) : page === 'summit' ? (
+          <SummitHall />
+        ) : (
+          <Terrain />
+        )}
       </div>
       <div className="vignette" aria-hidden="true" />
       <div className="gridlines" aria-hidden="true">
@@ -252,13 +289,13 @@ export default function Site({ initial, page = 'home' }: { initial: Lang; page?:
         <Link className="brand" href={home ? '#top' : `/${lang}`}>
           <Logo />
           <span>
-            <b>{t.brand}</b>
-            <i>{t.brandSub}</i>
+            <b>{u.brand}</b>
+            <i>{u.brandSub}</i>
           </span>
         </Link>
         <nav>
-          {navItems.map(([n, id]) => (
-            <Link key={id} href={home ? `#${id}` : `/${lang}#${id}`}>
+          {navItems.map(([n, href, key]) => (
+            <Link key={href} href={href} aria-current={key && key === here ? 'page' : undefined}>
               {n}
             </Link>
           ))}
@@ -292,7 +329,7 @@ export default function Site({ initial, page = 'home' }: { initial: Lang; page?:
           )}
         </div>
         <Link className="nav-cta" href={`/${lang}/contact`} aria-current={page === 'contact' ? 'page' : undefined}>
-          {t.nav[2]}
+          {u.nav.contact}
         </Link>
         <button
           className={`burger${open ? ' on' : ''}`}
@@ -307,10 +344,10 @@ export default function Site({ initial, page = 'home' }: { initial: Lang; page?:
 
       <div className={`mmenu${open ? ' on' : ''}`} aria-hidden={!open}>
         <nav>
-          {navItems.map(([n, id], i) => (
+          {navItems.map(([n, href], i) => (
             <Link
-              key={id}
-              href={home ? `#${id}` : `/${lang}#${id}`}
+              key={href}
+              href={href}
               tabIndex={open ? 0 : -1}
               style={{ transitionDelay: `${0.08 + i * 0.05}s` }}
               onClick={() => setOpen(false)}
@@ -326,7 +363,7 @@ export default function Site({ initial, page = 'home' }: { initial: Lang; page?:
             onClick={() => setOpen(false)}
           >
             <small>{pad(navItems.length + 1)}</small>
-            {t.nav[2]}
+            {u.nav.contact}
           </Link>
         </nav>
         <p>
@@ -342,25 +379,25 @@ export default function Site({ initial, page = 'home' }: { initial: Lang; page?:
           <div className="hero-inner">
             <p className="eyebrow rise" style={{ animationDelay: '.2s' }}>
               <i />
-              {t.hero.eyebrow}
+              {h.heroEyebrow}
             </p>
             <h1 key={lang}>
-              {t.hero.title.map((line, i) => (
+              {h.heroTitle.map((line, i) => (
                 <span className="mask" key={line}>
                   <span style={{ animationDelay: `${0.3 + i * 0.16}s` }}>{line}</span>
                 </span>
               ))}
             </h1>
             <p className="sub rise" style={{ animationDelay: '.8s' }}>
-              {t.hero.sub}
+              {h.heroSub}
             </p>
             <div className="cta rise" style={{ animationDelay: '1s' }}>
-              <a className="btn primary" href="#about">
+              <Link className="btn primary" href={`/${lang}/projects`}>
                 <span aria-hidden="true">↳</span>
-                {t.hero.cta}
-              </a>
+                {h.cta1}
+              </Link>
               <Link className="btn" href={`/${lang}/contact`}>
-                {t.hero.cta2}
+                {h.cta2}
               </Link>
             </div>
           </div>
@@ -380,10 +417,14 @@ export default function Site({ initial, page = 'home' }: { initial: Lang; page?:
               <Label n="01">{t.about.label}</Label>
             </div>
             <div>
-              <h2 data-reveal>{t.about.title}</h2>
+              <h2 data-reveal>{h.aboutTitle}</h2>
               <p className="body" data-reveal>
-                {t.about.body}
+                {h.aboutBody}
               </p>
+              <Link className="btn ink" href={`/${lang}/about`} data-reveal>
+                <span aria-hidden="true">↳</span>
+                {h.aboutMore}
+              </Link>
             </div>
           </div>
           <div className="culture">
@@ -427,9 +468,9 @@ export default function Site({ initial, page = 'home' }: { initial: Lang; page?:
         <section className="biz" id="business" ref={bizRef}>
           <div className="biz-sticky">
             <div className="biz-left">
-              <Label n="02">{t.biz.label}</Label>
+              <Label n="02">{h.bizLabel}</Label>
               <ol>
-                {t.biz.items.map((b, i) => (
+                {h.biz.map((b, i) => (
                   <li key={b.t} className={i === active ? 'on' : ''}>
                     <span className="num">{pad(i + 1)}</span>
                     <div>
@@ -446,7 +487,7 @@ export default function Site({ initial, page = 'home' }: { initial: Lang; page?:
               </div>
               <div className="biz-meter">
                 <b>{pad(active + 1)}</b>
-                <span>/ {pad(t.biz.items.length)}</span>
+                <span>/ {pad(h.biz.length)}</span>
                 <div className="track">
                   <i style={{ transform: `scaleX(${bizP})` }} />
                 </div>
@@ -455,10 +496,48 @@ export default function Site({ initial, page = 'home' }: { initial: Lang; page?:
           </div>
         </section>
 
+        <section className="hproj" id="projects">
+          <div className="sec-head">
+            <div data-reveal>
+              <Label n="03">{h.projLabel}</Label>
+            </div>
+            <div>
+              <h2 data-reveal>{h.projTitle}</h2>
+              <p className="body" data-reveal>
+                {h.projIntro}
+              </p>
+            </div>
+          </div>
+          <div className="pgrid" lang={projLang(lang) === lang ? undefined : 'en'}>
+            {projects.map((p, i) => (
+              <ProjectCard key={p.slug} p={p} lang={lang} delay={(i % 3) * 0.08} />
+            ))}
+          </div>
+          <div className="hproj-more" data-reveal>
+            <Link className="btn primary" href={`/${lang}/projects`}>
+              <span aria-hidden="true">↳</span>
+              {h.projAll}
+            </Link>
+          </div>
+          <div className="regs">
+            <div className="cell-head" data-reveal>
+              <Label>{h.regLabel}</Label>
+              <strong>{h.regTitle}</strong>
+            </div>
+            {h.regions.map(([k, d], i) => (
+              <div key={k} data-reveal style={{ transitionDelay: `${i * 0.06}s` }}>
+                <small>{pad(i + 1)}</small>
+                <strong>{k}</strong>
+                <span>{d}</span>
+              </div>
+            ))}
+          </div>
+        </section>
+
         <section className="minerals" id="minerals">
           <div className="sec-head">
             <div data-reveal>
-              <Label n="03">{m.minerals.label}</Label>
+              <Label n="04">{m.minerals.label}</Label>
             </div>
             <div>
               <h2 data-reveal>{m.minerals.title}</h2>
@@ -482,7 +561,7 @@ export default function Site({ initial, page = 'home' }: { initial: Lang; page?:
         <section className="resp light" id="responsibility">
           <div className="sec-head">
             <div data-reveal>
-              <Label n="04">{m.resp.label}</Label>
+              <Label n="05">{m.resp.label}</Label>
             </div>
             <div>
               <h2 data-reveal>{m.resp.title}</h2>
@@ -502,7 +581,7 @@ export default function Site({ initial, page = 'home' }: { initial: Lang; page?:
         <section className="process" id="process">
           <div className="sec-head">
             <div data-reveal>
-              <Label n="05">{m.process.label}</Label>
+              <Label n="06">{m.process.label}</Label>
             </div>
             <div>
               <h2 data-reveal>{m.process.title}</h2>
@@ -520,21 +599,32 @@ export default function Site({ initial, page = 'home' }: { initial: Lang; page?:
           </div>
         </section>
 
-        <section className="band">
-          <div data-reveal>
-            <h2>{m.band.title}</h2>
-            <p>{m.band.body}</p>
+        <section className="band" id="summit">
+          <div className="band-in">
+            <div data-reveal>
+              <small>■ {h.sumLabel}</small>
+              <h2>{h.sumTitle}</h2>
+              <p>{h.sumBody}</p>
+              <Link className="btn primary" href={`/${lang}/summit`}>
+                <span aria-hidden="true">↳</span>
+                {h.sumMore}
+              </Link>
+            </div>
+            <ol data-reveal>
+              {summit[lang].formats.map(([k], i) => (
+                <li key={k}>
+                  <small>{pad(i + 1)}</small>
+                  <strong>{k}</strong>
+                </li>
+              ))}
+            </ol>
           </div>
-          <Link className="btn dark" href={`/${lang}/contact`} data-reveal>
-            <span aria-hidden="true">↳</span>
-            {t.nav[2]}
-          </Link>
         </section>
 
         <section className="contact" id="contact">
           <div className="contact-head">
             <div data-reveal>
-              <Label n="06">{t.contact.label}</Label>
+              <Label n="07">{t.contact.label}</Label>
             </div>
             <h2 data-reveal>{t.contact.title}</h2>
           </div>
@@ -564,6 +654,10 @@ export default function Site({ initial, page = 'home' }: { initial: Lang; page?:
           </>
         ) : (
           <>
+            {page === 'about' && <AboutView lang={lang} />}
+            {page === 'projects' && <ProjectsView lang={lang} />}
+            {page === 'project' && project && <ProjectView lang={lang} project={project} />}
+            {page === 'summit' && <SummitView lang={lang} />}
             {page === 'contact' && <ContactView lang={lang} />}
             {(page === 'privacy' || page === 'legal') && <LegalView lang={lang} kind={page} />}
             {page === 'notfound' && <NotFoundView lang={lang} />}
@@ -575,15 +669,19 @@ export default function Site({ initial, page = 'home' }: { initial: Lang; page?:
         <span className="brand small">
           <Logo />
           <span>
-            <b>{t.brand}</b>
+            <b>{u.brand}</b>
           </span>
         </span>
         <nav>
+          <Link href={`/${lang}/about`}>{u.nav.about}</Link>
+          <Link href={`/${lang}/projects`}>{u.nav.projects}</Link>
+          <Link href={`/${lang}/summit`}>{u.nav.summit}</Link>
+          <Link href={`/${lang}/contact`}>{u.nav.contact}</Link>
           <Link href={`/${lang}/privacy`}>{pageText[lang].privacy}</Link>
           <Link href={`/${lang}/legal`}>{pageText[lang].legal}</Link>
         </nav>
         <span>
-          © {t.footer}
+          © {u.legalName}
         </span>
       </footer>
     </div>
