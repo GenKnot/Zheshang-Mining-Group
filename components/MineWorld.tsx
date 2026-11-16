@@ -18,20 +18,22 @@ const RED = new THREE.Color('#ff6a55');
 type V = number[];
 type Dot = { p: V; c: THREE.Color; s: number; a: number };
 
-const EX: V = [-1, 0, -30]; // 挖掘机的位置
-const ROAD = { cx: 10, cz: -30, rx: 11, rz: 8 }; // 运输道路：一圈椭圆
-// 露天矿坑：飞机航线正下方，镜头跟着飞机从它上空掠过
-const PIT = { x: 30, z: -76, r: 13, n: 8 };
-const pitRoad = (t: number): V => {
-  // t 从 0（坑口）到 1（坑底）：沿台阶盘旋三圈半下去
-  const a = t * TAU * 3.5;
-  const r = PIT.r - 0.5 - t * (PIT.n * 1.5 - 1.6);
-  return [PIT.x + r * Math.cos(a), -t * PIT.n * 0.95 + 0.05, PIT.z + r * Math.sin(a)];
+export const EX: V = [-1, 0, -30]; // 挖掘机的位置
+const ROAD = { cx: 16, cz: -30, rx: 10, rz: 8 }; // 运输道路：一圈椭圆，绕开挖掘机和等装车的卡车
+// 露天矿坑：飞机航线正下方，镜头跟着飞机从它上空掠过。r 半径、n 台阶数、d 深度，需与着色器常量一致
+export const PIT = { x: 40, z: -92, r: 34, n: 6, d: 13 };
+const GROUND = -0.06; // 平地比线条物件略低，免得叠在一起闪
+/** 盘山道上的位置：q 从 0（坑口）到 1（坑底），lane 是在台阶平面上靠外还是靠里 */
+const pitRoad = (q: number, lane: number): V => {
+  const u = q * (PIT.n - lane);
+  const d = PIT.r * (1 - (0.7 * (lane + u)) / PIT.n);
+  const a = TAU * u;
+  return [PIT.x + d * Math.cos(a), GROUND - (u * PIT.d) / PIT.n, PIT.z + d * Math.sin(a)];
 };
 // 飞机的航线：从矿场左后方飞来，越过作业区和矿坑，飞向远山
 export const FLIGHT = new THREE.CatmullRomCurve3(
   [
-    [-36, 9, -12], [-14, 10, -24], [4, 11, -40], [20, 12.5, -58], [34, 13.5, -80], [48, 14.5, -106], [60, 16, -136], [70, 18, -170],
+    [-36, 9, -12], [-14, 10, -24], [4, 11, -40], [22, 12.5, -62], [40, 14, -90], [54, 15, -118], [66, 16.5, -148], [76, 18.5, -182],
   ].map((p) => new THREE.Vector3(p[0], p[1], p[2])),
 );
 const roadAt = (t: number, k = 1): V => [ROAD.cx + ROAD.rx * k * Math.cos(t), 0.02, ROAD.cz + ROAD.rz * k * Math.sin(t)];
@@ -40,34 +42,8 @@ function build() {
   let seed = 41;
   const rnd = () => ((seed = (seed * 16807) % 2147483647) - 1) / 2147483646;
 
-  /* ---------- 地面、采场台阶、道路、远山 ---------- */
+  /* ---------- 采场台阶、道路、远山（地面本身是下面的等高线地形） ---------- */
   const land = new Lines();
-  // 作业区和矿坑周围是平的，越远起伏越大
-  const h = (x: number, z: number) => {
-    const d = Math.min(1, Math.max(0, (Math.hypot(x, z + 29) - 15) / 12));
-    const dp = Math.min(1, Math.max(0, (Math.hypot(x - PIT.x, z - PIT.z) - PIT.r - 2) / 9));
-    return d * dp * (1.3 * Math.sin(x * 0.19 + z * 0.11) * Math.sin(z * 0.16 + 1) + 0.5 * Math.sin(x * 0.5));
-  };
-  const inPit = (x: number, z: number) => Math.hypot(x - PIT.x, z - PIT.z) < PIT.r + 0.4;
-  const far = (z: number) => Math.max(0.25, 1 + (z + 13) / 190);
-  for (let z = -13; z >= -172; z -= 3)
-    for (let x = -44; x < 104; x += 1) if (!inPit(x + 0.5, z)) land.seg([x, h(x, z), z], [x + 1, h(x + 1, z), z], GREY, 0.2 * far(z));
-  for (let x = -44; x <= 104; x += 3)
-    for (let z = -13; z > -172; z -= 1.5) if (!inPit(x, z - 0.75)) land.seg([x, h(x, z), z], [x, h(x, z - 1.5), z - 1.5], GREY, 0.14 * far(z));
-
-  // 露天矿坑：一圈圈台阶，和首页的矿坑是同一种画法
-  for (let k = 0; k < PIT.n; k++) {
-    const r = PIT.r - k * 1.5;
-    const y = -k * 0.95;
-    land.hoop(PIT.x, y, PIT.z, r, PALE, k === 0 ? 1 : 0.85, 72);
-    land.hoop(PIT.x, y - 0.95, PIT.z, r - 0.6, GOLD, 0.5, 72);
-    for (let i = 0; i < 36; i++) {
-      const a = (i / 36) * TAU + k * 0.3;
-      land.seg([PIT.x + r * Math.cos(a), y, PIT.z + r * Math.sin(a)], [PIT.x + (r - 0.6) * Math.cos(a), y - 0.95, PIT.z + (r - 0.6) * Math.sin(a)], GREY, 0.28);
-    }
-  }
-  land.hoop(PIT.x, -PIT.n * 0.95, PIT.z, PIT.r - PIT.n * 1.5 + 0.9, GOLD, 0.6, 32);
-  for (let i = 0; i < 160; i++) land.seg(pitRoad(i / 160), pitRoad((i + 1) / 160), PALE, 0.55); // 盘山道
   // 挖掘机身后的采场台阶
   for (let k = 0; k < 4; k++) {
     const y = k * 1.7;
@@ -205,6 +181,212 @@ function build() {
   };
 }
 
+
+/* ---------- 地面：流动的等高线地形 + 一圈圈台阶的露天矿坑 ---------- */
+const groundVert = /* glsl */ `
+uniform float uTime;
+uniform vec2 uPit;
+uniform float uMode;
+attribute vec2 aPolar;
+varying float vH;
+varying vec2 vW;
+varying float vDist;
+varying float vS;
+varying float vPd;
+
+const float PR = 34.0;
+const float PN = 6.0;
+const float PD = 13.0;
+
+vec3 permute(vec3 x) { return mod(((x * 34.0) + 1.0) * x, 289.0); }
+float snoise(vec2 v) {
+  const vec4 C = vec4(0.211324865405187, 0.366025403784439, -0.577350269189626, 0.024390243902439);
+  vec2 i = floor(v + dot(v, C.yy));
+  vec2 x0 = v - i + dot(i, C.xx);
+  vec2 i1 = (x0.x > x0.y) ? vec2(1.0, 0.0) : vec2(0.0, 1.0);
+  vec4 x12 = x0.xyxy + C.xxzz;
+  x12.xy -= i1;
+  i = mod(i, 289.0);
+  vec3 p = permute(permute(i.y + vec3(0.0, i1.y, 1.0)) + i.x + vec3(0.0, i1.x, 1.0));
+  vec3 m = max(0.5 - vec3(dot(x0, x0), dot(x12.xy, x12.xy), dot(x12.zw, x12.zw)), 0.0);
+  m = m * m; m = m * m;
+  vec3 x = 2.0 * fract(p * C.www) - 1.0;
+  vec3 h = abs(x) - 0.5;
+  vec3 ox = floor(x + 0.5);
+  vec3 a0 = x - ox;
+  m *= 1.79284291400159 - 0.85373472095314 * (a0 * a0 + h * h);
+  vec3 g;
+  g.x = a0.x * x0.x + h.x * x0.y;
+  g.yz = a0.yz * x12.xz + h.yz * x12.yw;
+  return 130.0 * dot(m, g);
+}
+float fbm(vec2 p) {
+  float a = 0.5, s = 0.0;
+  for (int i = 0; i < 5; i++) {
+    s += a * snoise(p);
+    p = p * 2.02 + vec2(13.1, 7.7);
+    a *= 0.5;
+  }
+  return s;
+}
+
+void main() {
+  vec2 w = position.xz;
+  vW = w;
+  vec2 p = w * 0.017 + vec2(uTime * 0.006, uTime * 0.004);
+  float ridge = 1.0 - abs(snoise(p * 0.55 + 4.0));
+  float h = (fbm(p) * 0.8 + ridge * ridge * 0.75) * 4.5;
+  // 作业区是平的，越远起伏越大
+  float dw = length(w - vec2(8.0, -31.0));
+  h *= smoothstep(18.0, 36.0, dw) * (1.0 + 0.6 * smoothstep(60.0, 160.0, dw));
+  h += ${GROUND.toFixed(2)};
+
+  // 露天矿坑：台阶沿螺旋线逐级下降，形成一条连续的盘山道
+  vec2 q = w - uPit;
+  float d = uMode > 0.5 ? aPolar.x : length(q);
+  float th = uMode > 0.5 ? aPolar.y : atan(-q.y, q.x);
+  if (th < 0.0) th += 6.2831853;
+  float th01 = th / 6.2831853;
+  float t = max(0.0, 1.0 - d / PR);
+  float s = t / 0.7 * PN + th01;
+  float stair = floor(s) + smoothstep(0.72, 1.0, fract(s));
+  float depth = clamp(stair - th01, 0.0, PN) * PD / PN;
+  float m = 1.0 - smoothstep(PR * 0.98, PR * 1.25, d);
+  h = mix(h, ${GROUND.toFixed(2)} - depth, m);
+  vS = s;
+  vPd = d;
+
+  vH = h;
+  vec4 mv = modelViewMatrix * vec4(w.x, h, w.y, 1.0);
+  vDist = -mv.z;
+  gl_Position = projectionMatrix * mv;
+}
+`;
+const groundFrag = /* glsl */ `
+uniform vec3 uBg;
+uniform vec3 uLine;
+uniform vec3 uGold;
+uniform vec2 uPit;
+uniform float uTime;
+uniform float uMode;
+uniform float uOp;
+varying float vH;
+varying vec2 vW;
+varying float vDist;
+varying float vS;
+varying float vPd;
+
+const float PR = 34.0;
+const float PN = 6.0;
+
+float contour(float f, float w) {
+  float d = abs(fract(f - 0.5) - 0.5) / max(fwidth(f), 1e-5);
+  return 1.0 - smoothstep(0.0, w, d);
+}
+
+void main() {
+  // 地形面在矿坑处留空，由更精细的矿坑网格补上
+  if (uMode < 0.5 && vPd < PR * 1.08) discard;
+  if (uMode > 0.5 && vPd >= PR * 1.08) discard;
+
+  float f = vH * 1.7;
+  float minor = contour(f, 1.3);
+  float major = contour(f / 5.0, 1.9);
+
+  float fog = 1.0 - smoothstep(70.0, 235.0, vDist);
+  float edge = (1.0 - smoothstep(120.0, 165.0, abs(vW.x - 40.0))) * (1.0 - smoothstep(180.0, 228.0, -vW.y));
+
+  // 从矿坑向外扩散的扫描环，加上沿线条流动的明暗：远看像水面的波光
+  float r = length(vW - uPit) / 170.0;
+  float sw = fract(uTime * 0.05);
+  float ring = exp(-pow((r - sw * 1.1) / 0.02, 2.0)) * (1.0 - sw);
+  float tw = 0.78 + 0.42 * sin(vW.x * 0.21 + uTime * 0.9) * sin(vW.y * 0.17 - uTime * 0.7);
+
+  vec3 col = uBg + vec3(0.018, 0.02, 0.024) * smoothstep(-3.0, 8.0, vH);
+  vec3 lc = mix(uLine, uGold, major);
+  lc = mix(lc, uGold * 1.35, clamp(ring, 0.0, 1.0));
+  float a = (minor * 0.26 + major * 0.85) * tw * (1.0 + ring * 2.5);
+
+  // 矿坑台阶的坡脚线和坡顶线
+  float inPit = uMode * step(0.62, vS) * step(vS, PN + 0.9);
+  float toe = contour(vS, 1.5) * inPit;
+  float crest = contour(vS - 0.72, 1.1) * inPit;
+  float pit = clamp(toe * 0.95 + crest * 0.45, 0.0, 1.0);
+  lc = mix(lc, uGold * 1.25, pit);
+  a = max(a * (1.0 - 0.45 * uMode * (1.0 - smoothstep(PR * 0.88, PR, vPd))), pit);
+
+  col = mix(col, lc, clamp(a, 0.0, 1.0));
+  col = mix(uBg, col, edge * fog);
+  gl_FragColor = vec4(col, uOp);
+}
+`;
+
+function buildGround(mobile: boolean) {
+  // 地形面：直接按世界坐标排在 xz 平面上，高度由着色器给
+  const X0 = -125, X1 = 205, Z0 = -13, Z1 = -230;
+  const nx = mobile ? 170 : 330;
+  const nz = mobile ? 110 : 217;
+  const pos: number[] = [];
+  const idx: number[] = [];
+  for (let j = 0; j <= nz; j++)
+    for (let i = 0; i <= nx; i++) pos.push(X0 + ((X1 - X0) * i) / nx, 0, Z0 + ((Z1 - Z0) * j) / nz);
+  for (let j = 0; j < nz; j++)
+    for (let i = 0; i < nx; i++) {
+      const a = j * (nx + 1) + i;
+      const b = a + nx + 1;
+      idx.push(a, b, b + 1, a, b + 1, a + 1);
+    }
+  const planeGeo = new THREE.BufferGeometry();
+  planeGeo.setAttribute('position', new THREE.Float32BufferAttribute(pos, 3));
+  planeGeo.setAttribute('aPolar', new THREE.Float32BufferAttribute(new Float32Array((pos.length / 3) * 2), 2));
+  planeGeo.setIndex(idx);
+
+  // 矿坑：极坐标网格，比地形面密，台阶才清晰
+  const nr = mobile ? 100 : 170;
+  const na = mobile ? 180 : 300;
+  const pp: number[] = [];
+  const polar: number[] = [];
+  const pi: number[] = [];
+  const r1 = PIT.r * 1.1;
+  for (let i = 0; i <= nr; i++) {
+    const d = (r1 * i) / nr;
+    for (let j = 0; j <= na; j++) {
+      const th = (j / na) * TAU;
+      pp.push(PIT.x + d * Math.cos(th), 0, PIT.z - d * Math.sin(th));
+      polar.push(d, th);
+    }
+  }
+  for (let i = 0; i < nr; i++)
+    for (let j = 0; j < na; j++) {
+      const a = i * (na + 1) + j;
+      const b = a + na + 1;
+      pi.push(a, b, b + 1, a, b + 1, a + 1);
+    }
+  const pitGeo = new THREE.BufferGeometry();
+  pitGeo.setAttribute('position', new THREE.Float32BufferAttribute(pp, 3));
+  pitGeo.setAttribute('aPolar', new THREE.Float32BufferAttribute(polar, 2));
+  pitGeo.setIndex(pi);
+
+  const mat = (mode: number) =>
+    new THREE.ShaderMaterial({
+      vertexShader: groundVert,
+      fragmentShader: groundFrag,
+      uniforms: {
+        uTime: { value: 0 },
+        uOp: { value: 0 },
+        uMode: { value: mode },
+        uPit: { value: new THREE.Vector2(PIT.x, PIT.z) },
+        // 直接写入 sRGB 数值，与页面背景色 #0a0c0f 保持一致
+        uBg: { value: new THREE.Vector3(10 / 255, 12 / 255, 15 / 255) },
+        uLine: { value: new THREE.Vector3(0.62, 0.64, 0.66) },
+        uGold: { value: new THREE.Vector3(0.83, 0.67, 0.42) },
+      },
+      transparent: true,
+      side: THREE.DoubleSide,
+    });
+  return { planeGeo, pitGeo, plane: mat(0), pit: mat(1) };
+}
+
 /** 关键帧插值：keys 为 [时刻, 数值]，时刻在 0–1 之间递增 */
 function key(u: number, keys: [number, number][]) {
   for (let i = 0; i < keys.length - 1; i++) {
@@ -219,8 +401,8 @@ function key(u: number, keys: [number, number][]) {
 }
 
 const TRUCKS = 3;
-const PIT_TRUCKS = 5;
-const TRUCK_SCALE = 2.5;
+const PIT_TRUCKS = 9;
+const TRUCK_SCALE = 2.2;
 
 export type Chase = { pos: THREE.Vector3; fwd: THREE.Vector3 };
 
@@ -250,6 +432,7 @@ export default function MineWorld({
     }),
     [],
   );
+  const ground = useMemo(() => buildGround(typeof window !== 'undefined' && window.innerWidth < 768), []);
   const root = useRef<THREE.Group>(null);
   const upper = useRef<THREE.Group>(null);
   const boom = useRef<THREE.Group>(null);
@@ -268,9 +451,13 @@ export default function MineWorld({
     if (lv <= 0.01) return;
     mats.line.uniforms.uOp.value = lv;
     mats.point.uniforms.uOp.value = lv;
+    ground.plane.uniforms.uOp.value = lv;
+    ground.pit.uniforms.uOp.value = lv;
     mats.truck.opacity = lv * 0.5; // 车身线条密，压暗一些免得被辉光冲白
     if (!still) time.current += dt;
     const T = time.current;
+    ground.plane.uniforms.uTime.value = T;
+    ground.pit.uniforms.uTime.value = T;
 
     // 挖掘机的作业循环：挖 → 提臂 → 回转到卡车上方 → 卸料 → 转回 → 落臂
     const u = (T / 9) % 1;
@@ -290,14 +477,20 @@ export default function MineWorld({
       o.rotation.y = Math.atan2(-dz, dx);
     });
 
-    // 矿坑里的卡车：沿盘山道上上下下
+    // 矿坑里的卡车：下行靠外、上行靠里，各走各的道，会车时不重叠
     pitTrucks.current?.children.forEach((o, i) => {
-      const ph = (T * 0.016 + i / PIT_TRUCKS) % 1;
-      const t = i % 2 ? ph : 1 - ph; // 一半下行，一半上行
-      const p = pitRoad(t);
-      const q = pitRoad(Math.min(1, Math.max(0, t + (i % 2 ? 0.004 : -0.004))));
+      const down = i % 2 === 0;
+      const ph = (T * 0.0045 + i / PIT_TRUCKS) % 1;
+      const q = down ? ph : 1 - ph;
+      const lane = down ? 0.16 : 0.54;
+      const p = pitRoad(q, lane);
+      const n = pitRoad(Math.min(1, Math.max(0, q + (down ? 0.0015 : -0.0015))), lane);
       o.position.set(p[0], p[1], p[2]);
-      o.rotation.y = Math.atan2(-(q[2] - p[2]), q[0] - p[0]);
+      o.rotation.y = Math.atan2(-(n[2] - p[2]), n[0] - p[0]);
+      // 在坑口和坑底淡入淡出
+      const e0 = Math.min(1, q / 0.02);
+      const e1 = Math.min(1, (1 - q) / 0.03);
+      o.scale.setScalar(Math.max(0.001, Math.min(e0, e1)));
     });
 
     // 飞机：平时按时间从左后方飞过矿场；镜头跟飞时改由滚动进度带着沿航线往前
@@ -330,6 +523,9 @@ export default function MineWorld({
 
   return (
     <group ref={root} visible={false}>
+      {/* 地面：和首页同一种画法的等高线地形，先画，后面的线条物件叠在上面 */}
+      <mesh geometry={ground.planeGeo} material={ground.plane} frustumCulled={false} renderOrder={-5} />
+      <mesh geometry={ground.pitGeo} material={ground.pit} frustumCulled={false} renderOrder={-5} />
       <lineSegments geometry={g.land} material={mats.line} frustumCulled={false} />
       <points geometry={g.lamps} material={mats.point} frustumCulled={false} />
 

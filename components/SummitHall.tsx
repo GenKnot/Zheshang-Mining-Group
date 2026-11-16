@@ -400,7 +400,7 @@ export default function SummitHall() {
     typeof window !== 'undefined' && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   return (
     <Canvas
-      camera={{ fov: 46, near: 0.1, far: 160, position: [0, 9, 20] }}
+      camera={{ fov: 46, near: 0.1, far: 400, position: [0, 9, 20] }}
       dpr={[1, mobile ? 1.5 : 1.75]}
       gl={{ antialias: true, alpha: true, powerPreference: 'high-performance' }}
     >

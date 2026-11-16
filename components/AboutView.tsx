@@ -33,6 +33,8 @@ export default function AboutView({ lang }: { lang: Lang }) {
       const r = el.getBoundingClientRect();
       const local = Math.min(1, Math.max(0, -r.top / (r.height - vh)));
       view.rigL = local;
+      // 这一段从屏幕下方滚进来的进度：镜头在这期间从首屏机位平滑移到钻头旁
+      view.rigIn = Math.min(1, Math.max(0, 1 - r.top / vh));
       view.rigOn = r.top < vh * 0.5 && r.bottom > vh * 0.5;
       // 这一段滚过去之后，余下的页面对应"继续下潜"的进度
       const past = -(r.bottom - vh * 0.5);
@@ -48,6 +50,7 @@ export default function AboutView({ lang }: { lang: Lang }) {
       window.removeEventListener('scroll', onScroll);
       window.removeEventListener('resize', onScroll);
       view.rigL = 0;
+      view.rigIn = 0;
       view.rigOn = false;
       view.rigDeep = 0;
     };

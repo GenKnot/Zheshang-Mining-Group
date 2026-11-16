@@ -554,8 +554,8 @@ function Scene({ labels, still }: { labels: React.RefObject<HTMLDivElement | nul
       spin = 0;
     }
     // 滚动到"跟钻"那一段时，钻进深度改由滚动进度决定，镜头贴着钻头往下走
-    // 跟钻那一段滚过去之后不回到地面，而是继续往深处下潜（rigDeep 从 0 到 1）
-    st.w += ((view.rigOn ? smooth(0.03, 0.2, view.rigL) : view.rigDeep > 0 ? 1 : 0) - st.w) * k;
+    // w 完全由滚动位置决定：那一段滚进屏幕的过程中，镜头同步从首屏移到钻头旁，不会突然跳过去
+    st.w += (smooth(0.15, 1, view.rigIn) - st.w) * Math.min(1, dt * 4);
     st.l += (view.rigL - st.l) * k;
     st.d += (view.rigDeep - st.d) * k;
     if (st.w > 0.001) {

@@ -3220,3 +3220,108 @@ html:not(:lang(zh)) .tcard dl > div {
 .spage .afloat h2 {
   margin-bottom: 22px;
 }
+
+/* ==========================================================================
+   项目详情页：首屏透明，露出背景里的矿场；下面的内容带底色
+   ========================================================================== */
+.lpage.pdetail {
+  background: transparent;
+}
+.pdetail .lpage-hero {
+  display: flex;
+  align-items: center;
+  min-height: 94svh;
+}
+.pdetail .lpage-hero .sec-head {
+  width: 100%;
+  padding: 6vh 0;
+}
+.pdetail .lpage-hero .sec-head > div + div {
+  max-width: 620px;
+}
+.pdetail > section:not(.lpage-hero) {
+  background: rgba(10, 12, 15, 0.86);
+}
+@media (max-width: 860px) {
+  .pdetail .lpage-hero {
+    align-items: flex-start;
+    min-height: 0;
+    padding-bottom: 50vh;
+  }
+  .pdetail .lpage-hero .sec-head {
+    padding: 10vh 0 0;
+  }
+}
+/* 详情页标题后面垫一层从左到右渐隐的暗底，保证压在线条上也能看清 */
+.pdetail .lpage-hero {
+  position: relative;
+}
+.pdetail .lpage-hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, rgba(10, 12, 15, 0.9) 0%, rgba(10, 12, 15, 0.72) 42%, rgba(10, 12, 15, 0) 72%);
+  pointer-events: none;
+}
+.pdetail .lpage-hero .sec-head {
+  position: relative;
+}
+@media (max-width: 860px) {
+  .pdetail .lpage-hero::before {
+    background: linear-gradient(180deg, rgba(10, 12, 15, 0.9) 0%, rgba(10, 12, 15, 0.78) 40%, rgba(10, 12, 15, 0) 56%);
+  }
+}
+
+/* ==========================================================================
+   悬浮卡片的边框：不再是一整圈方框，改成上下两条渐隐的金线加对角的角标，
+   底色从左到右渐淡，让背景里的线条从右侧透进来
+   ========================================================================== */
+.afloat article {
+  position: relative;
+  padding: 44px 46px 46px;
+  border: 0;
+  background:
+    linear-gradient(90deg, rgba(212, 171, 107, 0.85), rgba(212, 171, 107, 0) 68%) top left / 100% 1px no-repeat,
+    linear-gradient(270deg, rgba(212, 171, 107, 0.55), rgba(212, 171, 107, 0) 60%) bottom right / 100% 1px no-repeat,
+    linear-gradient(100deg, rgba(10, 12, 15, 0.9) 0%, rgba(10, 12, 15, 0.76) 55%, rgba(10, 12, 15, 0.42) 100%);
+  box-shadow: 0 30px 80px -40px rgba(0, 0, 0, 0.9);
+}
+.afloat article::before,
+.afloat article::after {
+  content: '';
+  position: absolute;
+  width: 26px;
+  height: 26px;
+  pointer-events: none;
+}
+.afloat article::before {
+  top: -1px;
+  left: -1px;
+  border-top: 2px solid var(--red);
+  border-left: 2px solid var(--red);
+}
+.afloat article::after {
+  right: -1px;
+  bottom: -1px;
+  border-right: 1px solid var(--gold);
+  border-bottom: 1px solid var(--gold);
+}
+.afloat small {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+.afloat small::after {
+  content: '';
+  width: 56px;
+  height: 1px;
+  background: linear-gradient(90deg, rgba(212, 171, 107, 0.7), rgba(212, 171, 107, 0));
+}
+.afloat h2 {
+  margin: 18px 0 18px;
+}
+@media (max-width: 860px) {
+  .afloat article {
+    padding: 32px 26px 34px;
+  }
+}

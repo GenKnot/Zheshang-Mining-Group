@@ -22,6 +22,7 @@ const Globe = dynamic(() => import('./Globe'), { ssr: false });
 const ProjectGlobe = dynamic(() => import('./ProjectGlobe'), { ssr: false });
 const AboutRig = dynamic(() => import('./AboutRig'), { ssr: false });
 const SummitHall = dynamic(() => import('./SummitHall'), { ssr: false });
+const ProjectSite = dynamic(() => import('./ProjectSite'), { ssr: false });
 
 const pad = (n: number) => String(n).padStart(2, '0');
 const DOTS = 40;
@@ -259,6 +260,8 @@ export default function Site({ initial, page = 'home', slug }: { initial: Lang; 
           <AboutRig />
         ) : page === 'summit' ? (
           <SummitHall />
+        ) : page === 'project' ? (
+          <ProjectSite />
         ) : (
           <Terrain />
         )}
