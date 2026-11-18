@@ -59,7 +59,7 @@ function Scene({ still }: { still: boolean }) {
     }
   });
 
-  return <MineWorld level={level} fly={fly} chase={chase} still={still} />;
+  return <MineWorld level={level} fly={fly} chase={chase} still={still} heli />;
 }
 
 export default function ProjectSite() {

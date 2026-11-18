@@ -290,6 +290,55 @@ export function truckGeometry() {
   return g;
 }
 
+/** 线框直升机：机头朝 +x，y 向上，机身长约 1.5。旋翼单独一份几何体，好让它自己转 */
+export function heliGeometry() {
+  const v: number[] = [];
+  const r: number[] = [];
+  type P = number[];
+  const seg = (a: P, b: P, o = v) => o.push(a[0], a[1], a[2], b[0], b[1], b[2]);
+  const loop = (pts: P[], o = v) => pts.forEach((p, i) => seg(p, pts[(i + 1) % pts.length], o));
+  // 机身：左右两片侧面轮廓，中间用横线连起来
+  const prof: [number, number][] = [[0.5, 0.0], [0.42, 0.16], [0.2, 0.27], [-0.12, 0.27], [-0.28, 0.13], [-0.28, -0.02], [0.3, -0.09]];
+  const L = prof.map(([x, y]) => [x, y, -0.14]);
+  const R = prof.map(([x, y]) => [x, y, 0.14]);
+  loop(L);
+  loop(R);
+  L.forEach((p, i) => seg(p, R[i]));
+  // 风挡
+  seg([0.42, 0.16, -0.14], [0.22, 0.05, -0.14]);
+  seg([0.42, 0.16, 0.14], [0.22, 0.05, 0.14]);
+  seg([0.22, 0.05, -0.14], [0.22, 0.05, 0.14]);
+  // 尾梁、垂尾、尾桨
+  for (const z of [-0.03, 0.03]) {
+    seg([-0.28, 0.13, z], [-0.9, 0.17, z]);
+    seg([-0.28, 0.04, z], [-0.9, 0.12, z]);
+  }
+  loop([[-0.9, 0.12, 0], [-0.86, 0.17, 0], [-0.98, 0.4, 0], [-0.92, 0.4, 0], [-0.8, 0.17, 0]]);
+  loop(Array.from({ length: 10 }, (_, i) => [-0.92 + 0.11 * Math.cos((i / 10) * TAU), 0.28 + 0.11 * Math.sin((i / 10) * TAU), 0.05]));
+  // 起落橇
+  for (const z of [-0.19, 0.19]) {
+    seg([-0.22, -0.22, z], [0.42, -0.22, z]);
+    seg([0.42, -0.22, z], [0.48, -0.17, z]);
+    for (const x of [-0.1, 0.25]) seg([x, -0.22, z], [x, -0.06, z * 0.7]);
+  }
+  // 旋翼轴
+  seg([0.02, 0.27, 0], [0.02, 0.36, 0]);
+  // 旋翼：两片桨叶加一圈淡淡的桨盘
+  const BR = 0.82;
+  for (const a of [0, Math.PI / 2]) {
+    const c = Math.cos(a);
+    const n = Math.sin(a);
+    seg([-BR * c, 0, -BR * n], [BR * c, 0, BR * n], r);
+    seg([-BR * c + 0.03 * n, 0, -BR * n - 0.03 * c], [BR * c + 0.03 * n, 0, BR * n - 0.03 * c], r);
+  }
+  loop(Array.from({ length: 28 }, (_, i) => [BR * Math.cos((i / 28) * TAU), 0, BR * Math.sin((i / 28) * TAU)]), r);
+  const body = new THREE.BufferGeometry();
+  body.setAttribute('position', new THREE.Float32BufferAttribute(v, 3));
+  const rotor = new THREE.BufferGeometry();
+  rotor.setAttribute('position', new THREE.Float32BufferAttribute(r, 3));
+  return { body, rotor };
+}
+
 /** 一组发光点（车灯、顶灯、浮尘）的几何体 */
 function glowGeometry(pts: number[][], color: THREE.Color, size: number, alpha = 1) {
   const g = new THREE.BufferGeometry();
@@ -547,7 +596,7 @@ const smooth = (a: number, b: number, x: number) => {
 };
 
 function Scene({ segments, still, mobile }: { segments: number; still: boolean; mobile: boolean }) {
-  const s = useRef({ p: 0, band: 0, on: 0, mx: 0, my: 0, intro: 0, w: 0, tau: 0, time: 0, shift: 0 });
+  const s = useRef({ p: 0, band: 0, on: 0, mx: 0, my: 0, intro: 0, w: 0, tau: 0, time: 0, shift: 0, hm: 0, hp: 0 });
   const look = useMemo(() => new THREE.Vector3(), []);
   const tmp = useMemo(() => ({ a: new THREE.Vector3(), b: new THREE.Vector3(), f: new THREE.Vector3(), l: new THREE.Vector3(), u: new THREE.Vector3(), m: new THREE.Matrix4() }), []);
   const mat = useRef<THREE.ShaderMaterial>(null);
@@ -560,6 +609,14 @@ function Scene({ segments, still, mobile }: { segments: number; still: boolean; 
   const lineMat = useMemo(() => tunnelMaterial(false), []);
   const glowMat = useMemo(() => tunnelMaterial(true), []);
   const truckGlow = useMemo(() => tunnelMaterial(true), []);
+  // 直升机：每隔一阵从矿坑上空飞过
+  const heli = useRef<THREE.Group>(null);
+  const heliBody = useRef<THREE.Group>(null);
+  const heliRotor = useRef<THREE.LineSegments>(null);
+  const heliGeo = useMemo(heliGeometry, []);
+  const heliMat = useMemo(() => new THREE.LineBasicMaterial({ color: raw('#f0cf94'), transparent: true }), []);
+  const heliGlow = useMemo(() => tunnelMaterial(true), []);
+  const heliLamps = useMemo(() => glowGeometry([[0.5, -0.04, 0], [-0.95, 0.4, 0]], new THREE.Color('#fff1cf'), 150), []);
   // 车灯：前灯偏白，尾灯偏橙
   const headGeo = useMemo(() => glowGeometry([[0.58, -0.18, 0.24], [0.58, 0.18, 0.24]], new THREE.Color('#fff1cf'), 130), []);
   const tailGeo = useMemo(() => glowGeometry([[-0.61, -0.2, 0.5], [-0.61, 0.2, 0.5]], new THREE.Color('#ff9a4d'), 150), []);
@@ -622,6 +679,30 @@ function Scene({ segments, still, mobile }: { segments: number; still: boolean; 
     );
     // 竖屏首屏：镜头多俯一些，让远处的矿坑落在标题上方
     if (mobile && i === 0) look.y -= 2.1 * (1 - t);
+
+    // 矿种一段：镜头降到矿坑边，贴着坑口绕半圈，越绕越低
+    st.hm += (view.hMin - st.hm) * k;
+    st.hp += (view.hProc - st.hp) * k;
+    const wm = smooth(0.04, 0.3, st.hm) * (1 - smooth(0.78, 1, st.hm));
+    if (wm > 0.001) {
+      const a = 0.5 + st.hm * 2.4 + st.mx * 0.1;
+      const rad = 6.6 - 1.9 * st.hm;
+      tmp.a.set(cx + rad * Math.cos(a), 2.9 - 1.5 * st.hm - st.my * 0.2, -cy + rad * Math.sin(a));
+      tmp.b.set(cx, RIM - PD * 0.55, -cy);
+      camera.position.lerp(tmp.a, wm);
+      look.lerp(tmp.b, wm);
+    }
+    // 合作流程一段：镜头像无人机一样沿盘山道一圈圈往下飞，卡车就在身边的台阶上
+    const wp = smooth(0.04, 0.3, st.hp) * (1 - smooth(0.8, 1, st.hp));
+    if (wp > 0.001) {
+      const q = 0.06 + 0.5 * st.hp;
+      roadAt(q, 0.52, cx, cy, tmp.f);
+      tmp.a.set(tmp.f.x, tmp.f.z + 0.5 - st.my * 0.1, -tmp.f.y);
+      roadAt(q + 0.045, 0.3, cx, cy, tmp.f);
+      tmp.b.set(tmp.f.x + st.mx * 0.3, tmp.f.z + 0.08, -tmp.f.y);
+      camera.position.lerp(tmp.a, wp);
+      look.lerp(tmp.b, wp);
+    }
 
     const camU = st.tau * 0.84;
     if (st.w > 0.001) {
@@ -694,6 +775,43 @@ function Scene({ segments, still, mobile }: { segments: number; still: boolean; 
       });
     }
 
+    // 直升机：每 24 秒一趟，来回交替方向，沿一条略弯的航线掠过矿坑上空
+    const hl = heli.current;
+    if (hl) {
+      const PERIOD = 24;
+      const FLY = 13;
+      const tt = st.time - 3;
+      const pass = Math.floor(tt / PERIOD);
+      const u0 = tt >= 0 ? (tt - pass * PERIOD) / FLY : 2;
+      const show = (still ? 0 : smooth(0.8, 1, st.intro)) * (1 - smooth(0.3, 0.7, st.w)) * smooth(0, 0.08, u0) * (1 - smooth(0.9, 1, u0));
+      hl.visible = show > 0.01;
+      if (hl.visible) {
+        const u = pass % 2 ? 1 - u0 : u0;
+        const at = (k: number, out: THREE.Vector3) => {
+          // 二次贝塞尔：左后方 → 矿坑上空 → 右前方
+          const a = (1 - k) * (1 - k);
+          const b = 2 * k * (1 - k);
+          const c = k * k;
+          // 竖屏视野窄、矿坑在远处：航线收窄、压低，贴着矿坑上空横穿
+          if (mobile) return out.set(a * -9 + b * 0 + c * 9, a * 0.9 + b * 0.7 + c * 1.0, a * -8 + b * -5 + c * -3);
+          return out.set(a * -17 + b * (cx - 1.5) + c * 19, a * 3.0 + b * 1.9 + c * 3.3, a * -8 + b * (-cy - 2.5) + c * 3.5);
+        };
+        at(u, tmp.a);
+        at(u + (pass % 2 ? -0.01 : 0.01), tmp.b);
+        tmp.a.y += 0.12 * Math.sin(st.time * 1.3);
+        tmp.b.y = tmp.a.y;
+        hl.position.copy(tmp.a);
+        hl.lookAt(tmp.b);
+        if (heliBody.current) {
+          heliBody.current.rotation.x = 0.1 * Math.sin(st.time * 0.7); // 轻微侧倾
+          heliBody.current.rotation.z = -0.13; // 前飞时机头略低
+        }
+        if (heliRotor.current) heliRotor.current.rotation.y = st.time * 21;
+        heliMat.opacity = show;
+        heliGlow.uniforms.uOp.value = show * 0.8;
+      }
+    }
+
     // 巷道里行驶在前方的卡车
     const ld = lead.current;
     if (ld) {
@@ -731,6 +849,16 @@ function Scene({ segments, still, mobile }: { segments: number; still: boolean; 
           ))}
         </group>
       </group>
+      {/* 外层负责位置和航向（lookAt 让 +z 朝前），内层把机头从 +x 转到 +z */}
+      <group ref={heli} visible={false}>
+        <group rotation={[0, -Math.PI / 2, 0]} scale={mobile ? 0.7 : 1.25}>
+          <group ref={heliBody}>
+            <lineSegments geometry={heliGeo.body} material={heliMat} frustumCulled={false} />
+            <lineSegments ref={heliRotor} geometry={heliGeo.rotor} material={heliMat} position={[0.02, 0.36, 0]} frustumCulled={false} />
+            <points geometry={heliLamps} material={heliGlow} frustumCulled={false} />
+          </group>
+        </group>
+      </group>
       <lineSegments geometry={tunnel.lines} material={lineMat} frustumCulled={false} />
       <points geometry={tunnel.dustGeo} material={glowMat} frustumCulled={false} />
       <points geometry={tunnel.lampGeo} material={glowMat} frustumCulled={false} />
@@ -745,7 +873,8 @@ function Scene({ segments, still, mobile }: { segments: number; still: boolean; 
 
 export default function Terrain() {
   if (!webglAvailable()) return null;
-  const mobile = typeof window !== 'undefined' && window.innerWidth < 768;
+  // 竖屏（手机和竖放的平板）都用"矿坑在标题上方"的构图，否则右侧的矿坑会被裁掉一半
+  const mobile = typeof window !== 'undefined' && (window.innerWidth < 768 || window.innerWidth / window.innerHeight < 0.85);
   const still =
     typeof window !== 'undefined' && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   return (

@@ -4,7 +4,7 @@ import { useFrame } from '@react-three/fiber';
 import { useMemo, useRef } from 'react';
 import * as THREE from 'three';
 import { Lines, lineMaterial, pointMaterial, points } from './AboutRig';
-import { raw, truckGeometry } from './Terrain';
+import { heliGeometry, raw, truckGeometry } from './Terrain';
 
 /* 峰会页大屏"里面"的矿场：挖掘机循环作业、卡车沿道路运输、飞机从远山上空飞过。
    整块场景放在舞台大屏的后方（z < -13），镜头穿过屏幕后看到它。 */
@@ -416,11 +416,14 @@ export default function MineWorld({
   fly,
   chase,
   still,
+  heli = false,
 }: {
   level: React.RefObject<number>;
   fly: React.RefObject<number>;
   chase: React.RefObject<Chase>;
   still: boolean;
+  /** 是否让一架直升机绕着矿场巡航（项目详情页用，和首页那架是同一架） */
+  heli?: boolean;
 }) {
   const g = useMemo(build, []);
   const truckGeo = useMemo(truckGeometry, []);
@@ -440,6 +443,17 @@ export default function MineWorld({
   const bucket = useRef<THREE.Group>(null);
   const trucks = useRef<THREE.Group>(null);
   const pitTrucks = useRef<THREE.Group>(null);
+  const heliGeo = useMemo(heliGeometry, []);
+  const heliLamps = useMemo(
+    () =>
+      points([
+        { p: [0.5, -0.04, 0], c: PALE, s: 260, a: 1 },
+        { p: [-0.95, 0.4, 0], c: RED, s: 220, a: 1 },
+      ]),
+    [],
+  );
+  const heliRef = useRef<THREE.Group>(null);
+  const heliRotor = useRef<THREE.LineSegments>(null);
   const plane = useRef<THREE.Group>(null);
   const planeBody = useRef<THREE.Group>(null);
   const tmp = useMemo(() => ({ a: new THREE.Vector3(), b: new THREE.Vector3() }), []);
@@ -492,6 +506,17 @@ export default function MineWorld({
       const e1 = Math.min(1, (1 - q) / 0.03);
       o.scale.setScalar(Math.max(0.001, Math.min(e0, e1)));
     });
+
+    // 直升机：绕着作业区和矿坑兜大圈，忽高忽低
+    if (heliRef.current) {
+      const a = T * 0.15 + 2.2;
+      const at = (b: number, out: THREE.Vector3) => out.set(18 + 42 * Math.cos(b), 11 + 2.5 * Math.sin(b * 2 + 1), -58 + 36 * Math.sin(b));
+      at(a, tmp.a);
+      at(a + 0.02, tmp.b);
+      heliRef.current.position.copy(tmp.a);
+      heliRef.current.lookAt(tmp.b);
+      if (heliRotor.current) heliRotor.current.rotation.y = T * 21;
+    }
 
     // 飞机：平时按时间从左后方飞过矿场；镜头跟飞时改由滚动进度带着沿航线往前
     if (plane.current) {
@@ -566,6 +591,16 @@ export default function MineWorld({
           </group>
         ))}
       </group>
+
+      {heli && (
+        <group ref={heliRef}>
+          <group rotation={[0.12, -Math.PI / 2, -0.12]} scale={3.4}>
+            <lineSegments geometry={heliGeo.body} material={mats.truck} frustumCulled={false} />
+            <lineSegments ref={heliRotor} geometry={heliGeo.rotor} material={mats.truck} position={[0.02, 0.36, 0]} frustumCulled={false} />
+            <points geometry={heliLamps} material={mats.point} frustumCulled={false} />
+          </group>
+        </group>
+      )}
 
       {/* 飞机：外层组负责位置和航向（lookAt 让 +z 朝前），内层把机头从 +x 转到 +z 并做侧倾 */}
       <group ref={plane}>

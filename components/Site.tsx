@@ -200,6 +200,15 @@ export default function Site({ initial, page = 'home', slug }: { initial: Lang; 
         view.biz = -1;
         view.bizL = 0;
       }
+      // 矿种、合作流程两段经过屏幕的进度（0 刚从下方进来，1 完全滚出上方），首页地形的镜头跟着走
+      const through = (id: string) => {
+        const s = document.getElementById(id);
+        if (!s) return 0;
+        const r = s.getBoundingClientRect();
+        return Math.min(1, Math.max(0, (vh - r.top) / (r.height + vh)));
+      };
+      view.hMin = through('minerals');
+      view.hProc = through('process');
     };
     const onMove = (e: PointerEvent) => {
       view.mx = (e.clientX / window.innerWidth) * 2 - 1;

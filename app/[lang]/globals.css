@@ -3325,3 +3325,73 @@ html:not(:lang(zh)) .tcard dl > div {
     padding: 32px 26px 34px;
   }
 }
+
+/* 首页矿种、合作流程两段：底色调透，背景里的镜头运动才看得见 */
+.minerals,
+.process {
+  background: linear-gradient(180deg, rgba(10, 12, 15, 0.9) 0, rgba(10, 12, 15, 0.44) 22vh, rgba(10, 12, 15, 0.44) calc(100% - 22vh), rgba(10, 12, 15, 0.9) 100%);
+}
+
+/* 矮屏幕（常见的 13 寸笔记本）：巡览卡片的图片改成按屏高限高，正文收紧，保证整张卡片装得下 */
+@media (min-width: 861px) and (max-height: 820px) {
+  .tcard-img {
+    aspect-ratio: auto;
+    height: 24vh;
+  }
+  .tcard-body {
+    padding: 16px 22px 18px;
+  }
+  .tcard h2 {
+    margin: 8px 0 10px;
+    font-size: 20px;
+  }
+  .tcard dl > div {
+    padding: 6px 0;
+  }
+  .tcard .btn {
+    margin-top: 12px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+}
+
+/* 小屏手机（约 320×568）：首屏收紧字号和间距，两个按钮并排，保证都落在第一屏里 */
+@media (max-width: 380px), (max-width: 480px) and (max-height: 640px) {
+  .hero h1 {
+    font-size: 34px;
+    line-height: 1.14;
+  }
+  .hero .sub {
+    margin-top: 16px;
+    font-size: 14px;
+    line-height: 1.6;
+  }
+  .hero .cta {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 20px;
+    max-width: 100%;
+  }
+  /* 中文两个按钮能并排；英文等较长的文案放不下时自动换到两行，不把页面撑宽 */
+  .hero .cta .btn {
+    flex: 1 1 auto;
+    justify-content: center;
+    max-width: 100%;
+    padding: 12px 10px;
+    font-size: 13px;
+  }
+}
+
+/* 窄屏：法文、西文等较长的小标签允许折行并收紧字距，不把页面撑出横向滚动 */
+@media (max-width: 480px) {
+  .label {
+    max-width: 100%;
+    white-space: normal;
+    letter-spacing: 0.12em;
+  }
+  .label span {
+    min-width: 0;
+  }
+}

@@ -14,6 +14,9 @@ const GOLD = '#d4ab6b';
 const HOME: [number, number] = [30.2, 120.2]; // 杭州
 
 /** 经纬度转球面坐标：经度 0 朝向 +z */
+// 露天开采的项目画矿坑，其余画井架
+const OPEN_PIT = new Set(['suriname-gold', 'south-africa-chrome', 'mozambique-heavy-sands']);
+
 function toVec(lat: number, lon: number, r = R) {
   const a = lat * D2R;
   const b = lon * D2R;
@@ -113,6 +116,68 @@ function Scene({ labels, still, mobile }: { labels: React.RefObject<HTMLDivEleme
   }, []);
 
   const spots = useMemo(() => projects.map((p) => toVec(p.coord[0], p.coord[1])), []);
+  // 每个项目一幅小的线框"立面图"，贴在标记上方的地表：露天矿画矿坑，其余画井架。聚焦到该项目时升起来
+  const sites = useMemo(
+    () =>
+      projects.map((p, i) => {
+        const v: number[] = [];
+        const seg = (a: number[], b: number[]) => v.push(a[0], a[1], 0, b[0], b[1], 0);
+        const oval = (x: number, y: number, rx: number, ry: number, n = 36) => {
+          for (let k = 0; k < n; k++) {
+            const a = (k / n) * Math.PI * 2;
+            const b = ((k + 1) / n) * Math.PI * 2;
+            seg([x + rx * Math.cos(a), y + ry * Math.sin(a)], [x + rx * Math.cos(b), y + ry * Math.sin(b)]);
+          }
+        };
+        if (OPEN_PIT.has(p.slug)) {
+          // 一圈圈往下收的台阶，加一条下坑的坡道和坑边的料堆
+          for (let k = 0; k < 5; k++) oval(0, 0.2 - k * 0.026, 0.16 - k * 0.03, (0.16 - k * 0.03) * 0.36);
+          for (let k = 0; k < 4; k++) {
+            const s = k % 2 ? -1 : 1;
+            seg([s * (0.16 - k * 0.03) * 0.7, 0.2 - k * 0.026 - 0.03], [-s * (0.13 - k * 0.03) * 0.7, 0.174 - k * 0.026 - 0.03]);
+          }
+          seg([-0.22, 0.2], [-0.16, 0.2]);
+          seg([0.16, 0.2], [0.24, 0.2]);
+          seg([0.17, 0.2], [0.2, 0.245]);
+          seg([0.2, 0.245], [0.235, 0.2]);
+        } else {
+          // 井架：两条斜腿、交叉拉撑、顶上的天轮、斜撑和卷扬机房
+          const B = 0.045;
+          seg([-0.055, B], [-0.016, 0.25]);
+          seg([0.055, B], [0.016, 0.25]);
+          seg([-0.016, 0.25], [0.016, 0.25]);
+          for (let k = 0; k < 4; k++) {
+            const y0 = B + k * 0.05;
+            const y1 = y0 + 0.05;
+            const w0 = 0.055 - (k * 0.05 * 0.039) / 0.205;
+            const w1 = 0.055 - ((k + 1) * 0.05 * 0.039) / 0.205;
+            seg([-w0, y0], [w1, y1]);
+            seg([w0, y0], [-w1, y1]);
+            seg([-w1, y1], [w1, y1]);
+          }
+          oval(0, 0.27, 0.03, 0.03, 16);
+          oval(0, 0.27, 0.008, 0.008, 6);
+          seg([0.016, 0.25], [0.15, B]);
+          seg([0.028, 0.278], [0.14, B + 0.05]);
+          seg([0.1, B], [0.1, B + 0.05]);
+          seg([0.1, B + 0.05], [0.18, B + 0.05]);
+          seg([0.18, B + 0.05], [0.18, B]);
+          seg([-0.1, B], [0.2, B]);
+        }
+        const geo = new THREE.BufferGeometry();
+        geo.setAttribute('position', new THREE.Float32BufferAttribute(v, 3));
+        const line = new THREE.LineSegments(geo, new THREE.LineBasicMaterial({ color: '#f3dcae', transparent: true, opacity: 0, depthWrite: false }));
+        // 贴在地表的切平面上：x 朝东、y 朝北、z 朝外
+        const n = spots[i].clone().normalize();
+        const north = new THREE.Vector3(0, 1, 0).addScaledVector(n, -n.y).normalize();
+        const east = new THREE.Vector3().crossVectors(north, n);
+        line.quaternion.setFromRotationMatrix(new THREE.Matrix4().makeBasis(east, north, n));
+        line.position.copy(spots[i]).addScaledVector(n, 0.012);
+        line.frustumCulled = false;
+        return line;
+      }),
+    [spots],
+  );
 
   // 从杭州到各个项目的弧线
   const arcs = useMemo(
@@ -214,6 +279,12 @@ function Scene({ labels, still, mobile }: { labels: React.RefObject<HTMLDivEleme
         ring.scale.setScalar(1 + t * (2 + 3 * a));
         (ring.material as THREE.MeshBasicMaterial).opacity = (1 - t) * (0.2 + 0.8 * a) * e;
       }
+      // 只在聚焦到这个项目时升起它的剪影
+      const site = sites[i];
+      const sv = a * st.t * (focus === p ? 1 : 0);
+      site.visible = sv > 0.01;
+      site.scale.set(1.7, Math.max(0.001, 1.7 * sv), 1);
+      (site.material as THREE.LineBasicMaterial).opacity = sv * e;
       const arc = arcs[i];
       (arc.material as THREE.LineBasicMaterial).opacity = (0.12 + 0.6 * a) * e;
       arc.geometry.setDrawRange(0, Math.round(81 * Math.min(1, Math.max(0, (st.intro - 0.4) / 0.6))));
@@ -250,6 +321,9 @@ function Scene({ labels, still, mobile }: { labels: React.RefObject<HTMLDivEleme
         </points>
         {arcs.map((a, i) => (
           <primitive key={i} object={a} />
+        ))}
+        {sites.map((o, i) => (
+          <primitive key={`s${i}`} object={o} />
         ))}
         <group ref={marks}>
           {spots.map((pos, i) => (
