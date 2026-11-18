@@ -3395,3 +3395,92 @@ html:not(:lang(zh)) .tcard dl > div {
     min-width: 0;
   }
 }
+
+/* 联系页地球上项目所在地的小标签：在标记右侧，比办公室的标签小一号 */
+.g-labels > div.pl {
+  margin-left: 12px;
+  padding: 0 0 0 8px;
+  border-right: 0;
+  border-left: 1px solid rgba(255, 90, 82, 0.7);
+  text-align: left;
+}
+.g-labels .pl b {
+  font-size: 10.5px;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  color: rgba(236, 232, 223, 0.85);
+}
+.g-labels .pl span {
+  font-size: 9px;
+  color: rgba(255, 138, 122, 0.9);
+}
+/* 办公地点下面的"项目覆盖地区"一行 */
+.coverage {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 2fr);
+  gap: 24px;
+  align-items: center;
+  padding: 26px 16px 30px;
+  border-top: 1px solid var(--line);
+  transition: opacity 0.9s var(--ease), transform 0.9s var(--ease);
+}
+.coverage small {
+  font-family: var(--mono);
+  color: var(--gold);
+  font-size: 10px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+}
+.coverage p {
+  margin-top: 8px;
+  max-width: 34em;
+  font-size: 13px;
+  color: var(--muted);
+}
+.coverage ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.coverage a {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 14px;
+  border: 1px solid rgba(212, 171, 107, 0.35);
+  font-size: 14px;
+  transition: background 0.3s, border-color 0.3s, color 0.3s;
+}
+.coverage a i {
+  font-family: var(--mono);
+  font-style: normal;
+  font-size: 11px;
+  color: var(--gold);
+}
+.coverage a span {
+  font-size: 11px;
+  color: var(--muted);
+}
+.coverage a:hover {
+  background: var(--gold);
+  border-color: var(--gold);
+  color: #14110b;
+}
+.coverage a:hover i,
+.coverage a:hover span {
+  color: #14110b;
+}
+@media (max-width: 860px) {
+  .coverage {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 16px;
+    padding: 22px 12px 26px;
+  }
+  /* 窄屏地球小，项目标签只留国家名 */
+  .g-labels .pl span {
+    display: none;
+  }
+}

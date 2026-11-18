@@ -3,6 +3,9 @@
 import { Canvas, useFrame } from '@react-three/fiber';
 import { useMemo, useRef } from 'react';
 import * as THREE from 'three';
+import type { Lang } from '../lib/content';
+import { coverage } from '../lib/coverage';
+import { projects, projLang } from '../lib/site';
 import { view } from '../lib/store';
 import { webglAvailable } from '../lib/webgl';
 
@@ -59,10 +62,40 @@ function Marker({ lat, lon, delay }: { lat: number; lon: number; delay: number }
   );
 }
 
+/** 项目所在地的小标记：红点加一圈慢慢扩开的细环，没有立杆，和办公室的标记区分开 */
+function Site({ lat, lon, delay }: { lat: number; lon: number; delay: number }) {
+  const ring = useRef<THREE.Mesh>(null);
+  const pos = useMemo(() => toVec(lat, lon), [lat, lon]);
+  const quat = useMemo(
+    () => new THREE.Quaternion().setFromUnitVectors(new THREE.Vector3(0, 0, 1), pos.clone().normalize()),
+    [pos],
+  );
+  useFrame(({ clock }) => {
+    const m = ring.current;
+    if (!m) return;
+    const t = (clock.elapsedTime * 0.35 + delay) % 1;
+    m.scale.setScalar(1 + t * 2.6);
+    (m.material as THREE.MeshBasicMaterial).opacity = (1 - t) * 0.8;
+  });
+  return (
+    <group position={pos} quaternion={quat}>
+      <mesh>
+        <sphereGeometry args={[0.024, 12, 12]} />
+        <meshBasicMaterial color="#ff5a52" />
+      </mesh>
+      <mesh ref={ring} position={[0, 0, 0.004]}>
+        <ringGeometry args={[0.034, 0.039, 40]} />
+        <meshBasicMaterial color="#ff8a7a" transparent side={THREE.DoubleSide} depthWrite={false} />
+      </mesh>
+    </group>
+  );
+}
+
 function Scene({ labels, still }: { labels: React.RefObject<HTMLDivElement | null>; still: boolean }) {
   const globe = useRef<THREE.Group>(null);
   const s = useRef({ p: 0, mx: 0, my: 0, intro: still ? 1 : 0 });
   const tmp = useMemo(() => new THREE.Vector3(), []);
+  const nrm = useMemo(() => new THREE.Vector3(), []);
 
   // 经纬网
   const grid = useMemo(() => {
@@ -116,6 +149,32 @@ function Scene({ labels, still }: { labels: React.RefObject<HTMLDivElement | nul
     return line;
   }, []);
 
+  // 从两处办公室到各项目所在地的弧线：就近的那一处出发，越远拱得越高
+  const routes = useMemo(
+    () =>
+      projects.map((p) => {
+        const b = toVec(p.coord[0], p.coord[1]).normalize();
+        const from = PLACES.map((o) => toVec(o.lat, o.lon).normalize()).sort((x, y) => x.angleTo(b) - y.angleTo(b))[0];
+        const ang = Math.max(0.02, from.angleTo(b));
+        const pts: THREE.Vector3[] = [];
+        for (let i = 0; i <= 80; i++) {
+          const t = i / 80;
+          const q = from
+            .clone()
+            .multiplyScalar(Math.sin((1 - t) * ang) / Math.sin(ang))
+            .add(b.clone().multiplyScalar(Math.sin(t * ang) / Math.sin(ang)));
+          pts.push(q.multiplyScalar(R * (1 + (0.03 + 0.1 * (ang / Math.PI)) * Math.sin(Math.PI * t))));
+        }
+        const line = new THREE.Line(
+          new THREE.BufferGeometry().setFromPoints(pts),
+          new THREE.LineBasicMaterial({ color: '#e6c58d', transparent: true, opacity: 0.85 }),
+        );
+        line.geometry.setDrawRange(0, 0);
+        return line;
+      }),
+    [],
+  );
+
   const glow = useMemo(
     () => ({
       vertexShader: `varying vec3 vN; void main(){ vN = normalize(normalMatrix * normal); gl_Position = projectionMatrix * modelViewMatrix * vec4(position,1.0); }`,
@@ -136,7 +195,8 @@ function Scene({ labels, still }: { labels: React.RefObject<HTMLDivElement | nul
     // 入场：地球转到东亚朝前；之后轻微摆动并跟随鼠标
     const g = globe.current;
     if (g) {
-      const sway = still ? 0 : Math.sin(clock.elapsedTime * 0.25) * 0.05;
+      // 在东亚和非洲一侧之间缓慢来回转：办公室始终看得见，西边的项目所在地也能转出来
+      const sway = still ? 0.15 : 0.2 - 0.3 * Math.cos(clock.elapsedTime * 0.11);
       g.rotation.x = LAT0 * D2R + st.my * 0.06;
       g.rotation.y = (1 - e) * -1.6 + sway + st.mx * 0.1;
     }
@@ -152,17 +212,38 @@ function Scene({ labels, still }: { labels: React.RefObject<HTMLDivElement | nul
 
     arc.geometry.setDrawRange(0, Math.round(65 * Math.min(1, Math.max(0, (st.intro - 0.6) / 0.4))));
 
-    // 把两地的屏幕坐标写给 DOM 标签
+    routes.forEach((r, i) =>
+      r.geometry.setDrawRange(0, Math.round(81 * Math.min(1, Math.max(0, (st.intro - 0.7 - i * 0.03) / 0.3)))),
+    );
+
+    // 把办公室和项目所在地的屏幕坐标写给 DOM 标签；转到背面的不显示
     const box = labels.current;
     if (box && g) {
-      PLACES.forEach((pl, i) => {
-        const el = box.children[i] as HTMLElement;
-        tmp.copy(toVec(pl.lat, pl.lon, R)).applyMatrix4(g.matrixWorld).project(camera);
+      const show = Math.max(0, Math.min(1, (st.intro - 0.75) * 4)) * Math.max(0, 1 - st.p * 5);
+      const place = (i: number, lat: number, lon: number, left: boolean, below = false) => {
+        const el = box.children[i] as HTMLElement | undefined;
+        if (!el) return;
+        tmp.copy(toVec(lat, lon, R)).applyMatrix4(g.matrixWorld);
+        const facing = nrm.copy(tmp).normalize().dot(camera.position.clone().sub(tmp).normalize());
+        tmp.project(camera);
         const x = (tmp.x * 0.5 + 0.5) * size.width;
         const y = (-tmp.y * 0.5 + 0.5) * size.height;
-        el.style.transform = `translate(${x.toFixed(1)}px, ${y.toFixed(1)}px) translate(-100%, -50%)`;
-        el.style.opacity = String(Math.max(0, Math.min(1, (st.intro - 0.75) * 4)) * Math.max(0, 1 - st.p * 5));
-      });
+        el.style.transform = below
+          ? `translate(${x.toFixed(1)}px, ${y.toFixed(1)}px) translate(-70%, 24px)`
+          : `translate(${x.toFixed(1)}px, ${y.toFixed(1)}px) translate(${left ? '-100%' : '0'}, -50%)`;
+        el.style.opacity = String(show * Math.max(0, Math.min(1, (facing - 0.1) * 6)));
+      };
+      PLACES.forEach((pl, i) => place(i, pl.lat, pl.lon, true));
+      // 离办公室很近的项目（广西紧挨着香港）：标签改放到标记下方，免得和办公室的标签叠在一起
+      projects.forEach((p, i) =>
+        place(
+          PLACES.length + i,
+          p.coord[0],
+          p.coord[1],
+          false,
+          PLACES.some((o) => Math.hypot(o.lat - p.coord[0], o.lon - p.coord[1]) < 9),
+        ),
+      );
     }
   });
 
@@ -180,6 +261,12 @@ function Scene({ labels, still }: { labels: React.RefObject<HTMLDivElement | nul
           <pointsMaterial color={GOLD} size={0.014} sizeAttenuation transparent opacity={0.55} />
         </points>
         <primitive object={arc} />
+        {routes.map((r, i) => (
+          <primitive key={i} object={r} />
+        ))}
+        {projects.map((p, i) => (
+          <Site key={p.slug} lat={p.coord[0]} lon={p.coord[1]} delay={i * 0.17} />
+        ))}
         {PLACES.map((p, i) => (
           <Marker key={p.name} lat={p.lat} lon={p.lon} delay={i * 0.25} />
         ))}
@@ -198,7 +285,7 @@ function Scene({ labels, still }: { labels: React.RefObject<HTMLDivElement | nul
   );
 }
 
-export default function Globe() {
+export default function Globe({ lang }: { lang: Lang }) {
   if (!webglAvailable()) return null;
   const labels = useRef<HTMLDivElement>(null);
   const still =
@@ -217,6 +304,12 @@ export default function Globe() {
           <div key={p.name}>
             <b>{p.name}</b>
             <span>{p.coord}</span>
+          </div>
+        ))}
+        {projects.map((p) => (
+          <div key={p.slug} className="pl">
+            <b>{p.t[projLang(lang)].country}</b>
+            <span>{coverage[lang].site}</span>
           </div>
         ))}
       </div>

@@ -262,7 +262,7 @@ export default function Site({ initial, page = 'home', slug }: { initial: Lang; 
 
       <div className="stage" aria-hidden="true">
         {page === 'contact' ? (
-          <Globe />
+          <Globe lang={lang} />
         ) : page === 'projects' ? (
           <ProjectGlobe lang={lang} />
         ) : page === 'about' ? (

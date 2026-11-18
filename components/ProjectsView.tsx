@@ -107,6 +107,16 @@ export default function ProjectsView({ lang }: { lang: Lang }) {
     window.scrollTo({ top: top + (el.offsetHeight - window.innerHeight) * ((k + 0.5) / n) });
   };
 
+  // 从别的页面带着地区进来（例如联系页的"项目覆盖地区"）：直接跳到该地区的第一个项目
+  useEffect(() => {
+    const k = decodeURIComponent(window.location.hash.slice(1));
+    const i = projects.findIndex((p) => p.region === k);
+    if (i < 0) return;
+    const id = window.setTimeout(() => jump(i + 1), 80);
+    return () => window.clearTimeout(id);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
+
   const b = cur?.t[pl];
 
   return (

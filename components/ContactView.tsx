@@ -4,6 +4,8 @@ import Link from 'next/link';
 import { useState } from 'react';
 import { content, MAIL, TEL, type Lang } from '../lib/content';
 import { contactPage } from '../lib/content-more';
+import { coverage } from '../lib/coverage';
+import { projects, projLang, regions } from '../lib/site';
 import Label from './Label';
 
 // 地图搜索用的地址（中文原文，定位最准确）
@@ -20,6 +22,10 @@ function mapUrl(lang: Lang, i: number) {
 export default function ContactView({ lang }: { lang: Lang }) {
   const t = content[lang];
   const c = contactPage[lang];
+  const cv = coverage[lang];
+  const pl = projLang(lang);
+  // 有项目的地区，按项目库里的顺序
+  const covered = Object.keys(regions).filter((k) => projects.some((p) => p.region === k));
   const [f, setF] = useState({ name: '', company: '', email: '', message: '' });
   const set = (k: keyof typeof f) => (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) =>
     setF({ ...f, [k]: e.target.value });
@@ -88,6 +94,24 @@ export default function ContactView({ lang }: { lang: Lang }) {
               </a>
             </article>
           ))}
+        </div>
+        {/* 项目所在地区：和办公地点分开写，点击跳到项目库里对应的地区 */}
+        <div className="coverage" data-reveal>
+          <div>
+            <small>■ {cv.label}</small>
+            <p>{cv.hint}</p>
+          </div>
+          <ul>
+            {covered.map((k) => (
+              <li key={k}>
+                <Link href={`/${lang}/projects#${k}`}>
+                  {regions[k][pl]}
+                  <i>{projects.filter((p) => p.region === k).length}</i>
+                  <span aria-hidden="true">↗</span>
+                </Link>
+              </li>
+            ))}
+          </ul>
         </div>
       </section>
 
