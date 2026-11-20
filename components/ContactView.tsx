@@ -11,12 +11,9 @@ import Label from './Label';
 // 地图搜索用的地址（中文原文，定位最准确）
 const MAP_QUERY = ['香港旺角亞皆老街2C號啟如商業大廈', '杭州市滨江区世茂智慧之门B塔'];
 
-function mapUrl(lang: Lang, i: number) {
-  const q = encodeURIComponent(MAP_QUERY[i]);
-  // 简体版用高德地图（内地可访问），其余语言用 Google 地图
-  return lang === 'zh-cn'
-    ? `https://uri.amap.com/search?keyword=${q}`
-    : `https://www.google.com/maps/search/?api=1&query=${q}`;
+// 所有语言都用高德地图：内地能正常访问，境外也打得开
+function mapUrl(i: number) {
+  return `https://uri.amap.com/search?keyword=${encodeURIComponent(MAP_QUERY[i])}`;
 }
 
 export default function ContactView({ lang }: { lang: Lang }) {
@@ -88,7 +85,7 @@ export default function ContactView({ lang }: { lang: Lang }) {
                 <i>{o.en}</i>
               </h3>
               <p>{o.addr}</p>
-              <a className="maplink" href={mapUrl(lang, i)} target="_blank" rel="noopener noreferrer">
+              <a className="maplink" href={mapUrl(i)} target="_blank" rel="noopener noreferrer">
                 <span aria-hidden="true">↗</span>
                 {c.map}
               </a>

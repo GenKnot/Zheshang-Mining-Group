@@ -1,7 +1,7 @@
 import type { Metadata, Viewport } from 'next';
 import { notFound } from 'next/navigation';
 import { HTML_LANG, LANGS, type Lang } from '../../lib/content';
-import { orgJsonLd, SITE_URL } from '../../lib/seo';
+import { orgJsonLd, pageMeta, SITE_URL } from '../../lib/seo';
 import { ui } from '../../lib/site';
 import './globals.css';
 
@@ -15,22 +15,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { lang } = await params;
   if (!LANGS.includes(lang as Lang)) return {};
   const t = ui[lang as Lang];
-  return {
-    metadataBase: new URL(SITE_URL),
-    title: t.metaTitle,
-    description: t.metaDesc,
-    openGraph: {
-      title: t.metaTitle,
-      description: t.metaDesc,
-      type: 'website',
-      locale: HTML_LANG[lang as Lang],
-      siteName: t.brand,
-    },
-    alternates: {
-      canonical: `/${lang}`,
-      languages: Object.fromEntries(LANGS.map((l) => [HTML_LANG[l], `/${l}`])),
-    },
-  };
+  return { metadataBase: new URL(SITE_URL), ...pageMeta(lang as Lang, '', t.metaTitle, t.metaDesc) };
 }
 
 export const viewport: Viewport = {

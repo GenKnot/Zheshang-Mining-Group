@@ -32,12 +32,10 @@ const MAX_DEPTH = 3000;
 let introSeen = false;
 
 /** 品牌字标：红色 ZSMI。拿到正式的标志文件后可以换成图片 */
+// 公司标志：红色 ZSMI，字母 I 里嵌着一块矿石。透明底，直接压在深色导航上
 function Logo() {
-  return (
-    <span className="zsmi" aria-hidden="true">
-      ZSMI
-    </span>
-  );
+  // eslint-disable-next-line @next/next/no-img-element
+  return <img className="zsmi" src="/logo-zsmi.webp" alt="ZSMI" width={359} height={144} />;
 }
 
 // 线框图标：四种几何体，纯 SVG 描边

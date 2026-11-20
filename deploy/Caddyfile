@@ -1,0 +1,39 @@
+# 浙商矿业官网（纯静态文件）。Caddy 会自动申请并续期 HTTPS 证书。
+# 域名解析指向本机之后才能签发证书；在那之前可以先用 http://服务器IP 访问检查。
+
+(site) {
+	root * /var/www/zsmi
+	encode zstd gzip
+
+	# 首页默认进中文版
+	redir / /zh-cn 302
+
+	# /zh-cn/about 这类地址对应 zh-cn/about.html
+	try_files {path} {path}.html {path}/index.html
+	file_server
+
+	# 带指纹的脚本和样式可以长期缓存；图片缓存一周
+	header /_next/static/* Cache-Control "public, max-age=31536000, immutable"
+	header /projects/* Cache-Control "public, max-age=604800"
+
+	# 不存在的地址显示网站自己的 404 页面
+	handle_errors {
+		rewrite * /404.html
+		file_server
+	}
+}
+
+www.zsktgroup.com {
+	import site
+}
+
+# 不带 www 的地址，以及 .cn 域名，统一跳到 www.zsktgroup.com。
+# 两个域名都能打开网站，但搜索引擎只认一个正式地址，不会被当成两个重复的网站。
+zsktgroup.com, zsktgroup.cn, www.zsktgroup.cn {
+	redir https://www.zsktgroup.com{uri} permanent
+}
+
+# 域名解析生效之前，用 IP 直接访问来检查
+http://47.242.143.68 {
+	import site
+}

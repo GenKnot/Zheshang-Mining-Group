@@ -3491,3 +3491,25 @@ html:not(:lang(zh)) .tcard dl > div {
     font-size: clamp(38px, 4.6vw, 60px);
   }
 }
+
+/* 首屏底部给"向下滚动"和坐标留出固定空间：窗口较矮时正文把首屏撑高，提示跟着下移，不会压在按钮上 */
+.hero {
+  padding-bottom: 96px;
+}
+
+/* 标志换成正式的图形文件：按高度定大小，宽度自适应 */
+img.zsmi {
+  display: block;
+  width: auto;
+  height: 27px;
+  transform: none;
+  flex: none;
+}
+.brand.small img.zsmi {
+  height: 21px;
+}
+@media (max-width: 860px) {
+  img.zsmi {
+    height: 24px;
+  }
+}
