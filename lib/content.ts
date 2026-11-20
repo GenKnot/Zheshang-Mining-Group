@@ -179,9 +179,9 @@ export const content: Record<Lang, Dict> = {
       body: 'Zheshang Mining Group is a diversified enterprise group focused on mineral resources. Guided by prudence, compliance and a long-term outlook, the Group works with its partners to create sustainable value.',
       principles: 'Principles',
       pillars: [
-        { k: 'Prudence', e: '稳健', d: 'Careful judgement, steady progress' },
-        { k: 'Compliance', e: '合规', d: 'Disciplined and principled operations' },
-        { k: 'Long-term', e: '长期', d: 'A long horizon, sustained commitment' },
+        { k: 'Prudence', e: '稳健', d: 'We judge carefully and move at a steady pace' },
+        { k: 'Compliance', e: '合规', d: 'We operate within the rules' },
+        { k: 'Long-term', e: '长期', d: 'We plan and commit for the long term' },
       ],
     },
     biz: {
@@ -332,9 +332,9 @@ export const content: Record<Lang, Dict> = {
       body: 'Zheshang Mining Group est un groupe diversifié spécialisé dans les ressources minérales. Guidé par la prudence, la conformité et une vision de long terme, le Groupe œuvre avec ses partenaires à la création d’une valeur durable.',
       principles: 'Principes',
       pillars: [
-        { k: 'Prudence', e: '稳健', d: 'Un jugement rigoureux, une progression régulière' },
-        { k: 'Conformité', e: '合规', d: 'Une gestion disciplinée et intègre' },
-        { k: 'Long terme', e: '长期', d: 'Un horizon lointain, un engagement constant' },
+        { k: 'Prudence', e: '稳健', d: 'Nous jugeons avec soin et avançons à un rythme régulier' },
+        { k: 'Conformité', e: '合规', d: 'Nous agissons dans le respect des règles' },
+        { k: 'Long terme', e: '长期', d: 'Nous planifions et nous engageons dans la durée' },
       ],
     },
     biz: {

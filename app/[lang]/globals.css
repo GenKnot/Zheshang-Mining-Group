@@ -3484,3 +3484,10 @@ html:not(:lang(zh)) .tcard dl > div {
     display: none;
   }
 }
+
+/* 矮屏幕上的非中文首页：标题较长会排成四行，缩小字号，保证按钮留在第一屏 */
+@media (min-width: 861px) and (max-height: 780px) {
+  html:not(:lang(zh)) .hero:not(.cpage-hero) h1 {
+    font-size: clamp(38px, 4.6vw, 60px);
+  }
+}
