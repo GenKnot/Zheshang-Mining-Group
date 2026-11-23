@@ -8,6 +8,10 @@
 	# 首页默认进中文版
 	redir / /zh-cn 302
 
+	# 项目改过网址，旧地址跳到新地址
+	@oldproject path_regexp oldp ^/([a-z-]+)/projects/kyrgyzstan-ashutor-gold$
+	redir @oldproject /{re.oldp.1}/projects/kyrgyzstan-gold permanent
+
 	# /zh-cn/about 这类地址对应 zh-cn/about.html
 	try_files {path} {path}.html {path}/index.html
 	file_server

@@ -15,7 +15,7 @@ const HOME: [number, number] = [30.2, 120.2]; // 杭州
 
 /** 经纬度转球面坐标：经度 0 朝向 +z */
 // 露天开采的项目画矿坑，其余画井架
-const OPEN_PIT = new Set(['suriname-gold', 'south-africa-chrome', 'mozambique-heavy-sands']);
+const OPEN_PIT = new Set(['suriname-gold', 'south-africa-chrome', 'mozambique-heavy-sands', 'guinea-mining']);
 
 function toVec(lat: number, lon: number, r = R) {
   const a = lat * D2R;

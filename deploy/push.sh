@@ -20,6 +20,6 @@ rsync -az --delete --human-readable --stats -e "$SSH" out/ "$HOST:/var/www/zsmi/
 
 echo "==> 更新服务器配置"
 rsync -az -e "$SSH" deploy/Caddyfile "$HOST:/tmp/Caddyfile"
-$SSH "$HOST" "sudo caddy validate --config /tmp/Caddyfile --adapter caddyfile >/dev/null && sudo install -m 644 /tmp/Caddyfile /etc/caddy/Caddyfile && sudo systemctl reload caddy"
+$SSH "$HOST" "sudo caddy validate --config /tmp/Caddyfile --adapter caddyfile >/dev/null && sudo install -m 644 /tmp/Caddyfile /etc/caddy/Caddyfile && sudo systemctl reload caddy; rm -f /tmp/Caddyfile"
 
 echo "==> 完成"

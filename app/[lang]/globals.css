@@ -2898,7 +2898,7 @@ html:lang(ko) .pcard dl > div {
    项目库：全屏地球巡览。画面固定，滚动时逐个切换项目，卡片叠在地球上
    ========================================================================== */
 .ppage > section.ptour {
-  height: 700vh;
+  height: 800vh;
 }
 .ptour-sticky {
   position: sticky;
@@ -3511,5 +3511,25 @@ img.zsmi {
 @media (max-width: 860px) {
   img.zsmi {
     height: 24px;
+  }
+}
+
+/* 项目详情页的现场视频：和照片同样的三列网格，点了才加载 */
+.pvideos {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 10px;
+}
+.pvideos video {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  background: #0d1014;
+  transition: opacity 0.9s var(--ease), transform 0.9s var(--ease);
+}
+@media (max-width: 860px) {
+  .pvideos {
+    grid-template-columns: minmax(0, 1fr);
   }
 }

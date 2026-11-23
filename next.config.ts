@@ -11,7 +11,11 @@ const config: NextConfig = staticExport
     }
   : {
       async redirects() {
-        return [{ source: '/', destination: '/zh-cn', permanent: false }];
+        return [
+          { source: '/', destination: '/zh-cn', permanent: false },
+          // 项目改过网址，旧地址跳到新地址
+          { source: '/:lang/projects/kyrgyzstan-ashutor-gold', destination: '/:lang/projects/kyrgyzstan-gold', permanent: true },
+        ];
       },
     };
 

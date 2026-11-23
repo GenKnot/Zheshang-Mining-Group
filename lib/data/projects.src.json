@@ -38,7 +38,7 @@
           "name": "苏里南金矿项目",
           "country": "苏里南",
           "mineral": "金（砂金、岩金）",
-          "area": "探矿权 174 km²，其中采矿许可 99.3 km²",
+          "area": "探矿权约 170 km²，其中采矿许可近 100 km²",
           "stage": "已取得采矿许可，砂金可先行开发",
           "coop": "联合开发，可洽谈",
           "summary": "项目位于南美洲北部的苏里南，处在 Rosebel 与 Merian 两座已投产大型金矿之间，三者同属北苏里南绿岩型金矿成矿带。矿权范围内砂金与岩金并存，已完成高精度航磁测量。",
@@ -53,7 +53,7 @@
             ],
             [
               "矿权面积",
-              "探矿权 174 km²，其中采矿许可 99.3 km²（含砂金赋存区域）"
+              "探矿权约 170 km²，其中采矿许可近 100 km²（含砂金赋存区域）"
             ],
             [
               "矿权归属",
@@ -130,7 +130,7 @@
           "name": "Suriname Gold Project",
           "country": "Suriname",
           "mineral": "Gold (alluvial and hard-rock)",
-          "area": "174 km² exploration licence, incl. 99.3 km² under mining permit",
+          "area": "Exploration licence of about 170 km², incl. nearly 100 km² under mining permit",
           "stage": "Mining permit granted; alluvial gold ready for early development",
           "coop": "Joint development, open to discussion",
           "summary": "The project is in Suriname in northern South America, between the producing Rosebel and Merian gold mines on the same North Suriname greenstone gold belt. The licence area contains both alluvial and hard-rock gold, and a high-resolution aeromagnetic survey has been completed.",
@@ -145,7 +145,7 @@
             ],
             [
               "Licence area",
-              "174 km² exploration licence, of which 99.3 km² is covered by a mining permit (including the alluvial zones)"
+              "Exploration licence of about 170 km², of which nearly 100 km² is covered by a mining permit (including the alluvial zones)"
             ],
             [
               "Ownership",
@@ -186,15 +186,15 @@
             {
               "h": "Location and geological setting",
               "p": [
-            "The project lies in the Precambrian metamorphic greenstone belt of the Guiana Shield and is controlled by the North Suriname ductile shear zone. This is a major global greenstone gold province, and the region's large gold deposits occur within it.",
+                "The project lies in the Precambrian metamorphic greenstone belt of the Guiana Shield and is controlled by the North Suriname ductile shear zone. This is a major global greenstone gold province, and the region's large gold deposits occur within it.",
                 "The licence sits between the Rosebel and Merian gold mines. The North Suriname gold belt crosses its north-eastern part, and the geological setting is similar to that of the two neighbouring mines."
               ]
             },
             {
               "h": "Alluvial gold",
               "p": [
-            "Alluvial gold occurs in river valleys and weathered material at grades of 0.8–1.0 g/m³ and depths of 1.5–10 m. It can be mined by open-pit methods with little stripping.",
-            "The area has abundant water, allowing year-round operation. One production line processes about 3,000 m³ a day with a crew of about 35, and further lines can be added in stages to match the scale of investment."
+                "Alluvial gold occurs in river valleys and weathered material at grades of 0.8–1.0 g/m³ and depths of 1.5–10 m. It can be mined by open-pit methods with little stripping.",
+                "The area has abundant water, allowing year-round operation. One production line processes about 3,000 m³ a day with a crew of about 35, and further lines can be added in stages to match the scale of investment."
               ]
             },
             {
@@ -237,7 +237,7 @@
           "name": "南非西北省铬矿项目",
           "country": "南非",
           "mineral": "铬矿，伴生铂族元素",
-          "area": "总面积 3000 公顷，其中 4.92 公顷已获采矿许可",
+          "area": "总面积 3000 公顷，其中约 5 公顷已获采矿许可",
           "stage": "在产，露天开采",
           "coop": "股权合作、联合开发，可洽谈",
           "summary": "项目位于南非西北省，距约翰内斯堡直线约 260 公里，有公路相连。首采区块已取得采矿许可并投入生产，整块 3000 公顷土地由项目公司持有，具备由 5 公顷扩展至 3000 公顷的开发路径。",
@@ -252,7 +252,7 @@
             ],
             [
               "矿权面积",
-              "总面积 3000 公顷；首采区块 4.92 公顷已获采矿许可，有效期至 2029 年 9 月 30 日"
+              "总面积 3000 公顷；首采区块约 5 公顷已获采矿许可，有效期至 2029 年"
             ],
             [
               "土地权属",
@@ -311,7 +311,7 @@
             {
               "h": "生产与扩产路径",
               "p": [
-                "首采区块 4.92 公顷已取得采矿许可并投入露天开采，规划第二年原矿产量 24 万吨，第三年及以后年产 45 万吨。",
+                "首采区块约 5 公顷已取得采矿许可并投入露天开采，规划第二年原矿产量 24 万吨，第三年及以后年产 45 万吨。",
                 "按当地规定完成钻探计划（不少于 10 个钻孔，孔距不小于 50 米）、提交合资格人士报告、缴纳复垦保证金并经矿产主管部门审批后，可申请整块 3000 公顷范围的采矿权。全面开发后规划年产品位高于 44% 的铬精矿 300 万吨。"
               ]
             },
@@ -327,10 +327,10 @@
           "name": "North West Chrome Project, South Africa",
           "country": "South Africa",
           "mineral": "Chromite with associated PGEs",
-          "area": "3,000 ha in total, incl. 4.92 ha under mining permit",
+          "area": "3,000 ha in total, incl. about 5 ha under mining permit",
           "stage": "In production, open pit",
           "coop": "Equity partnership or joint development, open to discussion",
-          "summary": "The project is in South Africa's North West Province, about 260 km in a straight line from Johannesburg, with road access. The first block holds a mining permit and is in production. The project company owns the full 3,000 ha of land, providing land access for potential expansion beyond the initial 4.92 ha.",
+          "summary": "The project is in South Africa's North West Province, about 260 km in a straight line from Johannesburg, with road access. The first block holds a mining permit and is in production. The project company owns the full 3,000 ha of land, providing land access for potential expansion beyond the initial block of about 5 ha.",
           "facts": [
             [
               "Location",
@@ -342,7 +342,7 @@
             ],
             [
               "Tenure",
-              "3,000 ha in total; a 4.92 ha first block holds a mining permit valid to 30 September 2029"
+              "3,000 ha in total; a first block of about 5 ha holds a mining permit valid until 2029"
             ],
             [
               "Land ownership",
@@ -388,20 +388,20 @@
             {
               "h": "Location and access",
               "p": [
-            "The project is in North West Province, about 260 km in a straight line from Johannesburg, with access to the road network. South Africa has an established mining and legal framework."
+                "The project is in North West Province, about 260 km in a straight line from Johannesburg, with access to the road network. South Africa has an established mining and legal framework."
               ]
             },
             {
               "h": "Mineralisation",
               "p": [
-            "The seam is 1.8–2.2 m thick at depths of 10–150 m, grading 36–40% Cr₂O₃, with run-of-mine grades of 44–48% in places. It is suited to open-pit mining.",
+                "The seam is 1.8–2.2 m thick at depths of 10–150 m, grading 36–40% Cr₂O₃, with run-of-mine grades of 44–48% in places. It is suited to open-pit mining.",
                 "Ten holes have been drilled to depths of about 15–56 m. Regional geology indicates platinum group elements associated with the chromite seam, adding value for combined recovery."
               ]
             },
             {
               "h": "Production and expansion",
               "p": [
-                "The 4.92 ha first block holds a mining permit and is being mined by open pit, with planned run-of-mine output of 240,000 t in year two and 450,000 t a year thereafter.",
+                "The first block of about 5 ha holds a mining permit and is being mined by open pit, with planned run-of-mine output of 240,000 t in year two and 450,000 t a year thereafter.",
                 "A mining right over the full 3,000 ha can be applied for after completing the drilling programme (at least ten holes at a minimum spacing of 50 m), filing a Competent Person's Report, lodging the rehabilitation guarantee and obtaining approval from the minerals authority. At full development the plan is to produce 3 Mt a year of chrome concentrate grading above 44%."
               ]
             },
@@ -560,15 +560,15 @@
             {
               "h": "Technical capability",
               "p": [
-            "The project team includes geologists, drillers, samplers and assayers with overseas field experience and its own exploration equipment. It can address common technical challenges in heavy mineral sands exploration, such as hardpan layers, hole collapse and sampling below the water table.",
-            "Shallow drilling is used to outline mineralisation and confirm resources quickly, allowing the more promising sites to be selected before title confirmation, plant construction and production."
+                "The project team includes geologists, drillers, samplers and assayers with overseas field experience and its own exploration equipment. It can address common technical challenges in heavy mineral sands exploration, such as hardpan layers, hole collapse and sampling below the water table.",
+                "Shallow drilling is used to outline mineralisation and confirm resources quickly, allowing the more promising sites to be selected before title confirmation, plant construction and production."
               ]
             },
             {
               "h": "Deal structure",
               "p": [
-            "Joint development: the project owner contributes licences, exploration expertise and local resources, while the partner funds mining, processing and operations.",
-            "Transfer of licences or equity: for sites where shallow drilling and a resource report have been completed, part or all of the interest can be transferred to mining companies and investors.",
+                "Joint development: the project owner contributes licences, exploration expertise and local resources, while the partner funds mining, processing and operations.",
+                "Transfer of licences or equity: for sites where shallow drilling and a resource report have been completed, part or all of the interest can be transferred to mining companies and investors.",
                 "Technical services: drilling and sampling, geological exploration, on-site technical guidance and local operations support for mining companies entering the country."
               ]
             }
@@ -577,7 +577,104 @@
       }
     },
     {
-      "slug": "kyrgyzstan-ashutor-gold",
+      "slug": "guinea-mining",
+      "region": "africa",
+      "symbols": [
+        "Au"
+      ],
+      "images": 18,
+      "videos": 3,
+      "coord": [
+        10.8,
+        -10.9
+      ],
+      "t": {
+        "zh-cn": {
+          "name": "几内亚矿区",
+          "country": "几内亚",
+          "mineral": "金",
+          "area": "资料备索",
+          "stage": "矿区现场作业中",
+          "coop": "合作开发、投资，可洽谈",
+          "summary": "矿区位于西非几内亚。现场已有采掘、运输和洗选设备作业，并取得砂金与矿石样品。详细资料在洽谈时提供。",
+          "facts": [
+            [
+              "所在位置",
+              "几内亚，西非"
+            ],
+            [
+              "矿种",
+              "金"
+            ],
+            [
+              "开采方式",
+              "露天开采"
+            ],
+            [
+              "现场情况",
+              "已有设备和人员在现场作业"
+            ],
+            [
+              "项目资料",
+              "洽谈时提供"
+            ],
+            [
+              "合作方式",
+              "合作开发、投资，可洽谈"
+            ]
+          ],
+          "highlights": [
+            "矿区现场已有采掘、运输和洗选设备",
+            "已取得砂金与矿石样品",
+            "详细资料可在洽谈时提供"
+          ],
+          "sections": []
+        },
+        "en": {
+          "name": "Guinea Mining Area",
+          "country": "Guinea",
+          "mineral": "Gold",
+          "area": "Available on request",
+          "stage": "Operating on site",
+          "coop": "Development partnership or investment, open to discussion",
+          "summary": "The mining area is in Guinea, West Africa. Excavation, haulage and washing equipment is working on site, and alluvial gold and ore samples have been collected. Detailed information is provided during discussions.",
+          "facts": [
+            [
+              "Location",
+              "Guinea, West Africa"
+            ],
+            [
+              "Commodity",
+              "Gold"
+            ],
+            [
+              "Mining method",
+              "Open-pit mining"
+            ],
+            [
+              "On site",
+              "Equipment and crews are working on site"
+            ],
+            [
+              "Project information",
+              "Provided during discussions"
+            ],
+            [
+              "Deal structure",
+              "Development partnership or investment, open to discussion"
+            ]
+          ],
+          "highlights": [
+            "Excavation, haulage and washing equipment already on site",
+            "Alluvial gold and ore samples collected",
+            "Detailed information available during discussions"
+          ],
+          "sections": []
+        }
+      }
+    },
+    {
+      "slug": "kyrgyzstan-gold",
       "region": "central-asia",
       "symbols": [
         "Au"
@@ -589,10 +686,10 @@
       ],
       "t": {
         "zh-cn": {
-          "name": "吉尔吉斯斯坦 Ashutor 金矿项目",
+          "name": "吉尔吉斯斯坦金矿项目",
           "country": "吉尔吉斯斯坦",
           "mineral": "金，另见钨、钒、铜矿化",
-          "area": "许可范围 55.93 km²",
+          "area": "许可范围超过 55 km²",
           "stage": "勘探阶段，已有钻探成果",
           "coop": "矿权合作、联合勘探，可洽谈",
           "summary": "项目位于吉尔吉斯斯坦东北部伊塞克湖州阿克苏地区，地处天山成矿带。2004 至 2010 年间已完成系统的槽探、反循环钻探和金刚石钻探，取得多处高品位见矿成果，矿体沿走向和深部均未封闭。",
@@ -607,7 +704,7 @@
             ],
             [
               "许可范围",
-              "55.93 km²（5593 公顷）"
+              "超过 55 km²"
             ],
             [
               "矿床类型",
@@ -615,11 +712,11 @@
             ],
             [
               "已完成钻探",
-              "反循环钻孔 69 个，共 8135 米；金刚石钻孔 9 个，共 883 米"
+              "反循环钻孔近 70 个，逾 8000 米；另有金刚石钻孔近 900 米"
             ],
             [
               "历史资源估算",
-              "55 米以浅含金 17 吨，品位 21.17 克/吨"
+              "55 米以浅含金约 17 吨，品位约 21 克/吨"
             ],
             [
               "历史勘探投入",
@@ -655,8 +752,8 @@
             {
               "h": "历史勘探成果",
               "p": [
-                "2004 至 2006 年完成槽探、推土机剥离和剖面取样；2007 至 2008 年施工反循环钻孔 69 个，共 8135 米，钻孔网度 100 米 × 50 米；2010 年施工金刚石钻孔 9 个，共 883 米。槽探和钻探均取得多处见矿成果。",
-                "前矿权人于 2009 年将钻探成果纳入估算，55 米以浅含金 17 吨，品位 21.17 克/吨。"
+                "2004 至 2006 年完成槽探、推土机剥离和剖面取样；2007 至 2008 年施工反循环钻孔近 70 个，逾 8000 米，钻孔网度 100 米 × 50 米；2010 年施工金刚石钻孔近 900 米。槽探和钻探均取得多处见矿成果。",
+                "前矿权人于 2009 年将钻探成果纳入估算，55 米以浅含金约 17 吨，品位约 21 克/吨。"
               ]
             },
             {
@@ -668,10 +765,10 @@
           ]
         },
         "en": {
-          "name": "Ashutor Gold Project, Kyrgyzstan",
+          "name": "Kyrgyzstan Gold Project",
           "country": "Kyrgyzstan",
           "mineral": "Gold, with tungsten, vanadium and copper mineralisation",
-          "area": "55.93 km² licence area",
+          "area": "Licence area of more than 55 km²",
           "stage": "Exploration stage with drilling results",
           "coop": "Partnership or joint exploration, open to discussion",
           "summary": "Located in the Ak-Suu district of the Issyk-Kul region in north-eastern Kyrgyzstan, on the Tien Shan metallogenic belt. Systematic trenching, reverse-circulation and diamond drilling were completed between 2004 and 2010 with multiple high-grade intercepts. Mineralisation remains open along strike and at depth.",
@@ -686,7 +783,7 @@
             ],
             [
               "Licence area",
-              "55.93 km² (5,593 ha)"
+              "More than 55 km²"
             ],
             [
               "Deposit type",
@@ -694,11 +791,11 @@
             ],
             [
               "Drilling completed",
-              "69 RC holes for 8,135 m; 9 diamond holes for 883 m"
+              "About 70 RC holes for more than 8,000 m, plus nearly 900 m of diamond drilling"
             ],
             [
               "Historical estimate",
-              "17 t of gold at 21.17 g/t to 55 m depth"
+              "About 17 t of gold at around 21 g/t to 55 m depth"
             ],
             [
               "Historical spend",
@@ -734,8 +831,8 @@
             {
               "h": "Historical exploration",
               "p": [
-                "Trenching, bulldozer cuts and traverse sampling were completed in 2004–2006. In 2007–2008, 69 reverse-circulation holes were drilled for 8,135 m on a 100 m × 50 m grid, followed by nine diamond holes for 883 m in 2010. Both trenching and drilling returned multiple gold intercepts.",
-            "In 2009, the previous licence holder used the earlier drilling data to estimate 17 t of gold at 21.17 g/t to a depth of 55 m."
+                "Trenching, bulldozer cuts and traverse sampling were completed in 2004–2006. In 2007–2008, about 70 reverse-circulation holes were drilled for more than 8,000 m on a 100 m × 50 m grid, followed by nearly 900 m of diamond drilling in 2010. Both trenching and drilling returned multiple gold intercepts.",
+                "In 2009, the previous licence holder used the earlier drilling data to estimate about 17 t of gold at around 21 g/t to a depth of 55 m."
               ]
             },
             {
@@ -799,7 +896,7 @@
           ],
           "highlights": [
             "一次可对比多处矿权，覆盖铜金、锂和多金属",
-            "锂矿权面积较大，单证 35–43 平方公里",
+            "锂矿权面积较大，单证 35 平方公里以上",
             "矿权均可转让"
           ],
           "table": {
@@ -813,37 +910,37 @@
               [
                 "铜、金",
                 "吉尔吉特-巴尔蒂斯坦，吉泽尔地区",
-                "33 km²",
+                "超过 30 km²",
                 "可转让"
               ],
               [
                 "锂",
                 "吉尔吉特-巴尔蒂斯坦，斯卡都",
-                "43 km²",
+                "超过 40 km²",
                 "可转让"
               ],
               [
                 "锂",
                 "吉尔吉特-巴尔蒂斯坦，斯卡都",
-                "35 km²",
+                "约 35 km²",
                 "可转让"
               ],
               [
                 "铅、铜等多金属",
                 "开伯尔-普赫图赫瓦省，吉德拉尔",
-                "499 英亩",
+                "近 500 英亩",
                 "可转让"
               ],
               [
                 "铜",
                 "开伯尔-普赫图赫瓦省，上迪尔地区",
-                "496 英亩",
+                "近 500 英亩",
                 "可转让"
               ],
               [
                 "铅、锌、锑、铜多金属",
                 "开伯尔-普赫图赫瓦省，吉德拉尔",
-                "499 英亩",
+                "近 500 英亩",
                 "可转让"
               ]
             ]
@@ -886,13 +983,13 @@
           ],
           "highlights": [
             "Several licences can be compared at once, covering copper–gold, lithium and polymetallic ground",
-            "Large lithium licences of 35–43 km² each",
+            "Large lithium licences of 35 km² or more each",
             "All licences are transferable"
           ],
           "table": {
             "head": [
               "Commodity",
-            "Location",
+              "Location",
               "Licence size",
               "Status"
             ],
@@ -900,37 +997,37 @@
               [
                 "Copper, gold",
                 "Ghizer district, Gilgit-Baltistan",
-                "33 km²",
+                "More than 30 km²",
                 "Transferable"
               ],
               [
                 "Lithium",
                 "Skardu, Gilgit-Baltistan",
-                "43 km²",
+                "More than 40 km²",
                 "Transferable"
               ],
               [
                 "Lithium",
                 "Skardu, Gilgit-Baltistan",
-                "35 km²",
+                "About 35 km²",
                 "Transferable"
               ],
               [
                 "Lead, copper and other metals",
                 "Chitral, Khyber Pakhtunkhwa",
-                "499 acres",
+                "Nearly 500 acres",
                 "Transferable"
               ],
               [
                 "Copper",
                 "Upper Dir, Khyber Pakhtunkhwa",
-                "496 acres",
+                "Nearly 500 acres",
                 "Transferable"
               ],
               [
                 "Lead, zinc, antimony, copper",
                 "Chitral, Khyber Pakhtunkhwa",
-                "499 acres",
+                "Nearly 500 acres",
                 "Transferable"
               ]
             ]
@@ -955,10 +1052,10 @@
           "name": "广西陆川金矿项目",
           "country": "中国",
           "mineral": "金",
-          "area": "矿区面积 1.393 km²",
+          "area": "矿区面积约 1.4 km²",
           "stage": "已取得采矿权",
           "coop": "合作开发，可洽谈",
-          "summary": "项目位于广西壮族自治区玉林市陆川县，开采矿种为金矿，矿区面积 1.393 平方公里，采矿权有效期至 2030 年 9 月。",
+          "summary": "项目位于广西壮族自治区玉林市陆川县，开采矿种为金矿，矿区面积约 1.4 平方公里，采矿权有效期至 2030 年。",
           "facts": [
             [
               "所在位置",
@@ -970,11 +1067,11 @@
             ],
             [
               "矿区面积",
-              "1.393 km²"
+              "约 1.4 km²"
             ],
             [
               "采矿权",
-              "已取得，有效期至 2030 年 9 月 16 日"
+              "已取得，有效期至 2030 年"
             ],
             [
               "取得方式",
@@ -995,10 +1092,10 @@
           "name": "Luchuan Gold Project, Guangxi",
           "country": "China",
           "mineral": "Gold",
-          "area": "1.393 km² mining area",
+          "area": "Mining area of about 1.4 km²",
           "stage": "Mining right granted",
           "coop": "Development partnership, open to discussion",
-          "summary": "The project is in Luchuan County, Yulin, Guangxi Zhuang Autonomous Region. Its 1.393 km² gold mining right is valid until September 2030.",
+          "summary": "The project is in Luchuan County, Yulin, Guangxi Zhuang Autonomous Region. Its gold mining right covers about 1.4 km² and is valid until 2030.",
           "facts": [
             [
               "Location",
@@ -1010,11 +1107,11 @@
             ],
             [
               "Mining area",
-              "1.393 km²"
+              "About 1.4 km²"
             ],
             [
               "Mining right",
-              "Granted, valid to 16 September 2030"
+              "Granted, valid until 2030"
             ],
             [
               "How acquired",

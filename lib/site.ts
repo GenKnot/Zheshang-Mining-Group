@@ -42,6 +42,7 @@ export type ProjText = {
   facts: string;
   highlights: string;
   gallery: string;
+  videos: string;
   list: string;
   region: string;
   mineral: string;
@@ -110,6 +111,8 @@ export type Project = {
   region: string;
   symbols: string[];
   images: number;
+  /** 现场视频的数量（没有就不写）。文件为 v01.mp4、v02.mp4…，同名 .jpg 是封面 */
+  videos?: number;
   coord: number[];
   t: Record<PLang, ProjectBody>;
 };
@@ -118,3 +121,4 @@ export const projects = projectData.projects as unknown as Project[];
 export const regions = projectData.regions as Record<string, Record<PLang, string>>;
 export const projectBySlug = (slug: string) => projects.find((p) => p.slug === slug);
 export const projectImage = (p: Project, n: number) => `/projects/${p.slug}/${String(n).padStart(2, '0')}.jpg`;
+export const projectVideo = (p: Project, n: number) => `/projects/${p.slug}/v${String(n).padStart(2, '0')}`;

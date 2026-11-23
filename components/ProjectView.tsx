@@ -3,7 +3,7 @@
 import Link from 'next/link';
 import { useEffect, useState } from 'react';
 import type { Lang } from '../lib/content';
-import { projectImage, projLang, projText, regions, type Project } from '../lib/site';
+import { projectImage, projectVideo, projLang, projText, regions, type Project } from '../lib/site';
 import Label from './Label';
 
 const pad = (n: number) => String(n).padStart(2, '0');
@@ -14,6 +14,7 @@ export default function ProjectView({ lang, project: p }: { lang: Lang; project:
   const b = p.t[pl];
   const [shot, setShot] = useState(-1); // 当前放大的图片序号
   const imgs = Array.from({ length: p.images }, (_, i) => projectImage(p, i + 1));
+  const vids = Array.from({ length: p.videos ?? 0 }, (_, i) => projectVideo(p, i + 1));
 
   useEffect(() => {
     if (shot < 0) return;
@@ -149,6 +150,22 @@ export default function ProjectView({ lang, project: p }: { lang: Lang; project:
               <button key={src} onClick={() => setShot(i)} data-reveal style={{ transitionDelay: `${(i % 3) * 0.06}s` }}>
                 <img src={src} alt={`${b.name} ${i + 1}`} loading="lazy" />
               </button>
+            ))}
+          </div>
+        </section>
+      )}
+
+      {vids.length > 0 && (
+        <section className="pd-block">
+          <div data-reveal>
+            <Label>{pt.videos}</Label>
+          </div>
+          <div className="pvideos">
+            {vids.map((v, i) => (
+              // 不自动播放、不预先下载：访客点了才加载，省流量
+              <video key={v} controls playsInline muted preload="none" poster={`${v}.jpg`} data-reveal style={{ transitionDelay: `${(i % 3) * 0.06}s` }}>
+                <source src={`${v}.mp4`} type="video/mp4" />
+              </video>
             ))}
           </div>
         </section>
